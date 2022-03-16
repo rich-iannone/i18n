@@ -254,3 +254,63 @@ cldr_character_labels <- function(
   
   as.list(values)
 }
+
+#' @export
+characters_params <-
+  list(
+    locale = "locale",
+    exemplar_characters = "exemplar_characters", 
+    auxiliary = "auxiliary",
+    index = "index", 
+    numbers = "numbers",
+    punctuation = "punctuation",
+    more_info = "more_info",
+    ellipsis = "ellipsis", 
+    leninent_scope_general = "leninent_scope_general",
+    leninent_scope_date = "leninent_scope_date",
+    leninent_scope_number = "leninent_scope_number", 
+    stricter_scope_number = "stricter_scope_number"
+  )
+
+#' Get localized values from the `characters` dataset
+#'
+#' @description
+#' The `characters` table contains information on the usage of characters
+#' and exemplar character sets across 571 locales. The `cldr_characters()`
+#' function allows one to extract parameter values from the table by
+#' supplying the `locale` and one of the following parameter names:
+#' 
+#' - `"exemplar_characters"`
+#' - `"auxiliary"`
+#' - `"index"`
+#' - `"numbers"`
+#' - `"punctuation"`
+#' - `"more_info"`
+#' - `"ellipsis"`
+#' - `"leninent_scope_general"`
+#' - `"leninent_scope_date"`
+#' - `"leninent_scope_number"`
+#' - `"stricter_scope_number"`
+#' 
+#' @return Either a named list or a length one character vector, depending on
+#' the `param` value.
+#' 
+#' @export
+cldr_characters <- function(
+    locale = "en",
+    param = characters_params$exemplar_characters
+) {
+  
+  values <- characters[characters$locale == locale, ][[param]]
+  
+  if (is.list(values)) {
+    
+    values <- unlist(values, use.names = TRUE)
+    
+    names(values) <- gsub("^value\\.", "", names(values))
+    
+    values <- as.list(values)
+  }
+  
+  values
+}
