@@ -1,0 +1,36 @@
+library(dplyr)
+library(jsonlite)
+library(readr)
+library(usethis)
+
+# source("data-raw/01-locales.R")
+# source("data-raw/02-default_locales.R")
+# source("data-raw/03-locale_names.R")
+# source("data-raw/04-dates.R")
+# source("data-raw/05-numbers.R")
+# source("data-raw/06-currencies.R")
+# source("data-raw/07-character_labels.R")
+# source("data-raw/08-characters.R")
+
+all_locales <- readRDS("data-raw/all_locales.rds")
+default_locales <- readRDS("data-raw/default_locales.rds")
+locale_names <- readRDS("data-raw/locale_names.rds")
+dates <- readRDS("data-raw/dates.rds")
+numbers <- readRDS("data-raw/numbers.rds")
+currencies <- readRDS("data-raw/currencies.rds")
+character_labels <- readRDS("data-raw/character_labels.rds")
+characters <- readRDS("data-raw/characters.rds")
+
+# Create external datasets
+usethis::use_data(
+  all_locales,
+  default_locales,
+  locale_names,
+  dates,
+  numbers,
+  currencies,
+  character_labels,
+  characters,
+  internal = FALSE, overwrite = TRUE
+)
+
