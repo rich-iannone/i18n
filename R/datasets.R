@@ -11,165 +11,363 @@
 #' alongside their default locale names. This indicates that `"en"` maps to
 #' `"en-US"` and `"de"` should map to `"de-DE"`. Throughout the **cldr**
 #' datasets, base names are used instead of their expanded equivalents.
+#' 
+#' There are 226 rows and the following 2 columns:
+#' 
+#' - `default_locale` (`character`)
+#' - `base_locale` (`character`)
 #'
-#' @format A tibble with 226 rows and 2 variables:
-#' \describe{
-#' \item{default_locale}{The expanded locale names (e.g., `"en-US"`) that do not
-#' normally appear within the **cldr** datasets but are valid aliases for base
-#' locale names (e.g., `"en"`).}
-#' \item{base_locale}{The corresponding base name for the locale. This omits the
-#' region particle from the locale name.}
-#' }
+#' The `default_locale` column contains the expanded locale names (e.g.,
+#' `"en-US"`) that do not normally appear within the **cldr** datasets but are
+#' valid aliases for the base locale names (e.g., `"en"`) found in the
+#' `base_locale` column.
 #' 
 "default_locales"
 
 #' A table with localized language, script, and territory names
 #'
-#' The `locale_names` table contains localized names for languages
-#' (`lang_names`), script names (`script_names`), names for territories
-#' (`territory_names`), and names for variants (`variant_names`).
+#' The `locale_names` table contains localized names for languages, script
+#' names, names for territories, and names for variants. There are 571 rows and
+#' the following 5 columns:
 #'
-#' @format A tibble with 571 rows and 5 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{lang_names}{A list column containing named lists for all localized
-#' language names.}
-#' \item{script_names}{A list column containing named lists for all localized
-#' script names.}
-#' \item{territory_names}{A list column containing named lists for all localized
-#' territory names.}
-#' \item{variant_names}{A list column containing named lists for all localized
-#' variant names.}
-#' }
+#' - `locale` (`character`)
+#' - `lang_names` (`named list [variable length]`)
+#' - `script_names` (`named list [variable length]`)
+#' - `territory_names` (`named list [variable length]`)
+#' - `variant_names` (`named list [variable length]`)
+#' 
+#' The `lang_names` column contains named lists for all localized language
+#' names. The `script_names` column holds named lists for all localized
+#' script names, and `territory_names` has all of the localized territory
+#' names per locale. The `variant_names` list column containing named lists for all localized
+#' variant names.
 #' 
 "locale_names"
 
 #' A table with localized date attributes and descriptors
 #'
 #' The `dates` table contains localized data for constructing dates and times
-#' across 571 locales.
+#' across 571 locales. There are 571 rows and the following 29 columns:
 #' 
-#' @format A tibble with 571 rows and 29 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{months_format_abbrev}{months_format_abbrev}
-#' \item{months_format_narrow}{months_format_narrow}
-#' \item{months_format_wide}{months_format_wide}
-#' \item{days_standalone_narrow}{days_standalone_narrow}
-#' \item{days_standalone_short}{days_standalone_short}
-#' \item{days_standalone_wide}{days_standalone_wide}
-#' \item{quarters_format_abbrev}{quarters_format_abbrev}
-#' \item{quarters_format_narrow}{quarters_format_narrow}
-#' \item{quarters_format_wide}{quarters_format_wide}
-#' \item{quarters_standalone_abbrev}{quarters_standalone_abbrev}
-#' \item{quarters_standalone_narrow}{quarters_standalone_narrow}
-#' \item{quarters_standalone_wide}{quarters_standalone_wide}
-#' \item{dayperiods_format_abbrev}{dayperiods_format_abbrev}
-#' \item{dayperiods_format_narrow}{dayperiods_format_narrow}
-#' \item{dayperiods_format_wide}{dayperiods_format_wide}
-#' \item{dayperiods_standalone_abbrev}{dayperiods_standalone_abbrev}
-#' \item{dayperiods_standalone_narrow}{dayperiods_standalone_narrow}
-#' \item{dayperiods_standalone_wide}{dayperiods_standalone_wide}
-#' \item{eras_abbrev}{eras_abbrev}
-#' \item{eras_names}{eras_names}
-#' \item{eras_narrow}{eras_narrow}
-#' \item{date_formats}{date_formats}
-#' \item{date_skeletons}{date_skeletons}
-#' \item{time_formats}{time_formats}
-#' \item{time_skeletons}{time_skeletons}
-#' \item{date_time_available_formats}{date_time_available_formats}
-#' \item{date_time_append_items}{date_time_append_items}
-#' \item{date_time_interval_formats}{date_time_interval_formats}
-#' }
+#' `locale` (`character`)
+#' `months_format_abbrev` (`named list [length of 12]`)
+#' `months_format_narrow` (`named list [length of 12]`)
+#' `months_format_wide` (`named list [length of 12]`)
+#' `days_standalone_narrow` (`named list [length of 7]`)
+#' `days_standalone_short` (`named list [length of 7]`)
+#' `days_standalone_wide` (`named list [length of 7]`)
+#' `quarters_format_abbrev` (`named list [length of 4]`)
+#' `quarters_format_narrow` (`named list [length of 4]`)
+#' `quarters_format_wide` (`named list [length of 4]`)
+#' `quarters_standalone_abbrev` (`named list [length of 4]`)
+#' `quarters_standalone_narrow` (`named list [length of 4]`)
+#' `quarters_standalone_wide` (`named list [length of 4]`)
+#' `dayperiods_format_abbrev` (`named list [variable length]`)
+#' `dayperiods_format_narrow` (`named list [variable length]`)
+#' `dayperiods_format_wide` (`named list [variable length]`)
+#' `dayperiods_standalone_abbrev` (`named list [variable length]`)
+#' `dayperiods_standalone_narrow` (`named list [variable length]`)
+#' `dayperiods_standalone_wide` (`named list [variable length]`)
+#' `eras_abbrev` (`named list [length of 4]`)
+#' `eras_names` (`named list [length of 4]`)
+#' `eras_narrow` (`named list [length of 4]`)
+#' `date_formats` (`named list [variable length]`)
+#' `date_skeletons` (`named list [length of 4]`)
+#' `time_formats` (`named list [variable length]`)
+#' `time_skeletons` (`named list [variable length]`)
+#' `date_time_available_formats` (`named list [variable length]`)
+#' `date_time_append_items` (`named list [length of 11]`)
+#' `date_time_interval_formats` (`named list [variable length]`)
 #'
 "dates"
 
 #' A table with localized numerical attributes and descriptors
 #'
 #' The `numbers` table contains localized data for number-related entities
-#' across 571 locales.
+#' across 571 locales. This table has 571 rows (one per locale) and the
+#' following 26 columns:
 #' 
-#' @format A tibble with 571 rows and 26 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{default_numbering_system}{default_numbering_system}
-#' \item{other_numbering_systems}{other_numbering_systems}
-#' \item{minimum_grouping_digits}{minimum_grouping_digits}
-#' \item{decimal}{decimal}
-#' \item{group}{group}
-#' \item{list}{list}
-#' \item{percent_sign}{percent_sign}
-#' \item{plus_sign}{plus_sign}
-#' \item{minus_sign}{minus_sign}
-#' \item{approx_sign}{approx_sign}
-#' \item{exp_sign}{exp_sign}
-#' \item{sup_exp}{sup_exp}
-#' \item{per_mille}{per_mille}
-#' \item{infinity}{infinity}
-#' \item{nan}{nan}
-#' \item{time_sep}{time_sep}
-#' \item{approx_pattern}{approx_pattern}
-#' \item{at_least_pattern}{at_least_pattern}
-#' \item{at_most_pattern}{at_most_pattern}
-#' \item{range_pattern}{range_pattern}
-#' \item{decimal_format}{decimal_format}
-#' \item{sci_format}{sci_format}
-#' \item{percent_format}{percent_format}
-#' \item{currency_format}{currency_format}
-#' \item{accounting_format}{accounting_format}
-#' }
+#' `locale` (`character`)
+#' `default_numbering_system` (`character`)
+#' `other_numbering_systems` (`named list [variable length]`)
+#' `minimum_grouping_digits` (`integer`)
+#' `decimal` (`character`)
+#' `group` (`character`)
+#' `list` (`character`)
+#' `percent_sign` (`character`)
+#' `plus_sign"` (`character`)
+#' `minus_sign` (`character`)
+#' `approx_sign` (`character`)
+#' `exp_sign` (`character`)
+#' `sup_exp` (`character`)
+#' `per_mille` (`character`)
+#' `infinity` (`character`)
+#' `nan` (`character`)
+#' `time_sep` (`character`)
+#' `approx_pattern` (`character`)
+#' `at_least_pattern` (`character`)
+#' `at_most_pattern` (`character`)
+#' `range_pattern` (`character`)
+#' `decimal_format` (`character`)
+#' `sci_format` (`character`)
+#' `percent_format` (`character`)
+#' `currency_format` (`character`)
+#' `accounting_format` (`character`)
+#' 
+#' The first column, `locale`, is the locale name (e.g., `"en"`, `"de-AT"`,
+#' etc.). The remaining 25 columns will be explained in separate sections.
+#' 
+#' @section Default Numbering System (`default_numbering_system`):
+#' The `default_numbering_system` column provides an element that indicates
+#' which numbering system should be used for presentation of numeric quantities
+#' in the given locale.
+#' 
+#' @section Other Numbering Systems (`other_numbering_systems`):
+#' The `other_numbering_systems` column provides an element that defines general
+#' categories of numbering systems that are sometimes used in the given locale
+#' for formatting numeric quantities. These additional numbering systems are
+#' often used in very specific contexts, such as in calendars or for financial
+#' purposes. There are currently three defined categories, as follows:
+#'   
+#' **native**
+#' 
+#' Defines the numbering system used for the native digits, usually defined as a
+#' part of the script used to write the language. The native numbering system
+#' can only be a numeric positional decimal-digit numbering system, using digits
+#' with General_Category=Decimal_Number. Note: In locales where the native
+#' numbering system is the default, it is assumed that the numbering system
+#' "latn" ( Western Digits 0-9 ) is always acceptable, and can be selected using
+#' the -nu keyword as part of a Unicode locale identifier.
+#' 
+#' **traditional**
+#' 
+#' Defines the traditional numerals for a locale. This numbering system may be
+#' numeric or algorithmic. If the traditional numbering system is not defined,
+#' applications should use the native numbering system as a fallback.
+#' 
+#' **finance**
+#' 
+#' Defines the numbering system used for financial quantities. This numbering
+#' system may be numeric or algorithmic. This is often used for ideographic
+#' languages such as Chinese, where it would be easy to alter an amount
+#' represented in the default numbering system simply by adding additional
+#' strokes. If the financial numbering system is not specified, applications
+#' should use the default numbering system as a fallback.
+#' 
+#' The categories defined for other numbering systems can be used in a Unicode
+#' locale identifier to select the proper numbering system without having to
+#' know the specific numbering system by name. For example:
+#'   
+#' To select Hindi language using the native digits for numeric formatting, use
+#' locale ID: `"hi-IN-u-nu-native"`.
+#'
+#' To select Chinese language using the appropriate financial numerals, use
+#' locale ID: `"zh-u-nu-finance"`.
+#'
+#' To select Tamil language using the traditional Tamil numerals, use locale ID:
+#' `"ta-u-nu-traditio"`.
+#'
+#' To select Arabic language using western digits 0-9, use locale ID:
+#' `"ar-u-nu-latn"`.
+#' 
+#' @section Minimum Grouping Digits (`minimum_grouping_digits`):
+#' 
+#' The `minimum_grouping_digits` value can be used to suppress groupings below a
+#' certain value. This is used for languages such as Polish, where one would
+#' only write the grouping separator for values above 9999. The
+#' `minimum_grouping_digits` value contains the default for the locale.
+#' 
+#' @section Number Symbols:
+#' 
+#' Number symbols define the localized symbols that are commonly used when
+#' formatting numbers in a given locale. These symbols can be referenced using a
+#' number formatting pattern.
+#' 
+#' The available number symbols are as follows:
+#'   
+#' `decimal`:
+#' 
+#' Separates the integer and fractional part of the number.
+#' 
+#' `group`:
+#' 
+#' Separates clusters of integer digits to make large numbers more legible;
+#' commonly used for thousands (grouping size 3, e.g. `"100,000,000"`) or in
+#' some locales, ten-thousands (grouping size 4, e.g. `"1,0000,0000"`). There
+#' may be two different grouping sizes: The primary grouping size used for the
+#' least significant integer group, and the secondary grouping size used for
+#' more significant groups; these are not the same in all locales (e.g.
+#' `"12,34,56,789"`). If a pattern contains multiple grouping separators, the
+#' interval between the last one and the end of the integer defines the primary
+#' grouping size, and the interval between the last two defines the secondary
+#' grouping size. All others are ignored, so `"#,##,###,####"` ==
+#' `"###,###,####"` == `"##,#,###,####"`.
+#' 
+#' `list`:
+#' 
+#' A symbol used to separate numbers in a list intended to represent structured
+#' data such as an array; must be different from the decimal value. This list
+#' separator is for non-linguistic usage as opposed to the list patterns for
+#' linguistic lists (e.g. `"Bob, Carol, and Ted"`).
+#' 
+#' `percent_sign` ('percentSign'):
+#' 
+#' A symbol used to indicate a percentage (1/100th) amount. If present, the
+#' value is also multiplied by 100 before formatting. That way `"1.23"` becomes
+#' `"123%"`.
+#' 
+#' `minus_sign` ('minusSign'):
+#' 
+#' The symbol used to denote negative values.
+#' 
+#' `plus_sign` ('plusSign'):
+#' 
+#' The symbol used to denote positive value. It can be used to produce modified
+#' patterns, so that `"3.12"` is formatted as `"+3.12"`, for example. The
+#' standard number patterns (except for type="accounting") will contain the
+#' `minus_sign`, explicitly or implicitly. In the explicit pattern, the value of
+#' the `plus_sign` can be substituted for the value of the `minus_sign` to
+#' produce a pattern that has an explicit plus sign.
+#' 
+#' `approx_sign` ('approximatelySign'):
+#' 
+#' A symbol used to denote a value that is approximate but not exact. The symbol
+#' is substituted in place of the `minus_sign` using the same semantics as
+#' `plus_sign` substitution.
+#' 
+#' `exp_sign` ('exponential'):
+#' 
+#' A symbol used for separating the mantissa and exponent values.
+#' 
+#' `sup_exp` ('superscriptingExponent'):
+#' 
+#' Programmers are used to the fallback exponent style `"1.23E4"`, but that
+#' should not be shown to end-users. Instead, the exponential notation `sup_exp`
+#' should be used to show a format like `"1.23 × 104"`. The superscripting can
+#' use markup, such as `<sup>4</sup>` in HTML, or for the special case of Latin
+#' digits, use superscripted numeral characters.
+#' 
+#' `per_mille` ('perMille'):
+#' 
+#' The symbol used to indicate a per-mille (1/1000th) amount. If present, the
+#' value is also multiplied by 1000 before formatting. That way `"1.23"` becomes
+#' `"1230"`.
+#' 
+#' `infinity`:
+#' 
+#' The infinity sign. Corresponds to the IEEE infinity bit pattern.
+#' 
+#' `nan`:
+#' 
+#' The NaN (not a number) sign. Corresponds to the IEEE NaN bit pattern.
+#' 
+#' `time_sep` ('timeSeparator'):
+#' 
+#' This replaces any use of the `time_sep` pattern character in a date-time
+#' format pattern (no `time_sep` pattern character is currently defined, see
+#' note below). This allows the same time format to be used for multiple number
+#' systems when the time separator depends on the number system. For example,
+#' the time format for Arabic should be a colon when using the Latin numbering
+#' system, but when the Arabic numbering system is used, the traditional time
+#' separator in older print styles was often Arabic comma.
+#' 
+#' @section Miscellaneous Patterns:
+#' 
+#' There are several miscellaneous patterns for special purposes. The currently
+#' defined values are:
+#'   
+#' `approx_pattern` ('approximately'):
+#' 
+#' Indicates an approximate number, such as: `"~99"`.
+#' 
+#' `at_most_pattern` ('atMost'):
+#' 
+#' Indicates a number or lower, such as: `"≤99"` to indicate that there are 99
+#' items or fewer.
+#' 
+#' `at_least_pattern` ('atLeast'):
+#' 
+#' Indicates a number or higher, such as: `"99+"` to indicate that there are 99
+#' items or more.
+#' 
+#' `range_pattern` ('range'):
+#' 
+#' Indicates a range of numbers, such as: `"99–103"` to indicate that there are
+#' from 99 to 103 items.
+#' 
+#' @section Number Formats:
+#' 
+#' Number formats are used to define the rules for formatting numeric
+#' quantities. Different formats are provided for different contexts.
+#'   
+#' `decimal_format` ('decimalFormats'):
+#' 
+#' The normal locale-specific way to write a base 10 number. Variations of the
+#' `decimal_format` pattern are provided that allow compact number formatting.
+#' 
+#' `percent_format` ('percentFormats'):
+#' 
+#' Pattern for use with percentage formatting.
+#' 
+#' `sci_format` ('scientificFormats'):
+#' 
+#' Pattern for use with scientific (exponent) formatting.
+#' 
+#' `currency_format` ('currencyFormats'):
+#' 
+#' Pattern for use with currency formatting. This format contains a few
+#' additional structural options that allow proper placement of the currency
+#' symbol relative to the numeric quantity.
+#' 
+#' `accounting_format` ('accountingFormats'):
+#' 
+#' Pattern for use with accounting-style formatting.
 #'
 "numbers"
 
 #' A table with localized currency attributes and descriptors
 #'
-#' The `currencies` table contains localized data for currency-related entities
-#' across 571 locales.
-#' 
-#' @format A tibble with 173,013 rows and 7 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{currency_code}{The three-letter code that identifies the currency.}
-#' \item{currency_display_name}{currency_display_name}
-#' \item{currency_symbol}{currency_symbol}
-#' \item{currency_symbol_narrow}{currency_symbol_narrow}
-#' \item{currency_display_name_count_1}{currency_display_name_count_1}
-#' \item{currency_display_name_count_other}{currency_display_name_count_other}
-#' }
+#' The `currencies` table contains localized data for number-related entities
+#' across 571 locales. This table has 173,013 rows, one per distinct combination
+#' of locale and currency (`currency_code`), and the following 7 columns:
+#'
+#' - `locale` (`character`)
+#' - `currency_code` (`character`)
+#' - `currency_display_name` (`character`)
+#' - `currency_symbol` (`character`)
+#' - `currency_symbol_narrow` (`character`)
+#' - `currency_display_name_count_1` (`character`)
+#' - `currency_display_name_count_other` (`character`)
 #'
 "currencies"
 
 #' A table with localized character labels and descriptors
 #'
 #' The `character_labels` table contains localized data for character labels
-#' across 571 locales.
+#' across 571 locales. There are 571 rows and the following 3 columns:
 #' 
-#' @format A tibble with 173,013 rows and 7 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{character_label_patterns}{character_label_patterns}
-#' \item{character_labels}{character_labels}
-#' }
+#' - `locale` (`character`)
+#' - `character_label_patterns` (`named list [variable length]`)
+#' - `character_labels` (`named list [variable length]`)
 #'
 "character_labels"
 
 #' A table with localized character data
 #'
 #' The `characters` table contains localized character data across 571 locales.
+#' There are 571 rows and the following 12 columns:
 #' 
-#' @format A tibble with 173,013 rows and 7 variables:
-#' \describe{
-#' \item{locale}{The locale name.}
-#' \item{exemplar_characters}{exemplar_characters}
-#' \item{auxiliary}{auxiliary}
-#' \item{index}{index}
-#' \item{numbers}{numbers}
-#' \item{punctuation}{punctuation}
-#' \item{ellipsis}{ellipsis}
-#' \item{leninent_scope_general}{leninent_scope_general}
-#' \item{leninent_scope_date}{leninent_scope_date}
-#' \item{leninent_scope_number}{leninent_scope_number}
-#' \item{stricter_scope_number}{stricter_scope_number}
-#' }
+#' - `locale`(`character`)
+#' - `exemplar_characters` (`character`)
+#' - `auxiliary` (`character`)
+#' - `index` (`character`)
+#' - `numbers` (`character`)
+#' - `punctuation` (`character`)
+#' - `more_info` (`character`)
+#' - `ellipsis` (`named list [length of 6]`)
+#' - `leninent_scope_general` (`named list [length of 9]`)
+#' - `leninent_scope_date` (`named list [length of 2]`)
+#' - `leninent_scope_number` (`named list [length of 3]`)
+#' - `stricter_scope_number` (`named list [length of 2]`)
 #'
 "characters"
