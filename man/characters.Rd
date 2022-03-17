@@ -5,25 +5,29 @@
 \alias{characters}
 \title{A table with localized character data}
 \format{
-A tibble with 173,013 rows and 7 variables:
-\describe{
-\item{locale}{The locale name.}
-\item{exemplar_characters}{exemplar_characters}
-\item{auxiliary}{auxiliary}
-\item{index}{index}
-\item{numbers}{numbers}
-\item{punctuation}{punctuation}
-\item{ellipsis}{ellipsis}
-\item{leninent_scope_general}{leninent_scope_general}
-\item{leninent_scope_date}{leninent_scope_date}
-\item{leninent_scope_number}{leninent_scope_number}
-\item{stricter_scope_number}{stricter_scope_number}
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 12 columns.
 }
 \usage{
 characters
 }
 \description{
 The \code{characters} table contains localized character data across 571 locales.
+There are 571 rows and the following 12 columns:
+}
+\details{
+\itemize{
+\item \code{locale}(\code{character})
+\item \code{exemplar_characters} (\code{character})
+\item \code{auxiliary} (\code{character})
+\item \code{index} (\code{character})
+\item \code{numbers} (\code{character})
+\item \code{punctuation} (\code{character})
+\item \code{more_info} (\code{character})
+\item \code{ellipsis} (\verb{named list [length of 6]})
+\item \code{leninent_scope_general} (\verb{named list [length of 9]})
+\item \code{leninent_scope_date} (\verb{named list [length of 2]})
+\item \code{leninent_scope_number} (\verb{named list [length of 3]})
+\item \code{stricter_scope_number} (\verb{named list [length of 2]})
+}
 }
 \keyword{datasets}

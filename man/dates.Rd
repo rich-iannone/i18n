@@ -5,44 +5,44 @@
 \alias{dates}
 \title{A table with localized date attributes and descriptors}
 \format{
-A tibble with 571 rows and 29 variables:
-\describe{
-\item{locale}{The locale name.}
-\item{months_format_abbrev}{months_format_abbrev}
-\item{months_format_narrow}{months_format_narrow}
-\item{months_format_wide}{months_format_wide}
-\item{days_standalone_narrow}{days_standalone_narrow}
-\item{days_standalone_short}{days_standalone_short}
-\item{days_standalone_wide}{days_standalone_wide}
-\item{quarters_format_abbrev}{quarters_format_abbrev}
-\item{quarters_format_narrow}{quarters_format_narrow}
-\item{quarters_format_wide}{quarters_format_wide}
-\item{quarters_standalone_abbrev}{quarters_standalone_abbrev}
-\item{quarters_standalone_narrow}{quarters_standalone_narrow}
-\item{quarters_standalone_wide}{quarters_standalone_wide}
-\item{dayperiods_format_abbrev}{dayperiods_format_abbrev}
-\item{dayperiods_format_narrow}{dayperiods_format_narrow}
-\item{dayperiods_format_wide}{dayperiods_format_wide}
-\item{dayperiods_standalone_abbrev}{dayperiods_standalone_abbrev}
-\item{dayperiods_standalone_narrow}{dayperiods_standalone_narrow}
-\item{dayperiods_standalone_wide}{dayperiods_standalone_wide}
-\item{eras_abbrev}{eras_abbrev}
-\item{eras_names}{eras_names}
-\item{eras_narrow}{eras_narrow}
-\item{date_formats}{date_formats}
-\item{date_skeletons}{date_skeletons}
-\item{time_formats}{time_formats}
-\item{time_skeletons}{time_skeletons}
-\item{date_time_available_formats}{date_time_available_formats}
-\item{date_time_append_items}{date_time_append_items}
-\item{date_time_interval_formats}{date_time_interval_formats}
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 29 columns.
 }
 \usage{
 dates
 }
 \description{
 The \code{dates} table contains localized data for constructing dates and times
-across 571 locales.
+across 571 locales. There are 571 rows and the following 29 columns:
+}
+\details{
+\code{locale} (\code{character})
+\code{months_format_abbrev} (\verb{named list [length of 12]})
+\code{months_format_narrow} (\verb{named list [length of 12]})
+\code{months_format_wide} (\verb{named list [length of 12]})
+\code{days_standalone_narrow} (\verb{named list [length of 7]})
+\code{days_standalone_short} (\verb{named list [length of 7]})
+\code{days_standalone_wide} (\verb{named list [length of 7]})
+\code{quarters_format_abbrev} (\verb{named list [length of 4]})
+\code{quarters_format_narrow} (\verb{named list [length of 4]})
+\code{quarters_format_wide} (\verb{named list [length of 4]})
+\code{quarters_standalone_abbrev} (\verb{named list [length of 4]})
+\code{quarters_standalone_narrow} (\verb{named list [length of 4]})
+\code{quarters_standalone_wide} (\verb{named list [length of 4]})
+\code{dayperiods_format_abbrev} (\verb{named list [variable length]})
+\code{dayperiods_format_narrow} (\verb{named list [variable length]})
+\code{dayperiods_format_wide} (\verb{named list [variable length]})
+\code{dayperiods_standalone_abbrev} (\verb{named list [variable length]})
+\code{dayperiods_standalone_narrow} (\verb{named list [variable length]})
+\code{dayperiods_standalone_wide} (\verb{named list [variable length]})
+\code{eras_abbrev} (\verb{named list [length of 4]})
+\code{eras_names} (\verb{named list [length of 4]})
+\code{eras_narrow} (\verb{named list [length of 4]})
+\code{date_formats} (\verb{named list [variable length]})
+\code{date_skeletons} (\verb{named list [length of 4]})
+\code{time_formats} (\verb{named list [variable length]})
+\code{time_skeletons} (\verb{named list [variable length]})
+\code{date_time_available_formats} (\verb{named list [variable length]})
+\code{date_time_append_items} (\verb{named list [length of 11]})
+\code{date_time_interval_formats} (\verb{named list [variable length]})
 }
 \keyword{datasets}

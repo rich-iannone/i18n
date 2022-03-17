@@ -10,6 +10,15 @@ cldr_currency(
   param = c("sym", "sym_narrow", "displ_name", "displ_ct_1", "displ_ct_oth")
 )
 }
+\arguments{
+\item{locale}{The locale ID for which to obtain the data from the
+\code{currencies} table.}
+
+\item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.).}
+
+\item{param}{The parameter from which information will be obtained for the
+specified \code{locale}.}
+}
 \value{
 A length one character vector.
 }

@@ -6,6 +6,13 @@
 \usage{
 cldr_dates(locale = "en", param = dates_params$months_format_abbrev)
 }
+\arguments{
+\item{locale}{The locale ID for which to obtain the data from the
+\code{dates} table.}
+
+\item{param}{The parameter from which information will be obtained for the
+specified \code{locale}.}
+}
 \value{
 A named list.
 }

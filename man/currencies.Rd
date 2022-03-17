@@ -5,22 +5,25 @@
 \alias{currencies}
 \title{A table with localized currency attributes and descriptors}
 \format{
-A tibble with 173,013 rows and 7 variables:
-\describe{
-\item{locale}{The locale name.}
-\item{currency_code}{The three-letter code that identifies the currency.}
-\item{currency_display_name}{currency_display_name}
-\item{currency_symbol}{currency_symbol}
-\item{currency_symbol_narrow}{currency_symbol_narrow}
-\item{currency_display_name_count_1}{currency_display_name_count_1}
-\item{currency_display_name_count_other}{currency_display_name_count_other}
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 173013 rows and 7 columns.
 }
 \usage{
 currencies
 }
 \description{
-The \code{currencies} table contains localized data for currency-related entities
-across 571 locales.
+The \code{currencies} table contains localized data for number-related entities
+across 571 locales. This table has 173,013 rows, one per distinct combination
+of locale and currency (\code{currency_code}), and the following 7 columns:
+}
+\details{
+\itemize{
+\item \code{locale} (\code{character})
+\item \code{currency_code} (\code{character})
+\item \code{currency_display_name} (\code{character})
+\item \code{currency_symbol} (\code{character})
+\item \code{currency_symbol_narrow} (\code{character})
+\item \code{currency_display_name_count_1} (\code{character})
+\item \code{currency_display_name_count_other} (\code{character})
+}
 }
 \keyword{datasets}

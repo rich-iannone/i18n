@@ -6,6 +6,13 @@
 \usage{
 cldr_characters(locale = "en", param = characters_params$exemplar_characters)
 }
+\arguments{
+\item{locale}{The locale ID for which to obtain the data from the
+\code{characters} table.}
+
+\item{param}{The parameter from which information will be obtained for the
+specified \code{locale}.}
+}
 \value{
 Either a named list or a length one character vector, depending on
 the \code{param} value.

@@ -9,6 +9,13 @@ cldr_locale(
   param = c("langs", "scripts", "territories", "variants")
 )
 }
+\arguments{
+\item{locale}{The locale ID for which to obtain the data from the
+\code{locale_names} table.}
+
+\item{param}{The parameter from which information will be obtained for the
+specified \code{locale}.}
+}
 \value{
 A named list.
 }

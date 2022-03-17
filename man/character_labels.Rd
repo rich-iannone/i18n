@@ -5,18 +5,20 @@
 \alias{character_labels}
 \title{A table with localized character labels and descriptors}
 \format{
-A tibble with 173,013 rows and 7 variables:
-\describe{
-\item{locale}{The locale name.}
-\item{character_label_patterns}{character_label_patterns}
-\item{character_labels}{character_labels}
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 3 columns.
 }
 \usage{
 character_labels
 }
 \description{
 The \code{character_labels} table contains localized data for character labels
-across 571 locales.
+across 571 locales. There are 571 rows and the following 3 columns:
+}
+\details{
+\itemize{
+\item \code{locale} (\code{character})
+\item \code{character_label_patterns} (\verb{named list [variable length]})
+\item \code{character_labels} (\verb{named list [variable length]})
+}
 }
 \keyword{datasets}

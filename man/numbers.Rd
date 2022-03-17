@@ -5,41 +5,263 @@
 \alias{numbers}
 \title{A table with localized numerical attributes and descriptors}
 \format{
-A tibble with 571 rows and 26 variables:
-\describe{
-\item{locale}{The locale name.}
-\item{default_numbering_system}{default_numbering_system}
-\item{other_numbering_systems}{other_numbering_systems}
-\item{minimum_grouping_digits}{minimum_grouping_digits}
-\item{decimal}{decimal}
-\item{group}{group}
-\item{list}{list}
-\item{percent_sign}{percent_sign}
-\item{plus_sign}{plus_sign}
-\item{minus_sign}{minus_sign}
-\item{approx_sign}{approx_sign}
-\item{exp_sign}{exp_sign}
-\item{sup_exp}{sup_exp}
-\item{per_mille}{per_mille}
-\item{infinity}{infinity}
-\item{nan}{nan}
-\item{time_sep}{time_sep}
-\item{approx_pattern}{approx_pattern}
-\item{at_least_pattern}{at_least_pattern}
-\item{at_most_pattern}{at_most_pattern}
-\item{range_pattern}{range_pattern}
-\item{decimal_format}{decimal_format}
-\item{sci_format}{sci_format}
-\item{percent_format}{percent_format}
-\item{currency_format}{currency_format}
-\item{accounting_format}{accounting_format}
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 26 columns.
 }
 \usage{
 numbers
 }
 \description{
 The \code{numbers} table contains localized data for number-related entities
-across 571 locales.
+across 571 locales. This table has 571 rows (one per locale) and the
+following 26 columns:
 }
+\details{
+\code{locale} (\code{character})
+\code{default_numbering_system} (\code{character})
+\code{other_numbering_systems} (\verb{named list [variable length]})
+\code{minimum_grouping_digits} (\code{integer})
+\code{decimal} (\code{character})
+\code{group} (\code{character})
+\code{list} (\code{character})
+\code{percent_sign} (\code{character})
+\verb{plus_sign"} (\code{character})
+\code{minus_sign} (\code{character})
+\code{approx_sign} (\code{character})
+\code{exp_sign} (\code{character})
+\code{sup_exp} (\code{character})
+\code{per_mille} (\code{character})
+\code{infinity} (\code{character})
+\code{nan} (\code{character})
+\code{time_sep} (\code{character})
+\code{approx_pattern} (\code{character})
+\code{at_least_pattern} (\code{character})
+\code{at_most_pattern} (\code{character})
+\code{range_pattern} (\code{character})
+\code{decimal_format} (\code{character})
+\code{sci_format} (\code{character})
+\code{percent_format} (\code{character})
+\code{currency_format} (\code{character})
+\code{accounting_format} (\code{character})
+
+The first column, \code{locale}, is the locale name (e.g., \code{"en"}, \code{"de-AT"},
+etc.). The remaining 25 columns will be explained in separate sections.
+}
+\section{Default Numbering System (\code{default_numbering_system})}{
+
+The \code{default_numbering_system} column provides an element that indicates
+which numbering system should be used for presentation of numeric quantities
+in the given locale.
+}
+
+\section{Other Numbering Systems (\code{other_numbering_systems})}{
+
+The \code{other_numbering_systems} column provides an element that defines general
+categories of numbering systems that are sometimes used in the given locale
+for formatting numeric quantities. These additional numbering systems are
+often used in very specific contexts, such as in calendars or for financial
+purposes. There are currently three defined categories, as follows:
+
+\strong{native}
+
+Defines the numbering system used for the native digits, usually defined as a
+part of the script used to write the language. The native numbering system
+can only be a numeric positional decimal-digit numbering system, using digits
+with General_Category=Decimal_Number. Note: In locales where the native
+numbering system is the default, it is assumed that the numbering system
+"latn" ( Western Digits 0-9 ) is always acceptable, and can be selected using
+the -nu keyword as part of a Unicode locale identifier.
+
+\strong{traditional}
+
+Defines the traditional numerals for a locale. This numbering system may be
+numeric or algorithmic. If the traditional numbering system is not defined,
+applications should use the native numbering system as a fallback.
+
+\strong{finance}
+
+Defines the numbering system used for financial quantities. This numbering
+system may be numeric or algorithmic. This is often used for ideographic
+languages such as Chinese, where it would be easy to alter an amount
+represented in the default numbering system simply by adding additional
+strokes. If the financial numbering system is not specified, applications
+should use the default numbering system as a fallback.
+
+The categories defined for other numbering systems can be used in a Unicode
+locale identifier to select the proper numbering system without having to
+know the specific numbering system by name. For example:
+
+To select Hindi language using the native digits for numeric formatting, use
+locale ID: \code{"hi-IN-u-nu-native"}.
+
+To select Chinese language using the appropriate financial numerals, use
+locale ID: \code{"zh-u-nu-finance"}.
+
+To select Tamil language using the traditional Tamil numerals, use locale ID:
+\code{"ta-u-nu-traditio"}.
+
+To select Arabic language using western digits 0-9, use locale ID:
+\code{"ar-u-nu-latn"}.
+}
+
+\section{Minimum Grouping Digits (\code{minimum_grouping_digits})}{
+
+
+The \code{minimum_grouping_digits} value can be used to suppress groupings below a
+certain value. This is used for languages such as Polish, where one would
+only write the grouping separator for values above 9999. The
+\code{minimum_grouping_digits} value contains the default for the locale.
+}
+
+\section{Number Symbols}{
+
+
+Number symbols define the localized symbols that are commonly used when
+formatting numbers in a given locale. These symbols can be referenced using a
+number formatting pattern.
+
+The available number symbols are as follows:
+
+\code{decimal}:
+
+Separates the integer and fractional part of the number.
+
+\code{group}:
+
+Separates clusters of integer digits to make large numbers more legible;
+commonly used for thousands (grouping size 3, e.g. \code{"100,000,000"}) or in
+some locales, ten-thousands (grouping size 4, e.g. \code{"1,0000,0000"}). There
+may be two different grouping sizes: The primary grouping size used for the
+least significant integer group, and the secondary grouping size used for
+more significant groups; these are not the same in all locales (e.g.
+\code{"12,34,56,789"}). If a pattern contains multiple grouping separators, the
+interval between the last one and the end of the integer defines the primary
+grouping size, and the interval between the last two defines the secondary
+grouping size. All others are ignored, so \code{"#,##,###,####"} ==
+\code{"###,###,####"} == \code{"##,#,###,####"}.
+
+\code{list}:
+
+A symbol used to separate numbers in a list intended to represent structured
+data such as an array; must be different from the decimal value. This list
+separator is for non-linguistic usage as opposed to the list patterns for
+linguistic lists (e.g. \code{"Bob, Carol, and Ted"}).
+
+\code{percent_sign} ('percentSign'):
+
+A symbol used to indicate a percentage (1/100th) amount. If present, the
+value is also multiplied by 100 before formatting. That way \code{"1.23"} becomes
+\code{"123\%"}.
+
+\code{minus_sign} ('minusSign'):
+
+The symbol used to denote negative values.
+
+\code{plus_sign} ('plusSign'):
+
+The symbol used to denote positive value. It can be used to produce modified
+patterns, so that \code{"3.12"} is formatted as \code{"+3.12"}, for example. The
+standard number patterns (except for type="accounting") will contain the
+\code{minus_sign}, explicitly or implicitly. In the explicit pattern, the value of
+the \code{plus_sign} can be substituted for the value of the \code{minus_sign} to
+produce a pattern that has an explicit plus sign.
+
+\code{approx_sign} ('approximatelySign'):
+
+A symbol used to denote a value that is approximate but not exact. The symbol
+is substituted in place of the \code{minus_sign} using the same semantics as
+\code{plus_sign} substitution.
+
+\code{exp_sign} ('exponential'):
+
+A symbol used for separating the mantissa and exponent values.
+
+\code{sup_exp} ('superscriptingExponent'):
+
+Programmers are used to the fallback exponent style \code{"1.23E4"}, but that
+should not be shown to end-users. Instead, the exponential notation \code{sup_exp}
+should be used to show a format like \code{"1.23 × 104"}. The superscripting can
+use markup, such as \verb{<sup>4</sup>} in HTML, or for the special case of Latin
+digits, use superscripted numeral characters.
+
+\code{per_mille} ('perMille'):
+
+The symbol used to indicate a per-mille (1/1000th) amount. If present, the
+value is also multiplied by 1000 before formatting. That way \code{"1.23"} becomes
+\code{"1230"}.
+
+\code{infinity}:
+
+The infinity sign. Corresponds to the IEEE infinity bit pattern.
+
+\code{nan}:
+
+The NaN (not a number) sign. Corresponds to the IEEE NaN bit pattern.
+
+\code{time_sep} ('timeSeparator'):
+
+This replaces any use of the \code{time_sep} pattern character in a date-time
+format pattern (no \code{time_sep} pattern character is currently defined, see
+note below). This allows the same time format to be used for multiple number
+systems when the time separator depends on the number system. For example,
+the time format for Arabic should be a colon when using the Latin numbering
+system, but when the Arabic numbering system is used, the traditional time
+separator in older print styles was often Arabic comma.
+}
+
+\section{Miscellaneous Patterns}{
+
+
+There are several miscellaneous patterns for special purposes. The currently
+defined values are:
+
+\code{approx_pattern} ('approximately'):
+
+Indicates an approximate number, such as: \code{"~99"}.
+
+\code{at_most_pattern} ('atMost'):
+
+Indicates a number or lower, such as: \code{"≤99"} to indicate that there are 99
+items or fewer.
+
+\code{at_least_pattern} ('atLeast'):
+
+Indicates a number or higher, such as: \code{"99+"} to indicate that there are 99
+items or more.
+
+\code{range_pattern} ('range'):
+
+Indicates a range of numbers, such as: \code{"99–103"} to indicate that there are
+from 99 to 103 items.
+}
+
+\section{Number Formats}{
+
+
+Number formats are used to define the rules for formatting numeric
+quantities. Different formats are provided for different contexts.
+
+\code{decimal_format} ('decimalFormats'):
+
+The normal locale-specific way to write a base 10 number. Variations of the
+\code{decimal_format} pattern are provided that allow compact number formatting.
+
+\code{percent_format} ('percentFormats'):
+
+Pattern for use with percentage formatting.
+
+\code{sci_format} ('scientificFormats'):
+
+Pattern for use with scientific (exponent) formatting.
+
+\code{currency_format} ('currencyFormats'):
+
+Pattern for use with currency formatting. This format contains a few
+additional structural options that allow proper placement of the currency
+symbol relative to the numeric quantity.
+
+\code{accounting_format} ('accountingFormats'):
+
+Pattern for use with accounting-style formatting.
+}
+
 \keyword{datasets}

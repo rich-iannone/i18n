@@ -6,6 +6,13 @@
 \usage{
 cldr_character_labels(locale = "en", param = c("patterns", "labels"))
 }
+\arguments{
+\item{locale}{The locale ID for which to obtain the data from the
+\code{character_labels} table.}
+
+\item{param}{The parameter from which information will be obtained for the
+specified \code{locale}.}
+}
 \value{
 A named list.
 }
