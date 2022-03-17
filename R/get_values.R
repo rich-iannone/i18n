@@ -131,7 +131,6 @@ dates_params <-
 #' function allows one to extract a named list using a `locale` and a specific
 #' `param`. The `param` values are:
 #' 
-#' - `"locale"`
 #' - `"months_format_abbrev"`
 #' - `"months_format_narrow"`
 #' - `"months_format_wide"`
@@ -213,6 +212,49 @@ numbers_params <-
     accounting_format = "accounting_format"
   )
 
+
+#' Get a single localized value from the `numbers` dataset
+#'
+#' @description
+#' The `dates` table contains localization data for number usage and this data
+#' is available for 571 locales. The `cldr_numbers()`
+#' function allows one to extract a named list using a `locale` and a specific
+#' `param`. The `param` values are:
+#' 
+#' - `"default_numbering_system"`
+#' - `"other_numbering_systems"`
+#' - `"minimum_grouping_digits"`
+#' - `"decimal"`
+#' - `"group"`
+#' - `"list"`
+#' - `"percent_sign" `
+#' - `"plus_sign"`
+#' - `"minus_sign"`
+#' - `"approx_sign"`
+#' - `"exp_sign"`
+#' - `"sup_exp"`
+#' - `"per_mille"`
+#' - `"infinity"`
+#' - `"nan"`
+#' - `"time_sep"`
+#' - `"approx_pattern"`
+#' - `"at_least_pattern"`
+#' - `"at_most_pattern"`
+#' - `"range_pattern"`
+#' - `"decimal_format"`
+#' - `"sci_format"`
+#' - `"percent_format"`
+#' - `"currency_format"`
+#' - `"accounting_format"`
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `numbers` table.
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
+#'   
+#' @return Either a named list or a length one character vector, depending on
+#'   the `param` value.
+#' 
 #' @export
 cldr_numbers <- function(
     locale = "en",
