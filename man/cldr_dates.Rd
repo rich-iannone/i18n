@@ -22,7 +22,6 @@ is localized across 571 locales. The \code{cldr_dates()}
 function allows one to extract a named list using a \code{locale} and a specific
 \code{param}. The \code{param} values are:
 \itemize{
-\item \code{"locale"}
 \item \code{"months_format_abbrev"}
 \item \code{"months_format_narrow"}
 \item \code{"months_format_wide"}
