@@ -12,6 +12,12 @@
 #' - `"displ_ct_1"`: is `currency_display_name_count_1`
 #' - `"displ_ct_oth"`: is `currency_display_name_count_other`
 #' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `currencies` table.
+#' @param currency The currency code (e.g., `"USD"`, `"EUR"`, etc.).
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
+#' 
 #' @return A length one character vector.
 #' 
 #' @export
@@ -39,7 +45,6 @@ cldr_currency <- function(
   ][[param_full]]
 }
 
-
 #' Get a single localized value from the `currencies` dataset
 #'
 #' @description
@@ -52,6 +57,11 @@ cldr_currency <- function(
 #' - `"scripts"`: is the `script_names` column in `locale_names`
 #' - `"territories"`: is `territory_names`
 #' - `"variants"`: is `variant_names`
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `locale_names` table.
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
 #' 
 #' @return A named list.
 #' 
@@ -151,6 +161,11 @@ dates_params <-
 #' - `"date_time_append_items"`
 #' - `"date_time_interval_formats"`
 #' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `dates` table.
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
+#' 
 #' @return A named list.
 #' 
 #' @export
@@ -230,6 +245,12 @@ cldr_numbers <- function(
 #' `character_labels`
 #' - `"labels"`: is the `character_labels` column in `character_labels`
 #' 
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `character_labels` table.
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
+#' 
 #' @return A named list.
 #' 
 #' @export
@@ -292,8 +313,13 @@ characters_params <-
 #' - `"leninent_scope_number"`
 #' - `"stricter_scope_number"`
 #' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `characters` table.
+#' @param param The parameter from which information will be obtained for the
+#'   specified `locale`.
+#' 
 #' @return Either a named list or a length one character vector, depending on
-#' the `param` value.
+#'   the `param` value.
 #' 
 #' @export
 cldr_characters <- function(
