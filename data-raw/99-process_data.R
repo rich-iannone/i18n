@@ -34,3 +34,16 @@ usethis::use_data(
   internal = FALSE, overwrite = TRUE
 )
 
+# Create internal datasets
+usethis::use_data(
+  all_locales,
+  default_locales,
+  locale_names,
+  dates,
+  numbers,
+  currencies,
+  character_labels,
+  characters,
+  internal = TRUE, overwrite = TRUE
+)
+
