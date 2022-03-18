@@ -4,13 +4,13 @@
 \alias{cldr_dates}
 \title{Get a single localized value from the \code{dates} dataset}
 \usage{
-cldr_dates(locale = "en", param = dates_params$months_format_abbrev)
+cldr_dates(locale = "en", element = dates_elements$months_format_abbrev)
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{dates} table.}
 
-\item{param}{The parameter from which information will be obtained for the
+\item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
 }
 \value{
@@ -20,7 +20,7 @@ A named list.
 The \code{dates} table contains information on how to express dates and this data
 is localized across 571 locales. The \code{cldr_dates()}
 function allows one to extract a named list using a \code{locale} and a specific
-\code{param}. The \code{param} values are:
+\code{element}. The element values are:
 \itemize{
 \item \code{"months_format_abbrev"}
 \item \code{"months_format_narrow"}

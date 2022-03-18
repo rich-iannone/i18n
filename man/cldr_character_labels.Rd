@@ -4,13 +4,13 @@
 \alias{cldr_character_labels}
 \title{Get localized values from the \code{character_labels} dataset}
 \usage{
-cldr_character_labels(locale = "en", param = c("patterns", "labels"))
+cldr_character_labels(locale = "en", element = c("patterns", "labels"))
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{character_labels} table.}
 
-\item{param}{The parameter from which information will be obtained for the
+\item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
 }
 \value{
@@ -19,8 +19,8 @@ A named list.
 \description{
 The \code{character_labels} table contains information on character patterns
 and character labels across 571 locales. The \code{cldr_character_labels()}
-function allows one to extract parameter values from the table by
-supplying the \code{locale} and one of the following parameter names:
+function allows one to extract element values from the table by
+supplying the \code{locale} and one of the following element names:
 \itemize{
 \item \code{"patterns"}: corresponds to the \code{character_label_patterns} column in
 \code{character_labels}

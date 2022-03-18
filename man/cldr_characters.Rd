@@ -4,24 +4,27 @@
 \alias{cldr_characters}
 \title{Get localized values from the \code{characters} dataset}
 \usage{
-cldr_characters(locale = "en", param = characters_params$exemplar_characters)
+cldr_characters(
+  locale = "en",
+  element = characters_elements$exemplar_characters
+)
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{characters} table.}
 
-\item{param}{The parameter from which information will be obtained for the
+\item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
 }
 \value{
 Either a named list or a length one character vector, depending on
-the \code{param} value.
+the \code{element} value.
 }
 \description{
 The \code{characters} table contains information on the usage of characters
 and exemplar character sets across 571 locales. The \code{cldr_characters()}
-function allows one to extract parameter values from the table by
-supplying the \code{locale} and one of the following parameter names:
+function allows one to extract element values from the table by
+supplying the \code{locale} and one of the following element names:
 \itemize{
 \item \code{"exemplar_characters"}
 \item \code{"auxiliary"}

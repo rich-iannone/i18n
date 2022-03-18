@@ -4,17 +4,15 @@
 \alias{cldr_locale}
 \title{Get a single localized value from the \code{currencies} dataset}
 \usage{
-cldr_locale(
-  locale = "en",
-  param = c("langs", "scripts", "territories", "variants")
-)
+cldr_locale(locale = "en", element = locale_elements$lang_names)
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{locale_names} table.}
 
-\item{param}{The parameter from which information will be obtained for the
-specified \code{locale}.}
+\item{element}{The element from which information will be obtained for the
+specified \code{locale}. A valid set of currency element can be accessed through
+the \link{locale_elements} list object.}
 }
 \value{
 A named list.
@@ -23,7 +21,7 @@ A named list.
 The \code{locale_names} table contains information on how to express components of
 locale codes and this is localized across 571 locales. The \code{cldr_locale()}
 function allows one to extract a named list using a \code{locale} and one of the
-following parameter names:
+following element names:
 \itemize{
 \item \code{"langs"}: corresponds to the \code{lang_names} column in \code{locale_names}
 \item \code{"scripts"}: is the \code{script_names} column in \code{locale_names}

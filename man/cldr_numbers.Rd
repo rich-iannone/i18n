@@ -4,24 +4,27 @@
 \alias{cldr_numbers}
 \title{Get a single localized value from the \code{numbers} dataset}
 \usage{
-cldr_numbers(locale = "en", param = numbers_params$default_numbering_system)
+cldr_numbers(
+  locale = "en",
+  element = numbers_elements$default_numbering_system
+)
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{numbers} table.}
 
-\item{param}{The parameter from which information will be obtained for the
+\item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
 }
 \value{
 Either a named list or a length one character vector, depending on
-the \code{param} value.
+the \code{element} value.
 }
 \description{
-The \code{dates} table contains localization data for number usage and this data
-is available for 571 locales. The \code{cldr_numbers()}
-function allows one to extract a named list using a \code{locale} and a specific
-\code{param}. The \code{param} values are:
+The \code{numbers} table contains localization data for number usage and this data
+is available for 571 locales. The \code{cldr_numbers()} function allows one to
+extract a named list using a \code{locale} and a specific \code{element}. The \code{element}
+values are:
 \itemize{
 \item \code{"default_numbering_system"}
 \item \code{"other_numbering_systems"}

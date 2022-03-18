@@ -6,18 +6,20 @@
 \usage{
 cldr_currency(
   locale = "en",
-  currency = "USD",
-  param = c("sym", "sym_narrow", "displ_name", "displ_ct_1", "displ_ct_oth")
+  currency = currency_codes$USD,
+  element = currencies_elements$currency_symbol
 )
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
 \code{currencies} table.}
 
-\item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.).}
+\item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.). A valid set
+of currency codes can be accessed through the \code{currency_codes} list object.}
 
-\item{param}{The parameter from which information will be obtained for the
-specified \code{locale}.}
+\item{element}{The element from which information will be obtained for the
+specified \code{locale}. A valid set of currency element can be accessed through
+the \code{currencies_elements} list object.}
 }
 \value{
 A length one character vector.
@@ -25,13 +27,14 @@ A length one character vector.
 \description{
 The \code{currencies} table contains information of currency codes and localized
 display names and symbols across 571 locales. The \code{cldr_currency()} function
-allows one to extract a single parameter value from the table by supplying
-the \code{locale}, the currency code, and one of the following parameter names:
+allows one to extract a single element value from the table by supplying
+the \code{locale}, the currency code (\code{currency}), and one of the following
+\code{element} names:
 \itemize{
-\item \code{"sym"}: corresponds to the \code{currency_symbol} column in \code{currencies}
-\item \code{"sym_narrow"}: is the \code{currency_symbol_narrow} column in \code{currencies}
-\item \code{"displ_name"}: is \code{currency_display_name}
-\item \code{"displ_ct_1"}: is \code{currency_display_name_count_1}
-\item \code{"displ_ct_oth"}: is \code{currency_display_name_count_other}
+\item \code{"currency_symbol"}
+\item \code{"currency_symbol_narrow"}
+\item \code{"currency_display_name"}
+\item \code{"currency_display_name_count_1"}
+\item \code{"currency_display_name_count_other"}
 }
 }
