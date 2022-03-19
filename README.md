@@ -45,7 +45,7 @@ cldr_numbers(locale = "de", element = numbers_elements$group)
 #> [1] ","
 ```
 
-Need to know the `LU` territory name from the `"es"` locale?
+Need to know the `"LU"` territory name from the `"es"` locale?
 
 ```r
 cldr_locale_names(locale = "es", element = locale_names_elements$territory_names)$LU
@@ -105,8 +105,8 @@ cldr_characters(locale = "fr", element = characters_elements$exemplar_characters
 #> [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"
 ```
 
-This is just a small sampling of some ways you can easily get at all the data
-within CLDR while using **R**.
+This is just a small sampling of ways you can easily get at all the data
+within the CLDR while using **R**!
 
 ## INSTALLATION
 
