@@ -6,6 +6,26 @@ provides up-to-date datasets from the Unicode's CLDR repositories, and, as an
 added bonus, functions to extract elements and subelements in a locale-specific
 way!
 
+The included datasets are:
+
+- `all_locales`
+- `default_locales`
+- `locale_names`
+- `numbers`
+- `dates`
+- `currencies`
+- `characters`
+- `character_labels`
+
+And the nice-to-have functions are:
+
+- `cldr_locale_names()`
+- `cldr_numbers()`
+- `cldr_dates()`
+- `cldr_currency()`
+- `cldr_characters()`
+- `cldr_character_labels()`
+
 ## Code of Conduct
 
 Please note that the **cldr** project is released with a [contributor
