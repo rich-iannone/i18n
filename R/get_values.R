@@ -1,7 +1,30 @@
-#' A list of currency codes for use in the `cldr_currency()` function
+#' Element lists for different **cldr** data tables
 #' 
-#' @return A named list.
+#' Several element lists are available for use in the various `cldr_*()`
+#' functions. The list object names, the number of elements they hold, and the
+#' functions they nicely pair with are:
 #' 
+#' `locale_names_elements` (4) -> `cldr_locale_names()`
+#' `currency_codes` (303) -> `cldr_currency()`
+#' `currencies_elements` (5) -> `cldr_currency()`
+#' `dates_elements` (28) -> `cldr_dates()`
+#' `numbers_elements` (26) -> `cldr_numbers()`
+#' `characters_elements` (12) -> `cldr_characters()`
+#' 
+#' @name element_lists
+NULL
+
+#' @rdname element_lists
+#' @export
+locale_names_elements <-
+  list(
+    lang_names = "lang_names",
+    script_names = "script_names",
+    territory_names = "territory_names",
+    variant_names = "variant_names"
+  )
+
+#' @rdname element_lists
 #' @export
 currency_codes <-
   list(
@@ -68,11 +91,7 @@ currency_codes <-
     ZWD = "ZWD", ZWL = "ZWL", ZWR = "ZWR"
   )
 
-
-#' A list of elements from the `currencies` table
-#' 
-#' @return A named list.
-#' 
+#' @rdname element_lists
 #' @export
 currencies_elements <- 
   list(
@@ -82,6 +101,125 @@ currencies_elements <-
     currency_display_name_count_1 = "currency_display_name_count_1",
     currency_display_name_count_other = "currency_display_name_count_other"
   )
+
+#' @rdname element_lists
+#' @export
+dates_elements <-
+  list(
+    months_format_abbrev = "months_format_abbrev",
+    months_format_narrow = "months_format_narrow", 
+    months_format_wide = "months_format_wide",
+    days_standalone_narrow = "days_standalone_narrow", 
+    days_standalone_short = "days_standalone_short",
+    days_standalone_wide = "days_standalone_wide", 
+    quarters_format_abbrev = "quarters_format_abbrev",
+    quarters_format_narrow = "quarters_format_narrow", 
+    quarters_format_wide = "quarters_format_wide",
+    quarters_standalone_abbrev = "quarters_standalone_abbrev", 
+    quarters_standalone_narrow = "quarters_standalone_narrow", 
+    quarters_standalone_wide = "quarters_standalone_wide",
+    dayperiods_format_abbrev = "dayperiods_format_abbrev", 
+    dayperiods_format_narrow = "dayperiods_format_narrow",
+    dayperiods_format_wide = "dayperiods_format_wide", 
+    dayperiods_standalone_abbrev = "dayperiods_standalone_abbrev", 
+    dayperiods_standalone_narrow = "dayperiods_standalone_narrow", 
+    dayperiods_standalone_wide = "dayperiods_standalone_wide", 
+    eras_abbrev = "eras_abbrev",
+    eras_names = "eras_names",
+    eras_narrow = "eras_narrow", 
+    date_formats = "date_formats",
+    date_skeletons = "date_skeletons", 
+    time_formats = "time_formats",
+    time_skeletons = "time_skeletons", 
+    date_time_available_formats = "date_time_available_formats", 
+    date_time_append_items = "date_time_append_items",
+    date_time_interval_formats = "date_time_interval_formats"
+  )
+
+#' @rdname element_lists
+#' @export
+numbers_elements <-
+  list(
+    locale = "locale",
+    default_numbering_system = "default_numbering_system", 
+    other_numbering_systems = "other_numbering_systems",
+    minimum_grouping_digits = "minimum_grouping_digits", 
+    decimal = "decimal",
+    group = "group",
+    list = "list",
+    percent_sign = "percent_sign", 
+    plus_sign = "plus_sign",
+    minus_sign = "minus_sign",
+    approx_sign = "approx_sign", 
+    exp_sign = "exp_sign",
+    sup_exp = "sup_exp",
+    per_mille = "per_mille", 
+    infinity = "infinity",
+    nan = "nan",
+    time_sep = "time_sep", 
+    approx_pattern = "approx_pattern",
+    at_least_pattern = "at_least_pattern", 
+    at_most_pattern = "at_most_pattern",
+    range_pattern = "range_pattern", 
+    decimal_format = "decimal_format",
+    sci_format = "sci_format", 
+    percent_format = "percent_format",
+    currency_format = "currency_format", 
+    accounting_format = "accounting_format"
+  )
+
+#' @rdname element_lists
+#' @export
+characters_elements <-
+  list(
+    locale = "locale",
+    exemplar_characters = "exemplar_characters", 
+    auxiliary = "auxiliary",
+    index = "index", 
+    numbers = "numbers",
+    punctuation = "punctuation",
+    more_info = "more_info",
+    ellipsis = "ellipsis", 
+    leninent_scope_general = "leninent_scope_general",
+    leninent_scope_date = "leninent_scope_date",
+    leninent_scope_number = "leninent_scope_number", 
+    stricter_scope_number = "stricter_scope_number"
+  )
+
+#' Get a single localized value from the `currencies` dataset
+#'
+#' @description
+#' The `locale_names` table contains information on how to express components of
+#' locale codes and this is localized across 571 locales. The
+#' `cldr_locale_names()` function allows one to extract a named list using a
+#' `locale` and one of the following element names:
+#' 
+#' - `"langs"`: corresponds to the `lang_names` column in `locale_names`
+#' - `"scripts"`: is the `script_names` column in `locale_names`
+#' - `"territories"`: is `territory_names`
+#' - `"variants"`: is `variant_names`
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `locale_names` table.
+#' @param element The element from which information will be obtained for the
+#'   specified `locale`. A valid set of [locale_names] elements can be accessed
+#'   through the [locale_names_elements] list object.
+#' 
+#' @return A named list.
+#' 
+#' @export
+cldr_locale_names <- function(
+    locale = "en",
+    element = locale_names_elements$lang_names
+) {
+  
+  values <- locale_names[locale_names$locale == locale, ][[element]]
+  values <- unlist(values, use.names = TRUE)
+  
+  names(values) <- gsub("^name\\.", "", names(values))
+  
+  as.list(values)
+}
 
 #' Get a single localized value from the `currencies` dataset
 #'
@@ -120,91 +258,6 @@ cldr_currency <- function(
       currencies$currency_code == currency,
   ][[element]]
 }
-
-#' A list of elements from the `locale_names` table
-#' 
-#' @return A named list.
-#' 
-#' @export
-locale_elements <-
-  list(
-    lang_names = "lang_names",
-    script_names = "script_names",
-    territory_names = "territory_names",
-    variant_names = "variant_names"
-  )
-
-#' Get a single localized value from the `currencies` dataset
-#'
-#' @description
-#' The `locale_names` table contains information on how to express components of
-#' locale codes and this is localized across 571 locales. The `cldr_locale()`
-#' function allows one to extract a named list using a `locale` and one of the
-#' following element names:
-#' 
-#' - `"langs"`: corresponds to the `lang_names` column in `locale_names`
-#' - `"scripts"`: is the `script_names` column in `locale_names`
-#' - `"territories"`: is `territory_names`
-#' - `"variants"`: is `variant_names`
-#' 
-#' @param locale The locale ID for which to obtain the data from the
-#'   `locale_names` table.
-#' @param element The element from which information will be obtained for the
-#'   specified `locale`. A valid set of currency element can be accessed through
-#'   the [locale_elements] list object.
-#' 
-#' @return A named list.
-#' 
-#' @export
-cldr_locale <- function(
-    locale = "en",
-    element = locale_elements$lang_names
-) {
-  
-  values <- locale_names[locale_names$locale == locale, ][[element]]
-  values <- unlist(values, use.names = TRUE)
-  
-  names(values) <- gsub("^name\\.", "", names(values))
-  
-  as.list(values)
-}
-
-#' A list of elements from the `dates` table
-#' 
-#' @return A named list.
-#' 
-#' @export
-dates_elements <-
-  list(
-    months_format_abbrev = "months_format_abbrev",
-    months_format_narrow = "months_format_narrow", 
-    months_format_wide = "months_format_wide",
-    days_standalone_narrow = "days_standalone_narrow", 
-    days_standalone_short = "days_standalone_short",
-    days_standalone_wide = "days_standalone_wide", 
-    quarters_format_abbrev = "quarters_format_abbrev",
-    quarters_format_narrow = "quarters_format_narrow", 
-    quarters_format_wide = "quarters_format_wide",
-    quarters_standalone_abbrev = "quarters_standalone_abbrev", 
-    quarters_standalone_narrow = "quarters_standalone_narrow", 
-    quarters_standalone_wide = "quarters_standalone_wide",
-    dayperiods_format_abbrev = "dayperiods_format_abbrev", 
-    dayperiods_format_narrow = "dayperiods_format_narrow",
-    dayperiods_format_wide = "dayperiods_format_wide", 
-    dayperiods_standalone_abbrev = "dayperiods_standalone_abbrev", 
-    dayperiods_standalone_narrow = "dayperiods_standalone_narrow", 
-    dayperiods_standalone_wide = "dayperiods_standalone_wide", 
-    eras_abbrev = "eras_abbrev",
-    eras_names = "eras_names",
-    eras_narrow = "eras_narrow", 
-    date_formats = "date_formats",
-    date_skeletons = "date_skeletons", 
-    time_formats = "time_formats",
-    time_skeletons = "time_skeletons", 
-    date_time_available_formats = "date_time_available_formats", 
-    date_time_append_items = "date_time_append_items",
-    date_time_interval_formats = "date_time_interval_formats"
-  )
 
 #' Get a single localized value from the `dates` dataset
 #'
@@ -263,41 +316,6 @@ cldr_dates <- function(
   
   as.list(values)
 }
-
-#' A list of elements from the `numbers` table
-#' 
-#' @return A named list.
-#' 
-#' @export
-numbers_elements <-
-  list(
-    locale = "locale",
-    default_numbering_system = "default_numbering_system", 
-    other_numbering_systems = "other_numbering_systems",
-    minimum_grouping_digits = "minimum_grouping_digits", 
-    decimal = "decimal",
-    group = "group",
-    list = "list",
-    percent_sign = "percent_sign", 
-    plus_sign = "plus_sign",
-    minus_sign = "minus_sign",
-    approx_sign = "approx_sign", 
-    exp_sign = "exp_sign",
-    sup_exp = "sup_exp",
-    per_mille = "per_mille", 
-    infinity = "infinity",
-    nan = "nan",
-    time_sep = "time_sep", 
-    approx_pattern = "approx_pattern",
-    at_least_pattern = "at_least_pattern", 
-    at_most_pattern = "at_most_pattern",
-    range_pattern = "range_pattern", 
-    decimal_format = "decimal_format",
-    sci_format = "sci_format", 
-    percent_format = "percent_format",
-    currency_format = "currency_format", 
-    accounting_format = "accounting_format"
-  )
 
 #' Get a single localized value from the `numbers` dataset
 #'
@@ -402,27 +420,6 @@ cldr_character_labels <- function(
   
   as.list(values)
 }
-
-#' A list of elements from the `characters` table
-#' 
-#' @return A named list.
-#' 
-#' @export
-characters_elements <-
-  list(
-    locale = "locale",
-    exemplar_characters = "exemplar_characters", 
-    auxiliary = "auxiliary",
-    index = "index", 
-    numbers = "numbers",
-    punctuation = "punctuation",
-    more_info = "more_info",
-    ellipsis = "ellipsis", 
-    leninent_scope_general = "leninent_scope_general",
-    leninent_scope_date = "leninent_scope_date",
-    leninent_scope_number = "leninent_scope_number", 
-    stricter_scope_number = "stricter_scope_number"
-  )
 
 #' Get localized values from the `characters` dataset
 #'
