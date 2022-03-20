@@ -22,7 +22,7 @@ And the nice-to-have functions are:
 - `cldr_locale_names()`
 - `cldr_numbers()`
 - `cldr_dates()`
-- `cldr_currency()`
+- `cldr_currencies()`
 - `cldr_characters()`
 - `cldr_character_labels()`
 
@@ -86,7 +86,7 @@ Need to get the appropriate display name for the the Japanese Yen (`"JPY"`)
 currency while in the `"zh"` locale?
 
 ```r
-cldr_currency(
+cldr_currencies(
   locale = "zh",
   currency = currency_codes$JPY,
   element = currencies_elements$currency_display_name
