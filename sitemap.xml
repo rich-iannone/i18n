@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/PULL_REQUEST_TEMPLATE.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/PULL_REQUEST_TEMPLATE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/index.html</loc>
   </url>
   <url>
-    <loc>/reference/all_locales.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/all_locales.html</loc>
   </url>
   <url>
-    <loc>/reference/character_labels.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/character_labels.html</loc>
   </url>
   <url>
-    <loc>/reference/characters.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/characters.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_character_labels.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_character_labels.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_characters.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_characters.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_currencies.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_currencies.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_dates.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_dates.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_locale_names.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_locale_names.html</loc>
   </url>
   <url>
-    <loc>/reference/cldr_numbers.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/cldr_numbers.html</loc>
   </url>
   <url>
-    <loc>/reference/currencies.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/currencies.html</loc>
   </url>
   <url>
-    <loc>/reference/dates.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/dates.html</loc>
   </url>
   <url>
-    <loc>/reference/default_locales.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/default_locales.html</loc>
   </url>
   <url>
-    <loc>/reference/element_lists.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/element_lists.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/locale_names.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/locale_names.html</loc>
   </url>
   <url>
-    <loc>/reference/numbers.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/numbers.html</loc>
   </url>
   <url>
-    <loc>/reference/pipe.html</loc>
+    <loc>https://rich-iannone.github.io/cldr/reference/pipe.html</loc>
   </url>
 </urlset>
