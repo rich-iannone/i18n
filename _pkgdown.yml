@@ -1,4 +1,19 @@
-url: ~
+destination: docs
+
+home:
+  strip_header: true
+
+url: https://rich-iannone.github.io/cldr
+
 template:
   bootstrap: 5
 
+reference:
+  - title: Get CLDR Element Values
+    contents:
+    - cldr_locale_names
+    - cldr_numbers
+    - cldr_dates
+    - cldr_currencies
+    - cldr_characters
+    - cldr_character_labels
