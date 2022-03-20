@@ -17,3 +17,21 @@ reference:
     - cldr_currencies
     - cldr_characters
     - cldr_character_labels
+  - title: CLDR Tables
+    contents:
+    - all_locales
+    - default_locales
+    - locale_names
+    - dates
+    - numbers
+    - currencies
+    - character_labels
+    - characters
+  - title: Element Lists
+    contents:
+    - locale_names_elements
+    - currency_codes
+    - currencies_elements
+    - dates_elements
+    - numbers_elements
+    - characters_elements
