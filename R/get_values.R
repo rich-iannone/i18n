@@ -225,10 +225,10 @@ cldr_locale_names <- function(
 #'
 #' @description
 #' The `currencies` table contains information of currency codes and localized
-#' display names and symbols across 571 locales. The `cldr_currency()` function
-#' allows one to extract a single element value from the table by supplying
-#' the `locale`, the currency code (`currency`), and one of the following
-#' `element` names:
+#' display names and symbols across 571 locales. The `cldr_currencies()`
+#' function allows one to extract a single element value from the table by
+#' supplying the `locale`, the currency code (`currency`), and one of the
+#' following `element` names:
 #' 
 #' - `"currency_symbol"`
 #' - `"currency_symbol_narrow"`
@@ -247,7 +247,7 @@ cldr_locale_names <- function(
 #' @return A length one character vector.
 #' 
 #' @export
-cldr_currency <- function(
+cldr_currencies <- function(
     locale = "en",
     currency = currency_codes$USD,
     element = currencies_elements$currency_symbol
