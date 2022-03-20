@@ -1,5 +1,9 @@
 **cldr**
 
+<!-- badges: start -->
+<a href="https://github.com/rich-iannone/cldr/actions"><img src="https://github.com/rich-iannone/cldr/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
+<!-- badges: end -->
+
 With the **cldr** package it’s possible to get **cldr** (*Common Locale
 Data Repository*) data to support your own localization efforts. This package
 provides up-to-date datasets from the Unicode's CLDR repositories, and, as an
