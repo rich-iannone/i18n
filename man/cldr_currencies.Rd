@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_currencies}
 \alias{cldr_currencies}
-\title{Get a single localized value from the \code{currencies} dataset}
+\title{Get a single localized value from the \link{currencies} dataset}
 \usage{
 cldr_currencies(
   locale = "en",
@@ -12,7 +12,7 @@ cldr_currencies(
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
-\code{currencies} table.}
+\link{currencies} table.}
 
 \item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.). A valid set
 of currency codes can be accessed through the \link{currency_codes} list object.}
@@ -25,7 +25,7 @@ through the \link{currencies_elements} list object.}
 A length one character vector.
 }
 \description{
-The \code{currencies} table contains information of currency codes and localized
+The \link{currencies} table contains information of currency codes and localized
 display names and symbols across 571 locales. The
 \code{cldr_currencies()} function allows one to extract a single element value
 from the table by supplying the \code{locale}, the currency code (\code{currency}), and
@@ -38,17 +38,17 @@ one of the following \code{element} names:
 \item \code{"currency_display_name_count_other"}
 }
 }
-\section{Demos}{
+\section{Examples}{
 
 
-If you would like to get the currency display name for the Japanese Yen
-(\code{"JPY"}) currency while in the \code{"zh"} locale, the following invocation of
+If you would like to get the currency display name for the British Pound
+(\code{"GBP"}) currency while in the \code{"de"} locale, the following invocation of
 \code{cldr_currencies()} can be used.\if{html}{\out{<div class="sourceCode r">}}\preformatted{cldr_currencies(
-  locale = "zh",
-  currency = currency_codes$JPY,
+  locale = "de",
+  currency = currency_codes$GBP,
   element = currencies_elements$currency_display_name
 )
-}\if{html}{\out{</div>}}\preformatted{#> [1] "日元"
+}\if{html}{\out{</div>}}\preformatted{#> [1] "Britisches Pfund"
 }
 }
 
