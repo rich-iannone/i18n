@@ -59,13 +59,13 @@ one of the following element names:
 </nav><div class="container template-reference-topic">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Get a single localized value from the <code>currencies</code> dataset</h1>
+      <img src="" class="logo" alt=""><h1>Get a single localized value from the <a href="currencies.html">currencies</a> dataset</h1>
       <small class="dont-index">Source: <a href="https://github.com/rich-iannone/cldr/blob/HEAD/R/get_values.R" class="external-link"><code>R/get_values.R</code></a></small>
       <div class="d-none name"><code>cldr_currencies.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
-    <p>The <code>currencies</code> table contains information of currency codes and localized
+    <p>The <a href="currencies.html">currencies</a> table contains information of currency codes and localized
 display names and symbols across 571 locales. The
 <code>cldr_currencies()</code> function allows one to extract a single element value
 from the table by supplying the <code>locale</code>, the currency code (<code>currency</code>), and
@@ -89,7 +89,7 @@ one of the following <code>element</code> names:</p><ul><li><p><code>"currency_s
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>locale</dt>
 <dd><p>The locale ID for which to obtain the data from the
-<code>currencies</code> table.</p></dd>
+<a href="currencies.html">currencies</a> table.</p></dd>
 <dt>currency</dt>
 <dd><p>The currency code (e.g., <code>"USD"</code>, <code>"EUR"</code>, etc.). A valid set
 of currency codes can be accessed through the <a href="element_lists.html">currency_codes</a> list object.</p></dd>
@@ -103,17 +103,17 @@ through the <a href="element_lists.html">currencies_elements</a> list object.</p
     <p>A length one character vector.</p>
     </div>
     <div class="section level2">
-    <h2 id="demos">Demos<a class="anchor" aria-label="anchor" href="#demos"></a></h2>
+    <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a></h2>
     
 
 
-<p>If you would like to get the currency display name for the Japanese Yen
-(<code>"JPY"</code>) currency while in the <code>"zh"</code> locale, the following invocation of
+<p>If you would like to get the currency display name for the British Pound
+(<code>"GBP"</code>) currency while in the <code>"de"</code> locale, the following invocation of
 <code>cldr_currencies()</code> can be used.</p><div class="sourceCode r"><pre><code><span class="fu"><a href="../reference/cldr_currencies.html">cldr_currencies</a></span><span class="op">(</span>
-  locale <span class="op">=</span> <span class="st">"zh"</span>,
-  currency <span class="op">=</span> <span class="va">currency_codes</span><span class="op">$</span><span class="va">JPY</span>,
+  locale <span class="op">=</span> <span class="st">"de"</span>,
+  currency <span class="op">=</span> <span class="va">currency_codes</span><span class="op">$</span><span class="va">GBP</span>,
   element <span class="op">=</span> <span class="va">currencies_elements</span><span class="op">$</span><span class="va">currency_display_name</span>
-<span class="op">)</span></code></pre><p></p></div><div class="sourceCode"><pre><code><span class="co">#&gt; [1] "日元"</span></code></pre></div>
+<span class="op">)</span></code></pre><p></p></div><div class="sourceCode"><pre><code><span class="co">#&gt; [1] "Britisches Pfund"</span></code></pre></div>
 
     </div>
 
