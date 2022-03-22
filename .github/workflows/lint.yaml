@@ -28,15 +28,6 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ubuntu-r-4.1-4-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ubuntu-r-4.1-4-
-          
-      - name: Install system dependencies
-        if: runner.os == 'Linux'
-        env:
-          RHUB_PLATFORM: linux-x86_64-ubuntu-gcc
-        run: |
-          Rscript -e "remotes::install_github('r-hub/sysreqs')"
-          sysreqs=$(Rscript -e "cat(sysreqs::sysreq_commands('DESCRIPTION'))")
-          sudo -s eval "$sysreqs"
 
       - name: Install dependencies
         run: |
