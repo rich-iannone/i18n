@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_character_labels}
 \alias{cldr_character_labels}
-\title{Get localized values from the \code{character_labels} dataset}
+\title{Get localized values from the \link{character_labels} dataset}
 \usage{
 cldr_character_labels(locale = "en", element = c("patterns", "labels"))
 }
@@ -17,13 +17,13 @@ specified \code{locale}.}
 A named list.
 }
 \description{
-The \code{character_labels} table contains information on character patterns
+The \link{character_labels} table contains information on character patterns
 and character labels across 571 locales. The
 \code{cldr_character_labels()} function allows one to extract element values from
 the table by supplying the \code{locale} and one of the following element names:
 \itemize{
 \item \code{"patterns"}: corresponds to the \code{character_label_patterns} column in
-\code{character_labels}
-\item \code{"labels"}: is the \code{character_labels} column in \code{character_labels}
+\link{character_labels}
+\item \code{"labels"}: is the \code{character_labels} column in \link{character_labels}
 }
 }
