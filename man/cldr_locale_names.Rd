@@ -2,13 +2,13 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_locale_names}
 \alias{cldr_locale_names}
-\title{Get a single localized value from the \code{currencies} dataset}
+\title{Get a single localized value from the \link{lcoale_names} dataset}
 \usage{
 cldr_locale_names(locale = "en", element = locale_names_elements$lang_names)
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
-\code{locale_names} table.}
+\link{locale_names} table.}
 
 \item{element}{The element from which information will be obtained for the
 specified \code{locale}. A valid set of \link{locale_names} elements can be accessed
@@ -18,13 +18,13 @@ through the \link{locale_names_elements} list object.}
 A named list.
 }
 \description{
-The \code{locale_names} table contains information on how to express components of
+The \link{locale_names} table contains information on how to express components of
 locale codes and this is localized across 571 locales.
 The \code{cldr_locale_names()} function allows one to extract a named list using
 a \code{locale} and one of the following element names:
 \itemize{
-\item \code{"langs"}: corresponds to the \code{lang_names} column in \code{locale_names}
-\item \code{"scripts"}: is the \code{script_names} column in \code{locale_names}
+\item \code{"langs"}: corresponds to the \code{lang_names} column in \link{locale_names}
+\item \code{"scripts"}: is the \code{script_names} column in \link{locale_names}
 \item \code{"territories"}: is \code{territory_names}
 \item \code{"variants"}: is \code{variant_names}
 }
