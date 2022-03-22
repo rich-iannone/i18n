@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_characters}
 \alias{cldr_characters}
-\title{Get localized values from the \code{characters} dataset}
+\title{Get localized values from the \link{characters} dataset}
 \usage{
 cldr_characters(
   locale = "en",
@@ -11,7 +11,7 @@ cldr_characters(
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
-\code{characters} table.}
+\link{characters} table.}
 
 \item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
@@ -21,7 +21,7 @@ Either a named list or a length one character vector, depending on
 the \code{element} value.
 }
 \description{
-The \code{characters} table contains information on the usage of characters
+The \link{characters} table contains information on the usage of characters
 and exemplar character sets across 571 locales. The
 \code{cldr_characters()} function allows one to extract element values from the
 table by supplying the \code{locale} and one of the following element names:
