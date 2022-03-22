@@ -8,7 +8,7 @@ With the **cldr** package it’s possible to get **cldr** (*Common Locale
 Data Repository*) data to support your own localization efforts. This package
 provides up-to-date datasets from the Unicode's CLDR repositories, and, as an
 added bonus, functions to extract elements and sub-elements in a locale-specific
-way!
+way.
 
 The included datasets are:
 
@@ -86,7 +86,7 @@ cldr_dates(locale = "ko", element = dates_elements$days_standalone_wide)
 #> [1] "토요일"
 ```
 
-Need to get the appropriate display name for the the Japanese Yen (`"JPY"`)
+Need to get the appropriate display name for the Japanese Yen (`"JPY"`)
 currency while in the `"zh"` locale?
 
 ```r
