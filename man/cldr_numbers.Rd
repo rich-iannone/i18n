@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_numbers}
 \alias{cldr_numbers}
-\title{Get a single localized value from the \code{numbers} dataset}
+\title{Get a single localized value from the \link{numbers} dataset}
 \usage{
 cldr_numbers(
   locale = "en",
@@ -11,7 +11,7 @@ cldr_numbers(
 }
 \arguments{
 \item{locale}{The locale ID for which to obtain the data from the
-\code{numbers} table.}
+\link{numbers} table.}
 
 \item{element}{The element from which information will be obtained for the
 specified \code{locale}.}
@@ -21,7 +21,7 @@ Either a named list or a length one character vector, depending on
 the \code{element} value.
 }
 \description{
-The \code{numbers} table contains localization data for number usage and this data
+The \link{numbers} table contains localization data for number usage and this data
 is available for 571 locales. The \code{cldr_numbers()}
 function allows one to extract a named list using a \code{locale} and a specific
 \code{element}. The \code{element} values are:
