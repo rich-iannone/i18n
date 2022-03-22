@@ -190,9 +190,9 @@ characters_elements <-
 #'
 #' @description
 #' The `locale_names` table contains information on how to express components of
-#' locale codes and this is localized across 571 locales. The
-#' `cldr_locale_names()` function allows one to extract a named list using a
-#' `locale` and one of the following element names:
+#' locale codes and this is localized across `r length(all_locales)` locales.
+#' The `cldr_locale_names()` function allows one to extract a named list using
+#' a `locale` and one of the following element names:
 #' 
 #' - `"langs"`: corresponds to the `lang_names` column in `locale_names`
 #' - `"scripts"`: is the `script_names` column in `locale_names`
@@ -225,10 +225,10 @@ cldr_locale_names <- function(
 #'
 #' @description
 #' The `currencies` table contains information of currency codes and localized
-#' display names and symbols across 571 locales. The `cldr_currencies()`
-#' function allows one to extract a single element value from the table by
-#' supplying the `locale`, the currency code (`currency`), and one of the
-#' following `element` names:
+#' display names and symbols across `r length(all_locales)` locales. The
+#' `cldr_currencies()` function allows one to extract a single element value
+#' from the table by supplying the `locale`, the currency code (`currency`), and
+#' one of the following `element` names:
 #' 
 #' - `"currency_symbol"`
 #' - `"currency_symbol_narrow"`
@@ -239,10 +239,27 @@ cldr_locale_names <- function(
 #' @param locale The locale ID for which to obtain the data from the
 #'   `currencies` table.
 #' @param currency The currency code (e.g., `"USD"`, `"EUR"`, etc.). A valid set
-#'   of currency codes can be accessed through the `currency_codes` list object.
+#'   of currency codes can be accessed through the [currency_codes] list object.
 #' @param element The element from which information will be obtained for the
-#'   specified `locale`. A valid set of currency element can be accessed through
-#'   the `currencies_elements` list object.
+#'   specified `locale`. A valid set of currency elements can be accessed
+#'   through the [currencies_elements] list object.
+#'   
+#' @section Demos:
+#' 
+#' If you would like to get the currency display name for the Japanese Yen
+#' (`"JPY"`) currency while in the `"zh"` locale, the following invocation of
+#' `cldr_currencies()` can be used.
+#' 
+#' ```r
+#' cldr_currencies(
+#'   locale = "zh",
+#'   currency = currency_codes$JPY,
+#'   element = currencies_elements$currency_display_name
+#' )
+#' ```
+#' ```
+#' #> [1] "日元"
+#' ``` 
 #' 
 #' @return A length one character vector.
 #' 
@@ -263,7 +280,7 @@ cldr_currencies <- function(
 #'
 #' @description
 #' The `dates` table contains information on how to express dates and this data
-#' is localized across 571 locales. The `cldr_dates()`
+#' is localized across `r length(all_locales)` locales. The `cldr_dates()`
 #' function allows one to extract a named list using a `locale` and a specific
 #' `element`. The element values are:
 #' 
@@ -321,9 +338,9 @@ cldr_dates <- function(
 #'
 #' @description
 #' The `numbers` table contains localization data for number usage and this data
-#' is available for 571 locales. The `cldr_numbers()` function allows one to
-#' extract a named list using a `locale` and a specific `element`. The `element`
-#' values are:
+#' is available for `r length(all_locales)` locales. The `cldr_numbers()`
+#' function allows one to extract a named list using a `locale` and a specific
+#' `element`. The `element` values are:
 #' 
 #' - `"default_numbering_system"`
 #' - `"other_numbering_systems"`
@@ -383,9 +400,9 @@ cldr_numbers <- function(
 #'
 #' @description
 #' The `character_labels` table contains information on character patterns
-#' and character labels across 571 locales. The `cldr_character_labels()`
-#' function allows one to extract element values from the table by
-#' supplying the `locale` and one of the following element names:
+#' and character labels across `r length(all_locales)` locales. The
+#' `cldr_character_labels()` function allows one to extract element values from
+#' the table by supplying the `locale` and one of the following element names:
 #' 
 #' - `"patterns"`: corresponds to the `character_label_patterns` column in
 #' `character_labels`
@@ -425,9 +442,9 @@ cldr_character_labels <- function(
 #'
 #' @description
 #' The `characters` table contains information on the usage of characters
-#' and exemplar character sets across 571 locales. The `cldr_characters()`
-#' function allows one to extract element values from the table by
-#' supplying the `locale` and one of the following element names:
+#' and exemplar character sets across `r length(all_locales)` locales. The
+#' `cldr_characters()` function allows one to extract element values from the
+#' table by supplying the `locale` and one of the following element names:
 #' 
 #' - `"exemplar_characters"`
 #' - `"auxiliary"`
