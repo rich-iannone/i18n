@@ -19,9 +19,9 @@ A named list.
 }
 \description{
 The \code{locale_names} table contains information on how to express components of
-locale codes and this is localized across 571 locales. The
-\code{cldr_locale_names()} function allows one to extract a named list using a
-\code{locale} and one of the following element names:
+locale codes and this is localized across 571 locales.
+The \code{cldr_locale_names()} function allows one to extract a named list using
+a \code{locale} and one of the following element names:
 \itemize{
 \item \code{"langs"}: corresponds to the \code{lang_names} column in \code{locale_names}
 \item \code{"scripts"}: is the \code{script_names} column in \code{locale_names}

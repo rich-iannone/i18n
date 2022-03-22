@@ -12,8 +12,8 @@ numbers
 }
 \description{
 The \code{numbers} table contains localized data for number-related entities
-across 571 locales. This table has 571 rows (one per locale) and the
-following 26 columns:
+across 571 locales. This table has
+571 rows (one per locale) and the following 26 columns:
 }
 \details{
 \code{locale} (\code{character})

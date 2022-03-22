@@ -15,21 +15,21 @@ cldr_currencies(
 \code{currencies} table.}
 
 \item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.). A valid set
-of currency codes can be accessed through the \code{currency_codes} list object.}
+of currency codes can be accessed through the \link{currency_codes} list object.}
 
 \item{element}{The element from which information will be obtained for the
-specified \code{locale}. A valid set of currency element can be accessed through
-the \code{currencies_elements} list object.}
+specified \code{locale}. A valid set of currency elements can be accessed
+through the \link{currencies_elements} list object.}
 }
 \value{
 A length one character vector.
 }
 \description{
 The \code{currencies} table contains information of currency codes and localized
-display names and symbols across 571 locales. The \code{cldr_currencies()}
-function allows one to extract a single element value from the table by
-supplying the \code{locale}, the currency code (\code{currency}), and one of the
-following \code{element} names:
+display names and symbols across 571 locales. The
+\code{cldr_currencies()} function allows one to extract a single element value
+from the table by supplying the \code{locale}, the currency code (\code{currency}), and
+one of the following \code{element} names:
 \itemize{
 \item \code{"currency_symbol"}
 \item \code{"currency_symbol_narrow"}
@@ -38,3 +38,17 @@ following \code{element} names:
 \item \code{"currency_display_name_count_other"}
 }
 }
+\section{Demos}{
+
+
+If you would like to get the currency display name for the Japanese Yen
+(\code{"JPY"}) currency while in the \code{"zh"} locale, the following invocation of
+\code{cldr_currencies()} can be used.\if{html}{\out{<div class="sourceCode r">}}\preformatted{cldr_currencies(
+  locale = "zh",
+  currency = currency_codes$JPY,
+  element = currencies_elements$currency_display_name
+)
+}\if{html}{\out{</div>}}\preformatted{#> [1] "日元"
+}
+}
+

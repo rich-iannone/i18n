@@ -12,7 +12,8 @@ character_labels
 }
 \description{
 The \code{character_labels} table contains localized data for character labels
-across 571 locales. There are 571 rows and the following 3 columns:
+across 571 locales. There are 571
+rows and the following 3 columns:
 }
 \details{
 \itemize{

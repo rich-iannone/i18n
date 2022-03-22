@@ -12,7 +12,8 @@ dates
 }
 \description{
 The \code{dates} table contains localized data for constructing dates and times
-across 571 locales. There are 571 rows and the following 29 columns:
+across 571 locales. There are 571
+rows and the following 29 columns:
 }
 \details{
 \code{locale} (\code{character})

@@ -11,8 +11,9 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 characters
 }
 \description{
-The \code{characters} table contains localized character data across 571 locales.
-There are 571 rows and the following 12 columns:
+The \code{characters} table contains localized character data across
+571 locales. There are 571 rows and
+the following 12 columns:
 }
 \details{
 \itemize{

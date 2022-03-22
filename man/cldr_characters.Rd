@@ -22,9 +22,9 @@ the \code{element} value.
 }
 \description{
 The \code{characters} table contains information on the usage of characters
-and exemplar character sets across 571 locales. The \code{cldr_characters()}
-function allows one to extract element values from the table by
-supplying the \code{locale} and one of the following element names:
+and exemplar character sets across 571 locales. The
+\code{cldr_characters()} function allows one to extract element values from the
+table by supplying the \code{locale} and one of the following element names:
 \itemize{
 \item \code{"exemplar_characters"}
 \item \code{"auxiliary"}

@@ -12,8 +12,8 @@ locale_names
 }
 \description{
 The \code{locale_names} table contains localized names for languages, script
-names, names for territories, and names for variants. There are 571 rows and
-the following 5 columns:
+names, names for territories, and names for variants. There are
+571 rows and the following 5 columns:
 }
 \details{
 \itemize{
