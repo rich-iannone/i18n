@@ -14,8 +14,7 @@ dates
 The \code{dates} table contains localized data for constructing dates and times
 across 571 locales. There are 571
 rows and the following 29 columns:
-}
-\details{
+
 \code{locale} (\code{character})
 \code{months_format_abbrev} (\verb{named list [length of 12]})
 \code{months_format_narrow} (\verb{named list [length of 12]})

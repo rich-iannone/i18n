@@ -14,8 +14,6 @@ characters
 The \code{characters} table contains localized character data across
 571 locales. There are 571 rows and
 the following 12 columns:
-}
-\details{
 \itemize{
 \item \code{locale}(\code{character})
 \item \code{exemplar_characters} (\code{character})

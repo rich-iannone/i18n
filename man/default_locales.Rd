@@ -15,8 +15,7 @@ This is a table that contains base locale names (e.g., \code{"en"}, \code{"de"})
 alongside their default locale names. This indicates that \code{"en"} maps to
 \code{"en-US"} and \code{"de"} should map to \code{"de-DE"}. Throughout the \strong{cldr}
 datasets, base names are used instead of their expanded equivalents.
-}
-\details{
+
 There are 226 rows and the following 2 columns:
 \itemize{
 \item \code{default_locale} (\code{character})

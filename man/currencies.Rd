@@ -15,8 +15,6 @@ The \code{currencies} table contains localized data for number-related entities
 across 571 locales. This table has 173,013 rows, one per
 distinct combination of locale and currency (\code{currency_code}), and the
 following 7 columns:
-}
-\details{
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{currency_code} (\code{character})

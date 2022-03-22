@@ -14,8 +14,7 @@ numbers
 The \code{numbers} table contains localized data for number-related entities
 across 571 locales. This table has
 571 rows (one per locale) and the following 26 columns:
-}
-\details{
+
 \code{locale} (\code{character})
 \code{default_numbering_system} (\code{character})
 \code{other_numbering_systems} (\verb{named list [variable length]})

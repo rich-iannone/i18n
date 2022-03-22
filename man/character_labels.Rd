@@ -14,8 +14,6 @@ character_labels
 The \code{character_labels} table contains localized data for character labels
 across 571 locales. There are 571
 rows and the following 3 columns:
-}
-\details{
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{character_label_patterns} (\verb{named list [variable length]})
