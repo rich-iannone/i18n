@@ -1,12 +1,14 @@
 #' A vector containing all locale names
 #'
+#' @description
 #' This is a vector of the 571 locale names that are used throughout the tabular
 #' datasets within the **cldr** package.
 #'
 "all_locales"
 
 #' A table containing a mapping of default locale names to base locales
-#'
+#' 
+#' @description
 #' This is a table that contains base locale names (e.g., `"en"`, `"de"`)
 #' alongside their default locale names. This indicates that `"en"` maps to
 #' `"en-US"` and `"de"` should map to `"de-DE"`. Throughout the **cldr**
@@ -26,6 +28,7 @@
 
 #' A table with localized language, script, and territory names
 #'
+#' @description
 #' The `locale_names` table contains localized names for languages, script
 #' names, names for territories, and names for variants. There are
 #' `r length(all_locales)` rows and the following 5 columns:
@@ -46,6 +49,7 @@
 
 #' A table with localized date attributes and descriptors
 #'
+#' @description
 #' The `dates` table contains localized data for constructing dates and times
 #' across `r length(all_locales)` locales. There are `r length(all_locales)`
 #' rows and the following 29 columns:
@@ -84,6 +88,7 @@
 
 #' A table with localized numerical attributes and descriptors
 #'
+#' @description
 #' The `numbers` table contains localized data for number-related entities
 #' across `r length(all_locales)` locales. This table has
 #' `r length(all_locales)` rows (one per locale) and the following 26 columns:
@@ -328,6 +333,7 @@
 
 #' A table with localized currency attributes and descriptors
 #'
+#' @description
 #' The `currencies` table contains localized data for number-related entities
 #' across `r length(all_locales)` locales. This table has 173,013 rows, one per
 #' distinct combination of locale and currency (`currency_code`), and the
@@ -345,6 +351,7 @@
 
 #' A table with localized character labels and descriptors
 #'
+#' @description
 #' The `character_labels` table contains localized data for character labels
 #' across `r length(all_locales)` locales. There are `r length(all_locales)`
 #' rows and the following 3 columns:
@@ -357,6 +364,7 @@
 
 #' A table with localized character data
 #'
+#' @description
 #' The `characters` table contains localized character data across
 #' `r length(all_locales)` locales. There are `r length(all_locales)` rows and
 #' the following 12 columns:
