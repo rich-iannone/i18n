@@ -9,14 +9,6 @@ template:
   bootstrap: 5
 
 reference:
-  - title: Get CLDR Element Values
-    contents:
-    - cldr_locale_names
-    - cldr_numbers
-    - cldr_dates
-    - cldr_currencies
-    - cldr_characters
-    - cldr_character_labels
   - title: CLDR Tables
     contents:
     - all_locales
@@ -27,6 +19,14 @@ reference:
     - currencies
     - character_labels
     - characters
+  - title: Get CLDR Element Values
+    contents:
+    - cldr_locale_names
+    - cldr_numbers
+    - cldr_dates
+    - cldr_currencies
+    - cldr_characters
+    - cldr_character_labels
   - title: Element Lists
     contents:
     - locale_names_elements
