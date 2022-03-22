@@ -27,8 +27,8 @@
 #' A table with localized language, script, and territory names
 #'
 #' The `locale_names` table contains localized names for languages, script
-#' names, names for territories, and names for variants. There are 571 rows and
-#' the following 5 columns:
+#' names, names for territories, and names for variants. There are
+#' `r length(all_locales)` rows and the following 5 columns:
 #'
 #' - `locale` (`character`)
 #' - `lang_names` (`named list [variable length]`)
@@ -47,7 +47,8 @@
 #' A table with localized date attributes and descriptors
 #'
 #' The `dates` table contains localized data for constructing dates and times
-#' across 571 locales. There are 571 rows and the following 29 columns:
+#' across `r length(all_locales)` locales. There are `r length(all_locales)`
+#' rows and the following 29 columns:
 #' 
 #' `locale` (`character`)
 #' `months_format_abbrev` (`named list [length of 12]`)
@@ -84,8 +85,8 @@
 #' A table with localized numerical attributes and descriptors
 #'
 #' The `numbers` table contains localized data for number-related entities
-#' across 571 locales. This table has 571 rows (one per locale) and the
-#' following 26 columns:
+#' across `r length(all_locales)` locales. This table has
+#' `r length(all_locales)` rows (one per locale) and the following 26 columns:
 #' 
 #' `locale` (`character`)
 #' `default_numbering_system` (`character`)
@@ -328,8 +329,9 @@
 #' A table with localized currency attributes and descriptors
 #'
 #' The `currencies` table contains localized data for number-related entities
-#' across 571 locales. This table has 173,013 rows, one per distinct combination
-#' of locale and currency (`currency_code`), and the following 7 columns:
+#' across `r length(all_locales)` locales. This table has 173,013 rows, one per
+#' distinct combination of locale and currency (`currency_code`), and the
+#' following 7 columns:
 #'
 #' - `locale` (`character`)
 #' - `currency_code` (`character`)
@@ -344,7 +346,8 @@
 #' A table with localized character labels and descriptors
 #'
 #' The `character_labels` table contains localized data for character labels
-#' across 571 locales. There are 571 rows and the following 3 columns:
+#' across `r length(all_locales)` locales. There are `r length(all_locales)`
+#' rows and the following 3 columns:
 #' 
 #' - `locale` (`character`)
 #' - `character_label_patterns` (`named list [variable length]`)
@@ -354,8 +357,9 @@
 
 #' A table with localized character data
 #'
-#' The `characters` table contains localized character data across 571 locales.
-#' There are 571 rows and the following 12 columns:
+#' The `characters` table contains localized character data across
+#' `r length(all_locales)` locales. There are `r length(all_locales)` rows and
+#' the following 12 columns:
 #' 
 #' - `locale`(`character`)
 #' - `exemplar_characters` (`character`)
