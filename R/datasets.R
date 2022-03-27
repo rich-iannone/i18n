@@ -188,16 +188,10 @@
 #' Number symbols define the localized symbols that are commonly used when
 #' formatting numbers in a given locale. These symbols can be referenced using a
 #' number formatting pattern.
-#' 
-#' The available number symbols are as follows:
 #'   
-#' `decimal`:
-#' 
-#' Separates the integer and fractional part of the number.
-#' 
-#' `group`:
-#' 
-#' Separates clusters of integer digits to make large numbers more legible;
+#' The `decimal` (*CLDR*: `'decimal'`) symbol separates the integer and
+#' fractional part of the number. The `group` (*CLDR*: `'group'`) symbol
+#' separates clusters of integer digits to make large numbers more legible;
 #' commonly used for thousands (grouping size 3, e.g. `"100,000,000"`) or in
 #' some locales, ten-thousands (grouping size 4, e.g. `"1,0000,0000"`). There
 #' may be two different grouping sizes: The primary grouping size used for the
@@ -209,125 +203,78 @@
 #' grouping size. All others are ignored, so `"#,##,###,####"` ==
 #' `"###,###,####"` == `"##,#,###,####"`.
 #' 
-#' `list`:
+#' The `list` (*CLDR*: `'list'`) symbol is used to separate numbers in a list
+#' intended to represent structured data such as an array. It must be different
+#' from the decimal value. This list separator is for non-linguistic usage as
+#' opposed to the list patterns for linguistic lists (e.g. `"Bob, Carol, and
+#' Ted"`).
 #' 
-#' A symbol used to separate numbers in a list intended to represent structured
-#' data such as an array; must be different from the decimal value. This list
-#' separator is for non-linguistic usage as opposed to the list patterns for
-#' linguistic lists (e.g. `"Bob, Carol, and Ted"`).
+#' The `plus_sign` (*CLDR*: `'plusSign'`) is the preferred symbol for expressing
+#' a positive value and the `minus_sign` (*CLDR*: `'minusSign'`) is for negative
+#' values. It can be used to produce modified patterns, so that `"3.12"` is
+#' formatted as `"+3.12"`, for example. The standard number patterns (except for
+#' accounting notation) will contain the `minus_sign`, explicitly or implicitly.
+#' In the explicit pattern, the value of the `plus_sign` can be substituted for
+#' the value of the `minus_sign` to produce a pattern that has an explicit plus
+#' sign.
 #' 
-#' `percent_sign` ('percentSign'):
+#' The `approx_sign` (*CLDR*: `'approximatelySign'`) element contains a symbol
+#' used to denote an approximate value. The symbol is substituted in place of
+#' the `minus_sign` using the same semantics as `plus_sign` substitution.
 #' 
-#' A symbol used to indicate a percentage (1/100th) amount. If present, the
-#' value is also multiplied by 100 before formatting. That way `"1.23"` becomes
-#' `"123%"`.
+#' The `exp_sign` (*CLDR*: `'exponential'`) provides a symbol used for
+#' separating the mantissa and exponent values. The exponential notation in
+#' `sup_exp` (*CLDR*: `'superscriptingExponent'`) could alternatively be used to
+#' show a format like `"1.23 × 104"`. The superscripting can use markup, such as
+#' `<sup>4</sup>` in HTML, or for the special case of Latin digits, use
+#' superscripted numeral characters.
+#'
+#' The `percent_sign` (*CLDR*: `'percentSign'`) is a symbol used to indicate a
+#' percentage (1/100th) amount. If present, the value might require
+#' multiplication by 100 before formatting. That way `"1.23"` becomes `"123%"`.
+#' The `per_mille` (*CLDR*: `'perMille'`) symbol used to indicate a per mille
+#' (1/1000th) amount. If present, the value might need to be multiplied by 1000
+#' before formatting (e.g., `"1.23"` becomes `"1230"`).
 #' 
-#' `minus_sign` ('minusSign'):
+#' The infinity sign is provided in the `infinity` (*CLDR*: `'infinity'`)
+#' element. The `nan` element (*CLDR*: `'nan'`) has the NaN (not a number) sign.
+#' These elements both correspond to the IEEE bit patterns for inifity and NaN.
 #' 
-#' The symbol used to denote negative values.
-#' 
-#' `plus_sign` ('plusSign'):
-#' 
-#' The symbol used to denote positive value. It can be used to produce modified
-#' patterns, so that `"3.12"` is formatted as `"+3.12"`, for example. The
-#' standard number patterns (except for type="accounting") will contain the
-#' `minus_sign`, explicitly or implicitly. In the explicit pattern, the value of
-#' the `plus_sign` can be substituted for the value of the `minus_sign` to
-#' produce a pattern that has an explicit plus sign.
-#' 
-#' `approx_sign` ('approximatelySign'):
-#' 
-#' A symbol used to denote a value that is approximate but not exact. The symbol
-#' is substituted in place of the `minus_sign` using the same semantics as
-#' `plus_sign` substitution.
-#' 
-#' `exp_sign` ('exponential'):
-#' 
-#' A symbol used for separating the mantissa and exponent values.
-#' 
-#' `sup_exp` ('superscriptingExponent'):
-#' 
-#' Programmers are used to the fallback exponent style `"1.23E4"`, but that
-#' should not be shown to end-users. Instead, the exponential notation `sup_exp`
-#' should be used to show a format like `"1.23 × 104"`. The superscripting can
-#' use markup, such as `<sup>4</sup>` in HTML, or for the special case of Latin
-#' digits, use superscripted numeral characters.
-#' 
-#' `per_mille` ('perMille'):
-#' 
-#' The symbol used to indicate a per-mille (1/1000th) amount. If present, the
-#' value is also multiplied by 1000 before formatting. That way `"1.23"` becomes
-#' `"1230"`.
-#' 
-#' `infinity`:
-#' 
-#' The infinity sign. Corresponds to the IEEE infinity bit pattern.
-#' 
-#' `nan`:
-#' 
-#' The NaN (not a number) sign. Corresponds to the IEEE NaN bit pattern.
-#' 
-#' `time_sep` ('timeSeparator'):
-#' 
-#' This replaces any use of the `time_sep` pattern character in a date-time
-#' format pattern (no `time_sep` pattern character is currently defined, see
-#' note below). This allows the same time format to be used for multiple number
-#' systems when the time separator depends on the number system. For example,
-#' the time format for Arabic should be a colon when using the Latin numbering
-#' system, but when the Arabic numbering system is used, the traditional time
-#' separator in older print styles was often Arabic comma.
+#' The `time_sep` (*CLDR*: `'timeSeparator'`) pattern allows the same time
+#' format to be used for multiple number systems when the time separator depends
+#' on the number system. For example, the time format for Arabic should be a
+#' colon when using the Latin numbering system, but when the Arabic numbering
+#' system is used, the traditional time separator in older print styles was
+#' often Arabic comma.
 #' 
 #' @section Miscellaneous Patterns:
 #' 
-#' There are several miscellaneous patterns for special purposes. The currently
-#' defined values are:
-#'   
-#' `approx_pattern` ('approximately'):
-#' 
-#' Indicates an approximate number, such as: `"~99"`.
-#' 
-#' `at_most_pattern` ('atMost'):
-#' 
-#' Indicates a number or lower, such as: `"≤99"` to indicate that there are 99
-#' items or fewer.
-#' 
-#' `at_least_pattern` ('atLeast'):
-#' 
-#' Indicates a number or higher, such as: `"99+"` to indicate that there are 99
-#' items or more.
-#' 
-#' `range_pattern` ('range'):
-#' 
-#' Indicates a range of numbers, such as: `"99–103"` to indicate that there are
-#' from 99 to 103 items.
+#' There are several miscellaneous patterns for special purposes. The
+#' `approx_pattern` (*CLDR*: `'approximately'`) indicates an approximate number,
+#' such as: `"~99"`. With the pattern called `at_most_pattern` (*CLDR*:
+#' `'atMost'`) we can describe an upper limit, such as `"≤99"`. This indicates
+#' that, for example, there are 99 items or fewer. The `at_least_pattern`
+#' (*CLDR*: `'atLeast'`) describes a lower limit. This might be `"99+"` to
+#' indicate that there are 99 items or more. With the `range_pattern` (*CLDR*:
+#' `'range'`), a range of numbers, such as `"99–103"`, can be used to indicate
+#' that there are from 99 to 103 items.
 #' 
 #' @section Number Formats:
 #' 
 #' Number formats are used to define the rules for formatting numeric
-#' quantities. Different formats are provided for different contexts.
-#'   
-#' `decimal_format` ('decimalFormats'):
-#' 
-#' The normal locale-specific way to write a base 10 number. Variations of the
+#' quantities. Different formats are provided for different contexts. The
+#' `decimal_format` (*CLDR*: `'decimalFormats'`) is the prescribed
+#' locale-specific way to write a base 10 number. Variations of the
 #' `decimal_format` pattern are provided that allow compact number formatting.
-#' 
-#' `percent_format` ('percentFormats'):
-#' 
-#' Pattern for use with percentage formatting.
-#' 
-#' `sci_format` ('scientificFormats'):
-#' 
-#' Pattern for use with scientific (exponent) formatting.
-#' 
-#' `currency_format` ('currencyFormats'):
-#' 
-#' Pattern for use with currency formatting. This format contains a few
-#' additional structural options that allow proper placement of the currency
-#' symbol relative to the numeric quantity.
-#' 
-#' `accounting_format` ('accountingFormats'):
-#' 
-#' Pattern for use with accounting-style formatting.
+#' The `percent_format` (*CLDR*: `'percentFormats'`) is the pattern to use for
+#' percentage formatting. The pattern for use with scientific (exponent)
+#' formatting is provided as `sci_format` (*CLDR*: `'scientificFormats'`). The
+#' pattern for use with currency formatting is found in `currency_format`
+#' (*CLDR*: `'currencyFormats'`). This format contains a few additional
+#' structural options that allow proper placement of the currency symbol
+#' relative to the numeric quantity. The `accounting_format` (*CLDR*:
+#' `'accountingFormats'`) pattern is to be used to generate accounting-style
+#' formatting.
 #'
 "numbers"
 
