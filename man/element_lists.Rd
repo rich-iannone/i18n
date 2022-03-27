@@ -4,6 +4,7 @@
 \name{element_lists}
 \alias{element_lists}
 \alias{locale_names_elements}
+\alias{locale_list}
 \alias{currency_code_list}
 \alias{currencies_elements}
 \alias{dates_elements}
@@ -12,6 +13,8 @@
 \title{Element lists for different \strong{cldr} data tables}
 \format{
 An object of class \code{list} of length 4.
+
+An object of class \code{list} of length 571.
 
 An object of class \code{list} of length 303.
 
@@ -25,6 +28,8 @@ An object of class \code{list} of length 12.
 }
 \usage{
 locale_names_elements
+
+locale_list
 
 currency_code_list
 
