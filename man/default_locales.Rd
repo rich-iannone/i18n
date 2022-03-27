@@ -13,7 +13,7 @@ default_locales
 \description{
 This is a table that contains base locale names (e.g., \code{"en"}, \code{"de"})
 alongside their default locale names. This indicates that \code{"en"} maps to
-\code{"en-US"} and \code{"de"} should map to \code{"de-DE"}. Throughout the \strong{cldr}
+\code{"en-US"} and \code{"de"} should map to \code{"de-DE"}. Throughout the \strong{i18n}
 datasets, base names are used instead of their expanded equivalents.
 
 There are 226 rows and the following 2 columns:
@@ -23,7 +23,7 @@ There are 226 rows and the following 2 columns:
 }
 
 The \code{default_locale} column contains the expanded locale names (e.g.,
-\code{"en-US"}) that do not normally appear within the \strong{cldr} datasets but are
+\code{"en-US"}) that do not normally appear within the \emph{CLDR} datasets but are
 valid aliases for the base locale names (e.g., \code{"en"}) found in the
 \code{base_locale} column.
 }

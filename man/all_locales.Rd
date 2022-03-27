@@ -12,6 +12,6 @@ all_locales
 }
 \description{
 This is a vector of the 571 locale names that are used
-throughout the tabular datasets within the \strong{cldr} package.
+throughout the tabular datasets within the \strong{i18n} package.
 }
 \keyword{datasets}

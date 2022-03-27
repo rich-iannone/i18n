@@ -3,7 +3,7 @@ destination: docs
 home:
   strip_header: true
 
-url: https://rich-iannone.github.io/cldr
+url: https://rich-iannone.github.io/i18n
 
 template:
   bootstrap: 5

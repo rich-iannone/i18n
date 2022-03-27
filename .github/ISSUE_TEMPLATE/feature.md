@@ -8,8 +8,8 @@ assignees: rich-iannone
 
 ## Prework
 
-- [ ] Read and abide by **cldr**'s [code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) and [contributing guidelines](https://github.com/rich-iannone/cldr/blob/main/.github/CONTRIBUTING.md).
-- [ ] Search for duplicates among the [existing issues](https://github.com/rich-iannone/cldr/issues) (both open and closed).
+- [ ] Read and abide by **i18n**'s [code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) and [contributing guidelines](https://github.com/rich-iannone/cldr/blob/main/.github/CONTRIBUTING.md).
+- [ ] Search for duplicates among the [existing issues](https://github.com/rich-iannone/i18n/issues) (both open and closed).
 
 ## Proposal
 

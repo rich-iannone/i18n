@@ -1,4 +1,4 @@
-#' Element lists for different **cldr** data tables
+#' Element lists for different *CLDR* data tables
 #' 
 #' Several element lists are available for use in the various `cldr_*()`
 #' functions. The list object names, the number of elements they hold, and the

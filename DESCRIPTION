@@ -1,7 +1,7 @@
 Type: Package
-Package: cldr
+Package: i18n
 Version: 0.0.0.9000
-Title: Data from the 'Unicode CLDR' in Tabular Form
+Title: Internationalization Data from the 'Unicode CLDR' in Tabular Form
 Description: Up-to-date data from the 'Unicode CLDR Project' (where 'CLDR'
     stands for 'Common Locale Data Repository') are available here as a series
     of easy-to-parse datasets. Several functions are provided for extracting
@@ -11,8 +11,8 @@ Authors@R: c(
            comment = c(ORCID = "0000-0003-3925-190X"))
     )
 License: MIT + file LICENSE
-URL: https://github.com/rich-iannone/cldr
-BugReports: https://github.com/rich-iannone/cldr/issues
+URL: https://github.com/rich-iannone/i18n
+BugReports: https://github.com/rich-iannone/i18n/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

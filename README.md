@@ -1,10 +1,10 @@
-**cldr**
+**i18n**
 
 <!-- badges: start -->
-<a href="https://github.com/rich-iannone/cldr/actions"><img src="https://github.com/rich-iannone/cldr/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
+<a href="https://github.com/rich-iannone/i18n/actions"><img src="https://github.com/rich-iannone/i18n/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
 <!-- badges: end -->
 
-With the **cldr** package it’s possible to get **cldr** (*Common Locale
+With the **i18n** package it’s possible to get *CLDR* (*Common Locale
 Data Repository*) data to support your own localization efforts. This package
 provides up-to-date datasets from the Unicode's CLDR repositories, and, as an
 added bonus, functions to extract elements and sub-elements in a locale-specific
@@ -115,27 +115,27 @@ within the CLDR while using **R**!
 
 ## INSTALLATION
 
-Want to try this out?  You can install the development version of **cldr**
+Want to try this out?  You can install the development version of **i18n**
 from **GitHub**:
 
 ``` r
-devtools::install_github("rich-iannone/cldr")
+devtools::install_github("rich-iannone/i18n")
 ```
 
 If you encounter a bug, have usage questions, or want to share ideas to
 make this package better, feel free to file an
-[issue](https://github.com/rich-iannone/cldr/issues).
+[issue](https://github.com/rich-iannone/i18n/issues).
 
 ## Code of Conduct
 
-Please note that the **cldr** project is released with a [contributor
+Please note that the **i18n** project is released with a [contributor
 code of
 conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).<br>By
 participating in this project you agree to abide by its terms.
 
 ## 📄 License
 
-**cldr** is licensed under the MIT license.
+**i18n** is licensed under the MIT license.
 See the [`LICENSE.md`](LICENSE.md) file for more details.
 
 ## 🏛️ Governance

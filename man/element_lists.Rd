@@ -10,7 +10,7 @@
 \alias{dates_elements}
 \alias{numbers_elements}
 \alias{characters_elements}
-\title{Element lists for different \strong{cldr} data tables}
+\title{Element lists for different \emph{CLDR} data tables}
 \format{
 An object of class \code{list} of length 4.
 

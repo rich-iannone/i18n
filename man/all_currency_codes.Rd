@@ -12,6 +12,6 @@ all_currency_codes
 }
 \description{
 This is a vector of the 303 currency codes that
-are used in the \link{currencies} dataset within the \strong{cldr} package.
+are used in the \link{currencies} dataset within the \strong{i18n} package.
 }
 \keyword{datasets}

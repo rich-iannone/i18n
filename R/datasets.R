@@ -2,7 +2,7 @@
 #'
 #' @description
 #' This is a vector of the `r length(all_locales)` locale names that are used
-#' throughout the tabular datasets within the **cldr** package.
+#' throughout the tabular datasets within the **i18n** package.
 #'
 "all_locales"
 
@@ -10,7 +10,7 @@
 #'
 #' @description
 #' This is a vector of the `r length(all_currency_codes)` currency codes that
-#' are used in the [currencies] dataset within the **cldr** package.
+#' are used in the [currencies] dataset within the **i18n** package.
 #'
 "all_currency_codes"
 
@@ -19,7 +19,7 @@
 #' @description
 #' This is a table that contains base locale names (e.g., `"en"`, `"de"`)
 #' alongside their default locale names. This indicates that `"en"` maps to
-#' `"en-US"` and `"de"` should map to `"de-DE"`. Throughout the **cldr**
+#' `"en-US"` and `"de"` should map to `"de-DE"`. Throughout the **i18n**
 #' datasets, base names are used instead of their expanded equivalents.
 #' 
 #' There are `r nrow(default_locales)` rows and the following 2 columns:
@@ -28,7 +28,7 @@
 #' - `base_locale` (`character`)
 #'
 #' The `default_locale` column contains the expanded locale names (e.g.,
-#' `"en-US"`) that do not normally appear within the **cldr** datasets but are
+#' `"en-US"`) that do not normally appear within the *CLDR* datasets but are
 #' valid aliases for the base locale names (e.g., `"en"`) found in the
 #' `base_locale` column.
 #' 
