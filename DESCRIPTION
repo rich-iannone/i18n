@@ -1,10 +1,11 @@
 Type: Package
 Package: cldr
-Version: 0.0.0.9000
+Version: 0.1.0
 Title: Data from the 'Unicode CLDR' in Tabular Form
 Description: Up-to-date data from the 'Unicode CLDR Project' (where 'CLDR'
     stands for 'Common Locale Data Repository') are available here as a series
-    of easy-to-use rectangular datasets.
+    of easy-to-parse datasets. Several functions are provided for extracting
+    key elements from the tabular datasets. 
 Authors@R: c(
     person("Richard", "Iannone", , "riannone@me.com", c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3925-190X"))
