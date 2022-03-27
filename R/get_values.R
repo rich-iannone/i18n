@@ -26,7 +26,7 @@ locale_names_elements <-
 
 #' @rdname element_lists
 #' @export
-currency_codes <-
+currency_code_list <-
   list(
     ADP = "ADP", AED = "AED", AFA = "AFA", AFN = "AFN", ALK = "ALK", 
     ALL = "ALL", AMD = "AMD", ANG = "ANG", AOA = "AOA", AOK = "AOK", 
@@ -239,7 +239,7 @@ cldr_locale_names <- function(
 #' @param locale The locale ID for which to obtain the data from the
 #'   [currencies] table.
 #' @param currency The currency code (e.g., `"USD"`, `"EUR"`, etc.). A valid set
-#'   of currency codes can be accessed through the [currency_codes] list object.
+#'   of currency codes can be accessed through the [currency_code_list] object.
 #' @param element The element from which information will be obtained for the
 #'   specified `locale`. A valid set of currency elements can be accessed
 #'   through the [currencies_elements] list object.
@@ -253,7 +253,7 @@ cldr_locale_names <- function(
 #' ```r
 #' cldr_currencies(
 #'   locale = "de",
-#'   currency = currency_codes$GBP,
+#'   currency = currency_code_list$GBP,
 #'   element = currencies_elements$currency_display_name
 #' )
 #' ```
@@ -266,7 +266,7 @@ cldr_locale_names <- function(
 #' @export
 cldr_currencies <- function(
     locale = "en",
-    currency = currency_codes$USD,
+    currency = currency_code_list$USD,
     element = currencies_elements$currency_symbol
 ) {
 

@@ -6,7 +6,7 @@
 \usage{
 cldr_currencies(
   locale = "en",
-  currency = currency_codes$USD,
+  currency = currency_code_list$USD,
   element = currencies_elements$currency_symbol
 )
 }
@@ -15,7 +15,7 @@ cldr_currencies(
 \link{currencies} table.}
 
 \item{currency}{The currency code (e.g., \code{"USD"}, \code{"EUR"}, etc.). A valid set
-of currency codes can be accessed through the \link{currency_codes} list object.}
+of currency codes can be accessed through the \link{currency_code_list} object.}
 
 \item{element}{The element from which information will be obtained for the
 specified \code{locale}. A valid set of currency elements can be accessed
@@ -45,7 +45,7 @@ If you would like to get the currency display name for the British Pound
 (\code{"GBP"}) currency while in the \code{"de"} locale, the following invocation of
 \code{cldr_currencies()} can be used.\if{html}{\out{<div class="sourceCode r">}}\preformatted{cldr_currencies(
   locale = "de",
-  currency = currency_codes$GBP,
+  currency = currency_code_list$GBP,
   element = currencies_elements$currency_display_name
 )
 }\if{html}{\out{</div>}}\preformatted{#> [1] "Britisches Pfund"

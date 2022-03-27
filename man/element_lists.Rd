@@ -4,7 +4,7 @@
 \name{element_lists}
 \alias{element_lists}
 \alias{locale_names_elements}
-\alias{currency_codes}
+\alias{currency_code_list}
 \alias{currencies_elements}
 \alias{dates_elements}
 \alias{numbers_elements}
@@ -26,7 +26,7 @@ An object of class \code{list} of length 12.
 \usage{
 locale_names_elements
 
-currency_codes
+currency_code_list
 
 currencies_elements
 

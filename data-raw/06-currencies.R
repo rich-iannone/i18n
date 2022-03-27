@@ -108,3 +108,9 @@ readr::write_rds(
   file = "data-raw/currencies.rds",
   compress = "xz"
 )
+
+readr::write_rds(
+  sort(unique(currency_tbl$currency_code)),
+  file = "data-raw/all_currency_codes.rds",
+  compress = "xz"
+)

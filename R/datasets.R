@@ -6,6 +6,14 @@
 #'
 "all_locales"
 
+#' A vector containing every currency code
+#'
+#' @description
+#' This is a vector of the `length(all_currency_codes)` currency codes that are
+#' used in the [currencies] dataset within the **cldr** package.
+#'
+"all_currency_codes"
+
 #' A table containing a mapping of default locale names to base locales
 #' 
 #' @description

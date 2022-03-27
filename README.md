@@ -13,6 +13,7 @@ way.
 The included datasets are:
 
 - `all_locales`
+- `all_currency_codes`
 - `default_locales`
 - `locale_names`
 - `numbers`
@@ -92,7 +93,7 @@ currency while in the `"zh"` locale?
 ```r
 cldr_currencies(
   locale = "zh",
-  currency = currency_codes$JPY,
+  currency = currency_code_list$JPY,
   element = currencies_elements$currency_display_name
 )
 ```

@@ -13,6 +13,7 @@ source("data-raw/07-character_labels.R")
 source("data-raw/08-characters.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
+all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
 default_locales <- readRDS("data-raw/default_locales.rds")
 locale_names <- readRDS("data-raw/locale_names.rds")
 dates <- readRDS("data-raw/dates.rds")
@@ -24,6 +25,7 @@ characters <- readRDS("data-raw/characters.rds")
 # Create external datasets
 usethis::use_data(
   all_locales,
+  all_currency_codes,
   default_locales,
   locale_names,
   dates,
@@ -37,6 +39,7 @@ usethis::use_data(
 # Create internal datasets
 usethis::use_data(
   all_locales,
+  all_currency_codes,
   default_locales,
   locale_names,
   dates,
