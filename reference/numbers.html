@@ -149,30 +149,33 @@ etc.). The remaining 25 columns will be explained in separate sections.</p>
     <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 571 rows and 26 columns.</p>
     </div>
     <div class="section level2">
-    <h2 id="default-numbering-system-default-numbering-system-">Default Numbering System (<code>default_numbering_system</code>)<a class="anchor" aria-label="anchor" href="#default-numbering-system-default-numbering-system-"></a></h2>
+    <h2 id="default-numbering-system">Default Numbering System<a class="anchor" aria-label="anchor" href="#default-numbering-system"></a></h2>
     
 
-<p>The <code>default_numbering_system</code> column provides an element that indicates
-which numbering system should be used for presentation of numeric quantities
-in the given locale.</p>
+
+<p>The <code>default_numbering_system</code> (<em>CLDR</em>: <code>'defaultNumberingSystem'</code>) column
+provides an element that indicates which numbering system should be used for
+presentation of numeric quantities in the given locale.</p>
     </div>
     <div class="section level2">
-    <h2 id="other-numbering-systems-other-numbering-systems-">Other Numbering Systems (<code>other_numbering_systems</code>)<a class="anchor" aria-label="anchor" href="#other-numbering-systems-other-numbering-systems-"></a></h2>
+    <h2 id="other-numbering-systems">Other Numbering Systems<a class="anchor" aria-label="anchor" href="#other-numbering-systems"></a></h2>
     
 
-<p>The <code>other_numbering_systems</code> column provides an element that defines general
-categories of numbering systems that are sometimes used in the given locale
-for formatting numeric quantities. These additional numbering systems are
-often used in very specific contexts, such as in calendars or for financial
-purposes. There are currently three defined categories, as follows:</p>
+
+<p>The <code>other_numbering_systems</code> (<em>CLDR</em>: <code>'otherNumberingSystems'</code>) column
+provides an element that defines general categories of numbering systems that
+are sometimes used in the given locale for formatting numeric quantities.
+These additional numbering systems are often used in very specific contexts,
+such as in calendars or for financial purposes. There are currently three
+defined categories, as follows:</p>
 <p><strong>native</strong></p>
 <p>Defines the numbering system used for the native digits, usually defined as a
 part of the script used to write the language. The native numbering system
 can only be a numeric positional decimal-digit numbering system, using digits
-with General_Category=Decimal_Number. Note: In locales where the native
-numbering system is the default, it is assumed that the numbering system
-"latn" ( Western Digits 0-9 ) is always acceptable, and can be selected using
-the -nu keyword as part of a Unicode locale identifier.</p>
+with General_Category=Decimal_Number. In locales where the native numbering
+system is the default, it is assumed that the numbering system <code>"latn"</code> (
+Western Digits <code>0</code>-<code>9</code>) is always acceptable, and can be selected using the
+<code>"-nu"</code> keyword as part of a Unicode locale identifier.</p>
 <p><strong>traditional</strong></p>
 <p>Defines the traditional numerals for a locale. This numbering system may be
 numeric or algorithmic. If the traditional numbering system is not defined,
@@ -186,25 +189,24 @@ strokes. If the financial numbering system is not specified, applications
 should use the default numbering system as a fallback.</p>
 <p>The categories defined for other numbering systems can be used in a Unicode
 locale identifier to select the proper numbering system without having to
-know the specific numbering system by name. For example:</p>
-<p>To select Hindi language using the native digits for numeric formatting, use
-locale ID: <code>"hi-IN-u-nu-native"</code>.</p>
-<p>To select Chinese language using the appropriate financial numerals, use
-locale ID: <code>"zh-u-nu-finance"</code>.</p>
-<p>To select Tamil language using the traditional Tamil numerals, use locale ID:
-<code>"ta-u-nu-traditio"</code>.</p>
-<p>To select Arabic language using western digits 0-9, use locale ID:
-<code>"ar-u-nu-latn"</code>.</p>
+know the specific numbering system by name. To select the Hindi language
+using the native digits for numeric formatting, use locale ID
+<code>"hi-IN-u-nu-native"</code>. To select the Chinese language using the appropriate
+financial numerals, use locale ID: <code>"zh-u-nu-finance"</code>. With the Tamil
+language using the traditional Tamil numerals, use locale ID
+<code>"ta-u-nu-traditio"</code>. As a last example, to select the Arabic language using
+western digits <code>0</code>-<code>9</code>, use locale ID <code>"ar-u-nu-latn"</code>.</p>
     </div>
     <div class="section level2">
-    <h2 id="minimum-grouping-digits-minimum-grouping-digits-">Minimum Grouping Digits (<code>minimum_grouping_digits</code>)<a class="anchor" aria-label="anchor" href="#minimum-grouping-digits-minimum-grouping-digits-"></a></h2>
+    <h2 id="minimum-grouping-digits">Minimum Grouping Digits<a class="anchor" aria-label="anchor" href="#minimum-grouping-digits"></a></h2>
     
 
 
-<p>The <code>minimum_grouping_digits</code> value can be used to suppress groupings below a
-certain value. This is used for languages such as Polish, where one would
-only write the grouping separator for values above 9999. The
-<code>minimum_grouping_digits</code> value contains the default for the locale.</p>
+<p>The <code>minimum_grouping_digits</code> (<em>CLDR</em>: <code>'minimumGroupingDigits'</code>) value can
+be used to suppress groupings below a certain value. This is used for
+languages such as Polish, where one would only write the grouping separator
+for values above <code>9999</code>. The <code>minimum_grouping_digits</code> value contains the
+default for the locale.</p>
     </div>
     <div class="section level2">
     <h2 id="number-symbols">Number Symbols<a class="anchor" aria-label="anchor" href="#number-symbols"></a></h2>
