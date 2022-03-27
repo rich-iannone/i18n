@@ -214,11 +214,9 @@ only write the grouping separator for values above 9999. The
 <p>Number symbols define the localized symbols that are commonly used when
 formatting numbers in a given locale. These symbols can be referenced using a
 number formatting pattern.</p>
-<p>The available number symbols are as follows:</p>
-<p><code>decimal</code>:</p>
-<p>Separates the integer and fractional part of the number.</p>
-<p><code>group</code>:</p>
-<p>Separates clusters of integer digits to make large numbers more legible;
+<p>The <code>decimal</code> (<em>CLDR</em>: <code>'decimal'</code>) symbol separates the integer and
+fractional part of the number. The <code>group</code> (<em>CLDR</em>: <code>'group'</code>) symbol
+separates clusters of integer digits to make large numbers more legible;
 commonly used for thousands (grouping size 3, e.g. <code>"100,000,000"</code>) or in
 some locales, ten-thousands (grouping size 4, e.g. <code>"1,0000,0000"</code>). There
 may be two different grouping sizes: The primary grouping size used for the
@@ -229,71 +227,57 @@ interval between the last one and the end of the integer defines the primary
 grouping size, and the interval between the last two defines the secondary
 grouping size. All others are ignored, so <code>"#,##,###,####"</code> ==
 <code>"###,###,####"</code> == <code>"##,#,###,####"</code>.</p>
-<p><code>list</code>:</p>
-<p>A symbol used to separate numbers in a list intended to represent structured
-data such as an array; must be different from the decimal value. This list
-separator is for non-linguistic usage as opposed to the list patterns for
-linguistic lists (e.g. <code>"Bob, Carol, and Ted"</code>).</p>
-<p><code>percent_sign</code> ('percentSign'):</p>
-<p>A symbol used to indicate a percentage (1/100th) amount. If present, the
-value is also multiplied by 100 before formatting. That way <code>"1.23"</code> becomes
-<code>"123%"</code>.</p>
-<p><code>minus_sign</code> ('minusSign'):</p>
-<p>The symbol used to denote negative values.</p>
-<p><code>plus_sign</code> ('plusSign'):</p>
-<p>The symbol used to denote positive value. It can be used to produce modified
-patterns, so that <code>"3.12"</code> is formatted as <code>"+3.12"</code>, for example. The
-standard number patterns (except for type="accounting") will contain the
-<code>minus_sign</code>, explicitly or implicitly. In the explicit pattern, the value of
-the <code>plus_sign</code> can be substituted for the value of the <code>minus_sign</code> to
-produce a pattern that has an explicit plus sign.</p>
-<p><code>approx_sign</code> ('approximatelySign'):</p>
-<p>A symbol used to denote a value that is approximate but not exact. The symbol
-is substituted in place of the <code>minus_sign</code> using the same semantics as
-<code>plus_sign</code> substitution.</p>
-<p><code>exp_sign</code> ('exponential'):</p>
-<p>A symbol used for separating the mantissa and exponent values.</p>
-<p><code>sup_exp</code> ('superscriptingExponent'):</p>
-<p>Programmers are used to the fallback exponent style <code>"1.23E4"</code>, but that
-should not be shown to end-users. Instead, the exponential notation <code>sup_exp</code>
-should be used to show a format like <code>"1.23 × 104"</code>. The superscripting can
-use markup, such as <code>&lt;sup&gt;4&lt;/sup&gt;</code> in HTML, or for the special case of Latin
-digits, use superscripted numeral characters.</p>
-<p><code>per_mille</code> ('perMille'):</p>
-<p>The symbol used to indicate a per-mille (1/1000th) amount. If present, the
-value is also multiplied by 1000 before formatting. That way <code>"1.23"</code> becomes
-<code>"1230"</code>.</p>
-<p><code>infinity</code>:</p>
-<p>The infinity sign. Corresponds to the IEEE infinity bit pattern.</p>
-<p><code>nan</code>:</p>
-<p>The NaN (not a number) sign. Corresponds to the IEEE NaN bit pattern.</p>
-<p><code>time_sep</code> ('timeSeparator'):</p>
-<p>This replaces any use of the <code>time_sep</code> pattern character in a date-time
-format pattern (no <code>time_sep</code> pattern character is currently defined, see
-note below). This allows the same time format to be used for multiple number
-systems when the time separator depends on the number system. For example,
-the time format for Arabic should be a colon when using the Latin numbering
-system, but when the Arabic numbering system is used, the traditional time
-separator in older print styles was often Arabic comma.</p>
+<p>The <code>list</code> (<em>CLDR</em>: <code>'list'</code>) symbol is used to separate numbers in a list
+intended to represent structured data such as an array. It must be different
+from the decimal value. This list separator is for non-linguistic usage as
+opposed to the list patterns for linguistic lists (e.g. <code>"Bob, Carol, and Ted"</code>).</p>
+<p>The <code>plus_sign</code> (<em>CLDR</em>: <code>'plusSign'</code>) is the preferred symbol for expressing
+a positive value and the <code>minus_sign</code> (<em>CLDR</em>: <code>'minusSign'</code>) is for negative
+values. It can be used to produce modified patterns, so that <code>"3.12"</code> is
+formatted as <code>"+3.12"</code>, for example. The standard number patterns (except for
+accounting notation) will contain the <code>minus_sign</code>, explicitly or implicitly.
+In the explicit pattern, the value of the <code>plus_sign</code> can be substituted for
+the value of the <code>minus_sign</code> to produce a pattern that has an explicit plus
+sign.</p>
+<p>The <code>approx_sign</code> (<em>CLDR</em>: <code>'approximatelySign'</code>) element contains a symbol
+used to denote an approximate value. The symbol is substituted in place of
+the <code>minus_sign</code> using the same semantics as <code>plus_sign</code> substitution.</p>
+<p>The <code>exp_sign</code> (<em>CLDR</em>: <code>'exponential'</code>) provides a symbol used for
+separating the mantissa and exponent values. The exponential notation in
+<code>sup_exp</code> (<em>CLDR</em>: <code>'superscriptingExponent'</code>) could alternatively be used to
+show a format like <code>"1.23 × 104"</code>. The superscripting can use markup, such as
+<code>&lt;sup&gt;4&lt;/sup&gt;</code> in HTML, or for the special case of Latin digits, use
+superscripted numeral characters.</p>
+<p>The <code>percent_sign</code> (<em>CLDR</em>: <code>'percentSign'</code>) is a symbol used to indicate a
+percentage (1/100th) amount. If present, the value might require
+multiplication by 100 before formatting. That way <code>"1.23"</code> becomes <code>"123%"</code>.
+The <code>per_mille</code> (<em>CLDR</em>: <code>'perMille'</code>) symbol used to indicate a per mille
+(1/1000th) amount. If present, the value might need to be multiplied by 1000
+before formatting (e.g., <code>"1.23"</code> becomes <code>"1230"</code>).</p>
+<p>The infinity sign is provided in the <code>infinity</code> (<em>CLDR</em>: <code>'infinity'</code>)
+element. The <code>nan</code> element (<em>CLDR</em>: <code>'nan'</code>) has the NaN (not a number) sign.
+These elements both correspond to the IEEE bit patterns for inifity and NaN.</p>
+<p>The <code>time_sep</code> (<em>CLDR</em>: <code>'timeSeparator'</code>) pattern allows the same time
+format to be used for multiple number systems when the time separator depends
+on the number system. For example, the time format for Arabic should be a
+colon when using the Latin numbering system, but when the Arabic numbering
+system is used, the traditional time separator in older print styles was
+often Arabic comma.</p>
     </div>
     <div class="section level2">
     <h2 id="miscellaneous-patterns">Miscellaneous Patterns<a class="anchor" aria-label="anchor" href="#miscellaneous-patterns"></a></h2>
     
 
 
-<p>There are several miscellaneous patterns for special purposes. The currently
-defined values are:</p>
-<p><code>approx_pattern</code> ('approximately'):</p>
-<p>Indicates an approximate number, such as: <code>"~99"</code>.</p>
-<p><code>at_most_pattern</code> ('atMost'):</p>
-<p>Indicates a number or lower, such as: <code>"≤99"</code> to indicate that there are 99
-items or fewer.</p>
-<p><code>at_least_pattern</code> ('atLeast'):</p>
-<p>Indicates a number or higher, such as: <code>"99+"</code> to indicate that there are 99
-items or more.</p>
-<p><code>range_pattern</code> ('range'):</p>
-<p>Indicates a range of numbers, such as: <code>"99–103"</code> to indicate that there are
-from 99 to 103 items.</p>
+<p>There are several miscellaneous patterns for special purposes. The
+<code>approx_pattern</code> (<em>CLDR</em>: <code>'approximately'</code>) indicates an approximate number,
+such as: <code>"~99"</code>. With the pattern called <code>at_most_pattern</code> (<em>CLDR</em>:
+<code>'atMost'</code>) we can describe an upper limit, such as <code>"≤99"</code>. This indicates
+that, for example, there are 99 items or fewer. The <code>at_least_pattern</code>
+(<em>CLDR</em>: <code>'atLeast'</code>) describes a lower limit. This might be <code>"99+"</code> to
+indicate that there are 99 items or more. With the <code>range_pattern</code> (<em>CLDR</em>:
+<code>'range'</code>), a range of numbers, such as <code>"99–103"</code>, can be used to indicate
+that there are from 99 to 103 items.</p>
     </div>
     <div class="section level2">
     <h2 id="number-formats">Number Formats<a class="anchor" aria-label="anchor" href="#number-formats"></a></h2>
@@ -301,20 +285,19 @@ from 99 to 103 items.</p>
 
 
 <p>Number formats are used to define the rules for formatting numeric
-quantities. Different formats are provided for different contexts.</p>
-<p><code>decimal_format</code> ('decimalFormats'):</p>
-<p>The normal locale-specific way to write a base 10 number. Variations of the
-<code>decimal_format</code> pattern are provided that allow compact number formatting.</p>
-<p><code>percent_format</code> ('percentFormats'):</p>
-<p>Pattern for use with percentage formatting.</p>
-<p><code>sci_format</code> ('scientificFormats'):</p>
-<p>Pattern for use with scientific (exponent) formatting.</p>
-<p><code>currency_format</code> ('currencyFormats'):</p>
-<p>Pattern for use with currency formatting. This format contains a few
-additional structural options that allow proper placement of the currency
-symbol relative to the numeric quantity.</p>
-<p><code>accounting_format</code> ('accountingFormats'):</p>
-<p>Pattern for use with accounting-style formatting.</p>
+quantities. Different formats are provided for different contexts. The
+<code>decimal_format</code> (<em>CLDR</em>: <code>'decimalFormats'</code>) is the prescribed
+locale-specific way to write a base 10 number. Variations of the
+<code>decimal_format</code> pattern are provided that allow compact number formatting.
+The <code>percent_format</code> (<em>CLDR</em>: <code>'percentFormats'</code>) is the pattern to use for
+percentage formatting. The pattern for use with scientific (exponent)
+formatting is provided as <code>sci_format</code> (<em>CLDR</em>: <code>'scientificFormats'</code>). The
+pattern for use with currency formatting is found in <code>currency_format</code>
+(<em>CLDR</em>: <code>'currencyFormats'</code>). This format contains a few additional
+structural options that allow proper placement of the currency symbol
+relative to the numeric quantity. The <code>accounting_format</code> (<em>CLDR</em>:
+<code>'accountingFormats'</code>) pattern is to be used to generate accounting-style
+formatting.</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
