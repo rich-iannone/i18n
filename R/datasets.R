@@ -237,14 +237,13 @@
 #'
 #' The `percent_sign` (*CLDR*: `'percentSign'`) is a symbol used to indicate a
 #' percentage (1/100th) amount. If present, the value might require
-#' multiplication by 100 before formatting. That way `"1.23"` becomes `"123%"`.
-#' The `per_mille` (*CLDR*: `'perMille'`) symbol used to indicate a per mille
-#' (1/1000th) amount. If present, the value might need to be multiplied by 1000
-#' before formatting (e.g., `"1.23"` becomes `"1230"`).
+#' multiplication by `100` before formatting. The `per_mille` (*CLDR*:
+#' `'perMille'`) symbol used to indicate a per mille (1/1000th) amount. If
+#' present, the value might need to be multiplied by `1000` before formatting.
 #' 
 #' The infinity sign is provided in the `infinity` (*CLDR*: `'infinity'`)
 #' element. The `nan` element (*CLDR*: `'nan'`) has the NaN (not a number) sign.
-#' These elements both correspond to the IEEE bit patterns for inifity and NaN.
+#' These elements both correspond to the IEEE bit patterns for infinity and NaN.
 #' 
 #' The `time_sep` (*CLDR*: `'timeSeparator'`) pattern allows the same time
 #' format to be used for multiple number systems when the time separator depends

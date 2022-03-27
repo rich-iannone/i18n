@@ -158,14 +158,13 @@ superscripted numeral characters.
 
 The \code{percent_sign} (\emph{CLDR}: \code{'percentSign'}) is a symbol used to indicate a
 percentage (1/100th) amount. If present, the value might require
-multiplication by 100 before formatting. That way \code{"1.23"} becomes \code{"123\%"}.
-The \code{per_mille} (\emph{CLDR}: \code{'perMille'}) symbol used to indicate a per mille
-(1/1000th) amount. If present, the value might need to be multiplied by 1000
-before formatting (e.g., \code{"1.23"} becomes \code{"1230"}).
+multiplication by \code{100} before formatting. The \code{per_mille} (\emph{CLDR}:
+\code{'perMille'}) symbol used to indicate a per mille (1/1000th) amount. If
+present, the value might need to be multiplied by \code{1000} before formatting.
 
 The infinity sign is provided in the \code{infinity} (\emph{CLDR}: \code{'infinity'})
 element. The \code{nan} element (\emph{CLDR}: \code{'nan'}) has the NaN (not a number) sign.
-These elements both correspond to the IEEE bit patterns for inifity and NaN.
+These elements both correspond to the IEEE bit patterns for infinity and NaN.
 
 The \code{time_sep} (\emph{CLDR}: \code{'timeSeparator'}) pattern allows the same time
 format to be used for multiple number systems when the time separator depends
