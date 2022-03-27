@@ -252,13 +252,12 @@ show a format like <code>"1.23 × 104"</code>. The superscripting can use markup
 superscripted numeral characters.</p>
 <p>The <code>percent_sign</code> (<em>CLDR</em>: <code>'percentSign'</code>) is a symbol used to indicate a
 percentage (1/100th) amount. If present, the value might require
-multiplication by 100 before formatting. That way <code>"1.23"</code> becomes <code>"123%"</code>.
-The <code>per_mille</code> (<em>CLDR</em>: <code>'perMille'</code>) symbol used to indicate a per mille
-(1/1000th) amount. If present, the value might need to be multiplied by 1000
-before formatting (e.g., <code>"1.23"</code> becomes <code>"1230"</code>).</p>
+multiplication by <code>100</code> before formatting. The <code>per_mille</code> (<em>CLDR</em>:
+<code>'perMille'</code>) symbol used to indicate a per mille (1/1000th) amount. If
+present, the value might need to be multiplied by <code>1000</code> before formatting.</p>
 <p>The infinity sign is provided in the <code>infinity</code> (<em>CLDR</em>: <code>'infinity'</code>)
 element. The <code>nan</code> element (<em>CLDR</em>: <code>'nan'</code>) has the NaN (not a number) sign.
-These elements both correspond to the IEEE bit patterns for inifity and NaN.</p>
+These elements both correspond to the IEEE bit patterns for infinity and NaN.</p>
 <p>The <code>time_sep</code> (<em>CLDR</em>: <code>'timeSeparator'</code>) pattern allows the same time
 format to be used for multiple number systems when the time separator depends
 on the number system. For example, the time format for Arabic should be a
