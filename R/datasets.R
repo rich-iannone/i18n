@@ -257,12 +257,12 @@
 #' There are several miscellaneous patterns for special purposes. The
 #' `approx_pattern` (*CLDR*: `'approximately'`) indicates an approximate number,
 #' such as: `"~99"`. With the pattern called `at_most_pattern` (*CLDR*:
-#' `'atMost'`) we can describe an upper limit, such as `"≤99"`. This indicates
-#' that, for example, there are 99 items or fewer. The `at_least_pattern`
-#' (*CLDR*: `'atLeast'`) describes a lower limit. This might be `"99+"` to
-#' indicate that there are 99 items or more. With the `range_pattern` (*CLDR*:
-#' `'range'`), a range of numbers, such as `"99–103"`, can be used to indicate
-#' that there are from 99 to 103 items.
+#' `'atMost'`) we can describe an upper limit. This indicates that, for example,
+#' there are `99` items or fewer. The `at_least_pattern` (*CLDR*: `'atLeast'`)
+#' describes a lower limit. This might be `"99+"` to indicate that there are
+#' `99` items or more. With the `range_pattern` (*CLDR*: `'range'`), a range of
+#' numbers, such as `"99–103"`, can be used to indicate that there are from `99`
+#' to `103` items.
 #' 
 #' @section Number Formats:
 #' 

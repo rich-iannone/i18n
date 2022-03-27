@@ -180,12 +180,12 @@ often Arabic comma.
 There are several miscellaneous patterns for special purposes. The
 \code{approx_pattern} (\emph{CLDR}: \code{'approximately'}) indicates an approximate number,
 such as: \code{"~99"}. With the pattern called \code{at_most_pattern} (\emph{CLDR}:
-\code{'atMost'}) we can describe an upper limit, such as \code{"≤99"}. This indicates
-that, for example, there are 99 items or fewer. The \code{at_least_pattern}
-(\emph{CLDR}: \code{'atLeast'}) describes a lower limit. This might be \code{"99+"} to
-indicate that there are 99 items or more. With the \code{range_pattern} (\emph{CLDR}:
-\code{'range'}), a range of numbers, such as \code{"99–103"}, can be used to indicate
-that there are from 99 to 103 items.
+\code{'atMost'}) we can describe an upper limit. This indicates that, for example,
+there are \code{99} items or fewer. The \code{at_least_pattern} (\emph{CLDR}: \code{'atLeast'})
+describes a lower limit. This might be \code{"99+"} to indicate that there are
+\code{99} items or more. With the \code{range_pattern} (\emph{CLDR}: \code{'range'}), a range of
+numbers, such as \code{"99–103"}, can be used to indicate that there are from \code{99}
+to \code{103} items.
 }
 
 \section{Number Formats}{
