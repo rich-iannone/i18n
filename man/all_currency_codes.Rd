@@ -11,7 +11,7 @@ An object of class \code{character} of length 303.
 all_currency_codes
 }
 \description{
-This is a vector of the \code{length(all_currency_codes)} currency codes that are
-used in the \link{currencies} dataset within the \strong{cldr} package.
+This is a vector of the 303 currency codes that
+are used in the \link{currencies} dataset within the \strong{cldr} package.
 }
 \keyword{datasets}

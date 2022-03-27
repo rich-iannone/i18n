@@ -46,30 +46,33 @@ across 571 locales. This table has
 The first column, \code{locale}, is the locale name (e.g., \code{"en"}, \code{"de-AT"},
 etc.). The remaining 25 columns will be explained in separate sections.
 }
-\section{Default Numbering System (\code{default_numbering_system})}{
+\section{Default Numbering System}{
 
-The \code{default_numbering_system} column provides an element that indicates
-which numbering system should be used for presentation of numeric quantities
-in the given locale.
+
+The \code{default_numbering_system} (\emph{CLDR}: \code{'defaultNumberingSystem'}) column
+provides an element that indicates which numbering system should be used for
+presentation of numeric quantities in the given locale.
 }
 
-\section{Other Numbering Systems (\code{other_numbering_systems})}{
+\section{Other Numbering Systems}{
 
-The \code{other_numbering_systems} column provides an element that defines general
-categories of numbering systems that are sometimes used in the given locale
-for formatting numeric quantities. These additional numbering systems are
-often used in very specific contexts, such as in calendars or for financial
-purposes. There are currently three defined categories, as follows:
+
+The \code{other_numbering_systems} (\emph{CLDR}: \code{'otherNumberingSystems'}) column
+provides an element that defines general categories of numbering systems that
+are sometimes used in the given locale for formatting numeric quantities.
+These additional numbering systems are often used in very specific contexts,
+such as in calendars or for financial purposes. There are currently three
+defined categories, as follows:
 
 \strong{native}
 
 Defines the numbering system used for the native digits, usually defined as a
 part of the script used to write the language. The native numbering system
 can only be a numeric positional decimal-digit numbering system, using digits
-with General_Category=Decimal_Number. Note: In locales where the native
-numbering system is the default, it is assumed that the numbering system
-"latn" ( Western Digits 0-9 ) is always acceptable, and can be selected using
-the -nu keyword as part of a Unicode locale identifier.
+with General_Category=Decimal_Number. In locales where the native numbering
+system is the default, it is assumed that the numbering system \code{"latn"} (
+Western Digits \code{0}-\code{9}) is always acceptable, and can be selected using the
+\code{"-nu"} keyword as part of a Unicode locale identifier.
 
 \strong{traditional}
 
@@ -88,28 +91,23 @@ should use the default numbering system as a fallback.
 
 The categories defined for other numbering systems can be used in a Unicode
 locale identifier to select the proper numbering system without having to
-know the specific numbering system by name. For example:
-
-To select Hindi language using the native digits for numeric formatting, use
-locale ID: \code{"hi-IN-u-nu-native"}.
-
-To select Chinese language using the appropriate financial numerals, use
-locale ID: \code{"zh-u-nu-finance"}.
-
-To select Tamil language using the traditional Tamil numerals, use locale ID:
-\code{"ta-u-nu-traditio"}.
-
-To select Arabic language using western digits 0-9, use locale ID:
-\code{"ar-u-nu-latn"}.
+know the specific numbering system by name. To select the Hindi language
+using the native digits for numeric formatting, use locale ID
+\code{"hi-IN-u-nu-native"}. To select the Chinese language using the appropriate
+financial numerals, use locale ID: \code{"zh-u-nu-finance"}. With the Tamil
+language using the traditional Tamil numerals, use locale ID
+\code{"ta-u-nu-traditio"}. As a last example, to select the Arabic language using
+western digits \code{0}-\code{9}, use locale ID \code{"ar-u-nu-latn"}.
 }
 
-\section{Minimum Grouping Digits (\code{minimum_grouping_digits})}{
+\section{Minimum Grouping Digits}{
 
 
-The \code{minimum_grouping_digits} value can be used to suppress groupings below a
-certain value. This is used for languages such as Polish, where one would
-only write the grouping separator for values above 9999. The
-\code{minimum_grouping_digits} value contains the default for the locale.
+The \code{minimum_grouping_digits} (\emph{CLDR}: \code{'minimumGroupingDigits'}) value can
+be used to suppress groupings below a certain value. This is used for
+languages such as Polish, where one would only write the grouping separator
+for values above \code{9999}. The \code{minimum_grouping_digits} value contains the
+default for the locale.
 }
 
 \section{Number Symbols}{
