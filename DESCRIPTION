@@ -22,4 +22,7 @@ Depends:
 Imports: 
     magrittr
 Suggests:
-    lintr
+    lintr,
+    testthat (>= 3.0.0),
+    pointblank
+Config/testthat/edition: 3
