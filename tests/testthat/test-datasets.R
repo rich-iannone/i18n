@@ -15,29 +15,29 @@ test_that("Datasets have the expected types", {
 
 test_that("Tabular datasets have the expected dimensions", {
   
-  expect_col_count_match(default_locales, 2)
+  expect_equal(ncol(default_locales), 2)
   expect_row_count_match(default_locales, 226)
   
-  expect_col_count_match(locale_names, 5)
+  expect_equal(ncol(locale_names), 5)
   expect_row_count_match(locale_names, length(all_locales))
   expect_equal(locale_names$locale, all_locales)
 
-  expect_col_count_match(dates, 29)
+  expect_equal(ncol(dates), 29)
   expect_row_count_match(dates, length(all_locales))
   expect_equal(dates$locale, all_locales)
   
-  expect_col_count_match(numbers, 26)
+  expect_equal(ncol(numbers), 26)
   expect_row_count_match(numbers, length(all_locales))
   expect_equal(numbers$locale, all_locales)
   
-  expect_col_count_match(currencies, 7)
+  expect_equal(ncol(currencies), 7)
   expect_row_count_match(currencies, length(all_locales) * length(all_currency_codes))
   
-  expect_col_count_match(character_labels, 3)
+  expect_equal(ncol(character_labels), 3)
   expect_row_count_match(character_labels, length(all_locales))
   expect_equal(character_labels$locale, all_locales)
 
-  expect_col_count_match(characters, 12)
+  expect_equal(ncol(characters), 12)
   expect_row_count_match(characters, length(all_locales))
   expect_equal(characters$locale, all_locales)
 })
