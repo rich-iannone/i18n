@@ -115,8 +115,13 @@ within the CLDR while using **R**!
 
 ## INSTALLATION
 
-Want to try this out?  You can install the development version of **i18n**
-from **GitHub**:
+Want to try this out? The **i18n** package is available on **CRAN**:
+
+``` r
+install.packages("i18n")
+```
+
+You can also install the development version of **i18n** from **GitHub**:
 
 ``` r
 devtools::install_github("rich-iannone/i18n")
