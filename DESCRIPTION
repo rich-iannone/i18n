@@ -1,6 +1,6 @@
 Type: Package
 Package: i18n
-Version: 0.0.0.9000
+Version: 0.1.0
 Title: Internationalization Data from the 'Unicode CLDR' in Tabular Form
 Description: Up-to-date data from the 'Unicode CLDR Project' (where 'CLDR'
     stands for 'Common Locale Data Repository') are available here as a series
@@ -22,4 +22,6 @@ Depends:
 Imports: 
     magrittr
 Suggests:
-    lintr
+    lintr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
