@@ -1,6 +1,7 @@
 **i18n**
 
 <!-- badges: start -->
+<a href="https://cran.r-project.org/package=i18n"><img src="https://www.r-pkg.org/badges/version/i18n" alt="CRAN status" /></a>
 <a href="https://github.com/rich-iannone/i18n/actions"><img src="https://github.com/rich-iannone/i18n/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
 <!-- badges: end -->
 
