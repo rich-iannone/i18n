@@ -11,6 +11,7 @@ source("data-raw/05-numbers.R")
 source("data-raw/06-currencies.R")
 source("data-raw/07-character_labels.R")
 source("data-raw/08-characters.R")
+source("data-raw/09-units.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
@@ -21,6 +22,7 @@ numbers <- readRDS("data-raw/numbers.rds")
 currencies <- readRDS("data-raw/currencies.rds")
 character_labels <- readRDS("data-raw/character_labels.rds")
 characters <- readRDS("data-raw/characters.rds")
+units <- readRDS("data-raw/units.rds")
 
 # Create external datasets
 usethis::use_data(
@@ -33,6 +35,7 @@ usethis::use_data(
   currencies,
   character_labels,
   characters,
+  units,
   internal = FALSE, overwrite = TRUE
 )
 

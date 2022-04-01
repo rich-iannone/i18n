@@ -335,3 +335,33 @@
 #' - `stricter_scope_number` (`named list [length of 2]`)
 #'
 "characters"
+
+#' A table with localized data on units
+#'
+#' @description
+#' The `units` table contains localized character data across
+#' `r length(all_locales)` locales. There are `r nrow(units)` rows and
+#' the following `r ncol(units)` columns. Each row represents a display
+#' type (`"long"`, `"short"`, or `"narrow"`) for a locale.
+#' 
+#' Following the `locale` and `type` columns, each unit and it's subelements
+#' are provided as a cluster of columns in the form
+#' `"<<category>-unit name>.<subelement name>"`. The subelement names are:
+#' 
+#' - `"displayName"`
+#' - `"unitPattern-count-one"`
+#' - `"unitPattern-count-other"`
+#' - `"unitPattern-count-zero"`
+#' - `"unitPattern-count-two"`
+#' - `"unitPattern-count-few"`
+#' - `"unitPattern-count-many"`
+#'
+#' The `"displayName"` is the localized name for a unit when displayed outside
+#' of a pattern. The `"unitPattern-count-*"` subelements provide the localized
+#' forms of the unit when the value is exactly `0` (`"unitPattern-count-one"`),
+#' `1` (`"unitPattern-count-one"`), `2` (`"unitPattern-count-two"`), and, when
+#' the value constitutes a few (`"unitPattern-count-few"`) or many
+#' (`"unitPattern-count-many"`) units. Every other case is handled by
+#' `"unitPattern-count-other"`.
+#'
+"units"
