@@ -5,7 +5,7 @@
 \alias{dates}
 \title{A table with localized date attributes and descriptors}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 29 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 38 columns.
 }
 \usage{
 dates
@@ -13,12 +13,20 @@ dates
 \description{
 The \code{dates} table contains localized data for constructing dates and times
 across 571 locales. There are 571
-rows and the following 29 columns:
+rows and the following 38 columns:
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{months_format_abbrev} (\verb{named list [length of 12]})
 \item \code{months_format_narrow} (\verb{named list [length of 12]})
 \item \code{months_format_wide} (\verb{named list [length of 12]})
+\item \code{months_standalone_abbrev} (\verb{named list [length of 12]})
+\item \code{months_standalone_narrow} (\verb{named list [length of 12]})
+\item \code{months_standalone_wide} (\verb{named list [length of 12]})
+\item \code{days_format_abbrev} (\verb{named list [length of 7]})
+\item \code{days_format_narrow} (\verb{named list [length of 7]})
+\item \code{days_format_short} (\verb{named list [length of 7]})
+\item \code{days_format_wide} (\verb{named list [length of 7]})
+\item \code{days_standalone_abbrev} (\verb{named list [length of 7]})
 \item \code{days_standalone_narrow} (\verb{named list [length of 7]})
 \item \code{days_standalone_short} (\verb{named list [length of 7]})
 \item \code{days_standalone_wide} (\verb{named list [length of 7]})
