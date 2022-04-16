@@ -44,19 +44,3 @@ usethis::use_data(
   tz_names,
   internal = FALSE, overwrite = TRUE
 )
-
-# Create internal datasets
-usethis::use_data(
-  all_locales,
-  all_currency_codes,
-  default_locales,
-  locale_names,
-  dates,
-  numbers,
-  currencies,
-  character_labels,
-  characters,
-  script_metadata,
-  internal = TRUE, overwrite = TRUE
-)
-
