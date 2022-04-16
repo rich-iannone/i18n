@@ -1,0 +1,15 @@
+utils::globalVariables(
+  c(
+    "all_locales",
+    "all_currency_codes",
+    "default_locales",
+    "locale_names",
+    "dates",
+    "numbers",
+    "currencies",
+    "character_labels",
+    "characters",
+    "units",
+    "script_metadata"
+  )
+)
