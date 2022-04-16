@@ -23,9 +23,9 @@ names, names for territories, and names for variants. There are
 }
 
 The \code{lang_names} column contains named lists for all localized language
-names. The \code{script_names} column holds named lists for all localized
-script names, and \code{territory_names} has all of the localized territory
-names per locale. The \code{variant_names} list column containing named lists for all localized
-variant names.
+names. The \code{script_names} column holds named lists for all localized script
+names, and \code{territory_names} has all of the localized territory names per
+locale. The \code{variant_names} list column containing named lists for all
+localized variant names.
 }
 \keyword{datasets}
