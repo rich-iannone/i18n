@@ -48,10 +48,10 @@
 #' - `variant_names` (`named list [variable length]`)
 #' 
 #' The `lang_names` column contains named lists for all localized language
-#' names. The `script_names` column holds named lists for all localized
-#' script names, and `territory_names` has all of the localized territory
-#' names per locale. The `variant_names` list column containing named lists for all localized
-#' variant names.
+#' names. The `script_names` column holds named lists for all localized script
+#' names, and `territory_names` has all of the localized territory names per
+#' locale. The `variant_names` list column containing named lists for all
+#' localized variant names.
 #' 
 "locale_names"
 
@@ -380,10 +380,10 @@
 #' - `variant_names` (`named list [variable length]`)
 #' 
 #' The `lang_names` column contains named lists for all localized language
-#' names. The `script_names` column holds named lists for all localized
-#' script names, and `territory_names` has all of the localized territory
-#' names per locale. The `variant_names` list column containing named lists for all localized
-#' variant names.
+#' names. The `script_names` column holds named lists for all localized script
+#' names, and `territory_names` has all of the localized territory names per
+#' locale. The `variant_names` list column containing named lists for all
+#' localized variant names.
 #' 
 "script_metadata"
 
@@ -395,3 +395,20 @@
 #' exemplar city name (comprising `r ncol(tz_names) - 1` columns).
 #' 
 "tz_names"
+
+#' A table with localized time zone formatting information
+#'
+#' @description
+#' The `tz_formats` table contains localized formatting information across all
+#' locales. There are `r length(all_locales)` rows and the following 7 columns:
+#' 
+#' - `locale` (`character`)
+#' - `hour_format` (`character`)
+#' - `gmt_format` (`character`)
+#' - `gmt_zero_format` (`character`)
+#' - `region_format` (`character`)
+#' - `region_format_daylight` (`character`)
+#' - `region_format_standard` (`character`)
+#' - `region_format_fallback` (`character`)
+#' 
+"tz_formats"
