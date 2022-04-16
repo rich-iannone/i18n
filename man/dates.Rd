@@ -49,6 +49,7 @@ rows and the following 38 columns:
 \item \code{date_skeletons} (\verb{named list [length of 4]})
 \item \code{time_formats} (\verb{named list [variable length]})
 \item \code{time_skeletons} (\verb{named list [variable length]})
+\item \code{date_time_patterns} (\verb{named list [length of 4]})
 \item \code{date_time_available_formats} (\verb{named list [variable length]})
 \item \code{date_time_append_items} (\verb{named list [length of 11]})
 \item \code{date_time_interval_formats} (\verb{named list [variable length]})
