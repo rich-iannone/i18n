@@ -27,6 +27,7 @@ characters <- readRDS("data-raw/characters.rds")
 units <- readRDS("data-raw/units.rds")
 script_metadata <- readRDS("data-raw/script_metadata.rds")
 tz_names <- readRDS("data-raw/tz_names.rds")
+tz_formats <- readRDS("data-raw/tz_formats.rds")
 
 # Create external datasets
 usethis::use_data(
@@ -42,5 +43,6 @@ usethis::use_data(
   units,
   script_metadata,
   tz_names,
+  tz_formats,
   internal = FALSE, overwrite = TRUE
 )
