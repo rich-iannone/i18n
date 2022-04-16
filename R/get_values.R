@@ -564,48 +564,6 @@ cldr_numbers <- function(
   values
 }
 
-#' Get localized values from the [character_labels] dataset
-#'
-#' @description
-#' The [character_labels] table contains information on character patterns
-#' and character labels across `r length(all_locales)` locales. The
-#' `cldr_character_labels()` function allows one to extract element values from
-#' the table by supplying the `locale` and one of the following element names:
-#' 
-#' - `"patterns"`: corresponds to the `character_label_patterns` column in
-#' [character_labels]
-#' - `"labels"`: is the `character_labels` column in [character_labels]
-#' 
-#' @param locale The locale ID for which to obtain the data from the
-#'   `character_labels` table.
-#' @param element The element from which information will be obtained for the
-#'   specified `locale`.
-#' 
-#' @return A named list.
-#' 
-#' @export
-cldr_character_labels <- function(
-    locale = "en",
-    element = c("patterns", "labels")
-) {
-  
-  element <- match.arg(element)
-  
-  element_full <-
-    switch(
-      element,
-      patterns = "character_label_patterns",
-      labels = "character_labels"
-    )
-  
-  values <- character_labels[character_labels$locale == locale,][[element_full]]
-  values <- unlist(values, use.names = TRUE)
-  
-  names(values) <- gsub("^value\\.", "", names(values))
-  
-  as.list(values)
-}
-
 #' Get localized values from the [characters] dataset
 #'
 #' @description
@@ -652,4 +610,46 @@ cldr_characters <- function(
   }
   
   values
+}
+
+#' Get localized values from the [character_labels] dataset
+#'
+#' @description
+#' The [character_labels] table contains information on character patterns
+#' and character labels across `r length(all_locales)` locales. The
+#' `cldr_character_labels()` function allows one to extract element values from
+#' the table by supplying the `locale` and one of the following element names:
+#' 
+#' - `"patterns"`: corresponds to the `character_label_patterns` column in
+#' [character_labels]
+#' - `"labels"`: is the `character_labels` column in [character_labels]
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `character_labels` table.
+#' @param element The element from which information will be obtained for the
+#'   specified `locale`.
+#' 
+#' @return A named list.
+#' 
+#' @export
+cldr_character_labels <- function(
+    locale = "en",
+    element = c("patterns", "labels")
+) {
+  
+  element <- match.arg(element)
+  
+  element_full <-
+    switch(
+      element,
+      patterns = "character_label_patterns",
+      labels = "character_labels"
+    )
+  
+  values <- character_labels[character_labels$locale == locale,][[element_full]]
+  values <- unlist(values, use.names = TRUE)
+  
+  names(values) <- gsub("^value\\.", "", names(values))
+  
+  as.list(values)
 }
