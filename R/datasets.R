@@ -365,3 +365,24 @@
 #' `"unitPattern-count-other"`.
 #'
 "units"
+
+#' A table with localized language, script, and territory names
+#'
+#' @description
+#' The `locale_names` table contains localized names for languages, script
+#' names, names for territories, and names for variants. There are
+#' `r length(all_locales)` rows and the following 5 columns:
+#'
+#' - `locale` (`character`)
+#' - `lang_names` (`named list [variable length]`)
+#' - `script_names` (`named list [variable length]`)
+#' - `territory_names` (`named list [variable length]`)
+#' - `variant_names` (`named list [variable length]`)
+#' 
+#' The `lang_names` column contains named lists for all localized language
+#' names. The `script_names` column holds named lists for all localized
+#' script names, and `territory_names` has all of the localized territory
+#' names per locale. The `variant_names` list column containing named lists for all localized
+#' variant names.
+#' 
+"script_metadata"
