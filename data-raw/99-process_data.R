@@ -23,6 +23,7 @@ currencies <- readRDS("data-raw/currencies.rds")
 character_labels <- readRDS("data-raw/character_labels.rds")
 characters <- readRDS("data-raw/characters.rds")
 units <- readRDS("data-raw/units.rds")
+script_metadata <- readRDS("data-raw/script_metadata.rds")
 
 # Create external datasets
 usethis::use_data(
@@ -36,6 +37,7 @@ usethis::use_data(
   character_labels,
   characters,
   units,
+  script_metadata,
   internal = FALSE, overwrite = TRUE
 )
 
@@ -50,6 +52,7 @@ usethis::use_data(
   currencies,
   character_labels,
   characters,
+  script_metadata,
   internal = TRUE, overwrite = TRUE
 )
 
