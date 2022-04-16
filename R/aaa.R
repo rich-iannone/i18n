@@ -11,6 +11,7 @@ utils::globalVariables(
     "characters",
     "units",
     "script_metadata",
-    "tz_names"
+    "tz_names",
+    "tz_formats"
   )
 )
