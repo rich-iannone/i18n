@@ -354,7 +354,7 @@ characters_elements <-
     stricter_scope_number = "stricter_scope_number"
   )
 
-#' Get a single localized value from the [locale_names] dataset
+#' Get a localized list of locale names from the [locale_names] dataset
 #'
 #' @description
 #' The [locale_names] table contains information on how to express components of
