@@ -23,6 +23,7 @@ reference:
     - units
     - script_metadata
     - tz_names
+    - tz_formats
   - title: Get CLDR Element Values
     contents:
     - cldr_locale_names
