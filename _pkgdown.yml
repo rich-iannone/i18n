@@ -20,14 +20,16 @@ reference:
     - currencies
     - character_labels
     - characters
+    - units
+    - script_metadata
   - title: Get CLDR Element Values
     contents:
     - cldr_locale_names
     - cldr_numbers
     - cldr_dates
     - cldr_currencies
-    - cldr_characters
     - cldr_character_labels
+    - cldr_characters
   - title: Element Lists
     contents:
     - locale_list
