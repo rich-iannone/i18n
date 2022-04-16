@@ -60,12 +60,20 @@
 #' @description
 #' The `dates` table contains localized data for constructing dates and times
 #' across `r length(all_locales)` locales. There are `r length(all_locales)`
-#' rows and the following 29 columns:
+#' rows and the following `r ncol(dates)` columns:
 #' 
 #' - `locale` (`character`)
 #' - `months_format_abbrev` (`named list [length of 12]`)
 #' - `months_format_narrow` (`named list [length of 12]`)
 #' - `months_format_wide` (`named list [length of 12]`)
+#' - `months_standalone_abbrev` (`named list [length of 12]`)
+#' - `months_standalone_narrow` (`named list [length of 12]`)
+#' - `months_standalone_wide` (`named list [length of 12]`)
+#' - `days_format_abbrev` (`named list [length of 7]`)
+#' - `days_format_narrow` (`named list [length of 7]`)
+#' - `days_format_short` (`named list [length of 7]`)
+#' - `days_format_wide` (`named list [length of 7]`)
+#' - `days_standalone_abbrev` (`named list [length of 7]`)
 #' - `days_standalone_narrow` (`named list [length of 7]`)
 #' - `days_standalone_short` (`named list [length of 7]`)
 #' - `days_standalone_wide` (`named list [length of 7]`)
