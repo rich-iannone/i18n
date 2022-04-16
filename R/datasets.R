@@ -386,3 +386,12 @@
 #' variant names.
 #' 
 "script_metadata"
+
+#' A table with names for time zone exemplar cities
+#'
+#' @description
+#' The `tz_names` table contains localized names for all exemplar cities used in
+#' time zone names. There are `r length(all_locales)` rows and a column for each
+#' exemplar city name (comprising `r ncol(tz_names) - 1` columns).
+#' 
+"tz_names"
