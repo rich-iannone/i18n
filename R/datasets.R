@@ -96,6 +96,7 @@
 #' - `date_skeletons` (`named list [length of 4]`)
 #' - `time_formats` (`named list [variable length]`)
 #' - `time_skeletons` (`named list [variable length]`)
+#' - `date_time_patterns` (`named list [length of 4]`)
 #' - `date_time_available_formats` (`named list [variable length]`)
 #' - `date_time_append_items` (`named list [length of 11]`)
 #' - `date_time_interval_formats` (`named list [variable length]`)
