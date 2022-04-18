@@ -5,6 +5,7 @@ utils::globalVariables(
     "default_locales",
     "locale_names",
     "dates",
+    "dates_generic",
     "numbers",
     "currencies",
     "character_labels",
