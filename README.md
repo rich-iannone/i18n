@@ -17,11 +17,18 @@ The included datasets are:
 - `all_currency_codes`
 - `default_locales`
 - `locale_names`
-- `numbers`
 - `dates`
+- `dates_generic`
+- `numbers`
 - `currencies`
 - `characters`
 - `character_labels`
+- `delimiters`
+- `layout`
+- `script_metadata`
+- `units`
+- `tz_names`
+- `tz_formats`
 
 And the nice-to-have functions are:
 
@@ -48,7 +55,7 @@ cldr_numbers(locale = "de", element = numbers_elements$decimal)
 cldr_numbers(locale = "de", element = numbers_elements$group)
 ```
 ```
-#> [1] ","
+#> [1] "."
 ```
 
 Need to know the `"LU"` territory name from the `"es"` locale?
@@ -105,7 +112,7 @@ cldr_currencies(
 Would you like the complete set of exemplar characters for the `"fi"` locale?
 
 ```r
-cldr_characters(locale = "fr", element = characters_elements$exemplar_characters)
+cldr_characters(locale = "fi", element = characters_elements$exemplar_characters)
 ```
 ```
 #> [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"
@@ -149,4 +156,3 @@ See the [`LICENSE.md`](LICENSE.md) file for more details.
 This project is primarily maintained by [Rich Iannone](https://twitter.com/riannone).
 
 <hr>
-
