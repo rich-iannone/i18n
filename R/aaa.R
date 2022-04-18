@@ -8,10 +8,12 @@ utils::globalVariables(
     "dates_generic",
     "numbers",
     "currencies",
-    "character_labels",
     "characters",
-    "units",
+    "character_labels",
+    "delimiters",
+    "layout",
     "script_metadata",
+    "units",
     "tz_names",
     "tz_formats"
   )
