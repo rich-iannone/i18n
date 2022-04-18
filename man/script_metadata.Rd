@@ -3,7 +3,7 @@
 \docType{data}
 \name{script_metadata}
 \alias{script_metadata}
-\title{A table with localized language, script, and territory names}
+\title{A table with metadata for a wide variety of script types}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 168 rows and 11 columns.
 }
@@ -11,21 +11,22 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 script_metadata
 }
 \description{
-The \code{locale_names} table contains localized names for languages, script
-names, names for territories, and names for variants. There are
-571 rows and the following 5 columns:
+The \code{script_metadata} table contains metadata for various script types.
+There are
+168 rows and the following 11 columns:
 \itemize{
-\item \code{locale} (\code{character})
-\item \code{lang_names} (\verb{named list [variable length]})
-\item \code{script_names} (\verb{named list [variable length]})
-\item \code{territory_names} (\verb{named list [variable length]})
-\item \code{variant_names} (\verb{named list [variable length]})
+\item \code{script} (\code{character})
+\item \code{sample_char} (\code{character})
+\item \code{rank} (\code{integer})
+\item \code{script} (\code{character})
+\item \code{rtl} (\code{character})
+\item \code{lb_letters} (\code{character})
+\item \code{has_case} (\code{character})
+\item \code{shaping_req} (\code{character})
+\item \code{ime} (\code{character})
+\item \code{density} (\code{integer})
+\item \code{origin_country} (\code{character})
+\item \code{likely_lang} (\code{character})
 }
-
-The \code{lang_names} column contains named lists for all localized language
-names. The \code{script_names} column holds named lists for all localized script
-names, and \code{territory_names} has all of the localized territory names per
-locale. The \code{variant_names} list column containing named lists for all
-localized variant names.
 }
 \keyword{datasets}
