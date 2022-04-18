@@ -7,19 +7,21 @@ source("data-raw/01-locales.R")
 source("data-raw/02-default_locales.R")
 source("data-raw/03-locale_names.R")
 source("data-raw/04-dates.R")
-source("data-raw/05-numbers.R")
-source("data-raw/06-currencies.R")
-source("data-raw/07-character_labels.R")
-source("data-raw/08-characters.R")
-source("data-raw/09-units.R")
-source("data-raw/10-script_meta.R")
-source("data-raw/11-tz_names.R")
+source("data-raw/05-dates_generic.R")
+source("data-raw/06-numbers.R")
+source("data-raw/07-currencies.R")
+source("data-raw/08-character_labels.R")
+source("data-raw/09-characters.R")
+source("data-raw/10-units.R")
+source("data-raw/11-script_meta.R")
+source("data-raw/12-tz_names.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
 default_locales <- readRDS("data-raw/default_locales.rds")
 locale_names <- readRDS("data-raw/locale_names.rds")
 dates <- readRDS("data-raw/dates.rds")
+dates_generic <- readRDS("data-raw/dates_generic.rds")
 numbers <- readRDS("data-raw/numbers.rds")
 currencies <- readRDS("data-raw/currencies.rds")
 character_labels <- readRDS("data-raw/character_labels.rds")
@@ -36,6 +38,7 @@ usethis::use_data(
   default_locales,
   locale_names,
   dates,
+  dates_generic,
   numbers,
   currencies,
   character_labels,
