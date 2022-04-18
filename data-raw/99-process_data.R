@@ -10,11 +10,14 @@ source("data-raw/04-dates.R")
 source("data-raw/05-dates_generic.R")
 source("data-raw/06-numbers.R")
 source("data-raw/07-currencies.R")
-source("data-raw/08-character_labels.R")
-source("data-raw/09-characters.R")
-source("data-raw/10-units.R")
-source("data-raw/11-script_meta.R")
-source("data-raw/12-tz_names.R")
+source("data-raw/08-characters.R")
+source("data-raw/09-character_labels.R")
+source("data-raw/10-delimiters.R")
+source("data-raw/11-layout.R")
+source("data-raw/12-script_metadata.R")
+source("data-raw/13-units.R")
+source("data-raw/14-tz_names.R")
+source("data-raw/15-tz_formats.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
@@ -24,10 +27,12 @@ dates <- readRDS("data-raw/dates.rds")
 dates_generic <- readRDS("data-raw/dates_generic.rds")
 numbers <- readRDS("data-raw/numbers.rds")
 currencies <- readRDS("data-raw/currencies.rds")
-character_labels <- readRDS("data-raw/character_labels.rds")
 characters <- readRDS("data-raw/characters.rds")
-units <- readRDS("data-raw/units.rds")
+character_labels <- readRDS("data-raw/character_labels.rds")
+delimiters <- readRDS("data-raw/delimiters.rds")
+layout <- readRDS("data-raw/layout.rds")
 script_metadata <- readRDS("data-raw/script_metadata.rds")
+units <- readRDS("data-raw/units.rds")
 tz_names <- readRDS("data-raw/tz_names.rds")
 tz_formats <- readRDS("data-raw/tz_formats.rds")
 
@@ -41,10 +46,12 @@ usethis::use_data(
   dates_generic,
   numbers,
   currencies,
-  character_labels,
   characters,
-  units,
+  character_labels,
+  delimiters,
+  layout,
   script_metadata,
+  units,
   tz_names,
   tz_formats,
   internal = FALSE, overwrite = TRUE
