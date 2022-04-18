@@ -64,10 +64,16 @@
     <loc>https://rich-iannone.github.io/i18n/reference/default_locales.html</loc>
   </url>
   <url>
+    <loc>https://rich-iannone.github.io/i18n/reference/delimiters.html</loc>
+  </url>
+  <url>
     <loc>https://rich-iannone.github.io/i18n/reference/element_lists.html</loc>
   </url>
   <url>
     <loc>https://rich-iannone.github.io/i18n/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://rich-iannone.github.io/i18n/reference/layout.html</loc>
   </url>
   <url>
     <loc>https://rich-iannone.github.io/i18n/reference/locale_names.html</loc>
