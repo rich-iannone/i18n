@@ -359,19 +359,6 @@
 #'
 "currencies"
 
-#' A table with localized character labels and descriptors
-#'
-#' @description
-#' The `character_labels` table contains localized data for character labels
-#' across `r length(all_locales)` locales. There are `r length(all_locales)`
-#' rows and the following 3 columns:
-#' 
-#' - `locale` (`character`)
-#' - `character_label_patterns` (`named list [variable length]`)
-#' - `character_labels` (`named list [variable length]`)
-#'
-"character_labels"
-
 #' A table with localized character data
 #'
 #' @description
@@ -393,6 +380,70 @@
 #' - `stricter_scope_number` (`named list [length of 2]`)
 #'
 "characters"
+
+#' A table with localized character labels and descriptors
+#'
+#' @description
+#' The `character_labels` table contains localized data for character labels
+#' across `r length(all_locales)` locales. There are `r length(all_locales)`
+#' rows and the following 3 columns:
+#' 
+#' - `locale` (`character`)
+#' - `character_label_patterns` (`named list [variable length]`)
+#' - `character_labels` (`named list [variable length]`)
+#'
+"character_labels"
+
+#' A table with localized delimiter values
+#'
+#' @description
+#' The `delimiters` table contains localized  information on the preferred and
+#' alternate sets of quotation marks across `r length(all_locales)` locales.
+#' There are `r length(all_locales)` rows and the following 5 columns:
+#'
+#' - `locale` (`character`)
+#' - `quotation_start` (`character`)
+#' - `quotation_end` (`character`)
+#' - `alt_quotation_start` (`character`)
+#' - `alt_quotation_end` (`character`)
+#' 
+"delimiters"
+
+
+#' A table with localized layout data
+#'
+#' @description
+#' The `layout` table contains data on text layout across 
+#' `r length(all_locales)` locales. There are `r length(all_locales)` rows and
+#' the following 3 columns:
+#'
+#' - `locale` (`character`)
+#' - `character_order` (`character`)
+#' - `line_order` (`character`)
+#' 
+"layout"
+
+#' A table with metadata for a wide variety of script types
+#'
+#' @description
+#' The `script_metadata` table contains metadata for various script types.
+#' There are
+#' `r nrow(script_metadata)` rows and the following 11 columns:
+#'
+#' - `script` (`character`)
+#' - `sample_char` (`character`)
+#' - `rank` (`integer`)
+#' - `script` (`character`)
+#' - `rtl` (`character`)
+#' - `lb_letters` (`character`)
+#' - `has_case` (`character`)
+#' - `shaping_req` (`character`)
+#' - `ime` (`character`)
+#' - `density` (`integer`)
+#' - `origin_country` (`character`)
+#' - `likely_lang` (`character`)
+#' 
+"script_metadata"
 
 #' A table with localized data on units
 #'
@@ -423,27 +474,6 @@
 #' `"unitPattern-count-other"`.
 #'
 "units"
-
-#' A table with localized language, script, and territory names
-#'
-#' @description
-#' The `locale_names` table contains localized names for languages, script
-#' names, names for territories, and names for variants. There are
-#' `r length(all_locales)` rows and the following 5 columns:
-#'
-#' - `locale` (`character`)
-#' - `lang_names` (`named list [variable length]`)
-#' - `script_names` (`named list [variable length]`)
-#' - `territory_names` (`named list [variable length]`)
-#' - `variant_names` (`named list [variable length]`)
-#' 
-#' The `lang_names` column contains named lists for all localized language
-#' names. The `script_names` column holds named lists for all localized script
-#' names, and `territory_names` has all of the localized territory names per
-#' locale. The `variant_names` list column containing named lists for all
-#' localized variant names.
-#' 
-"script_metadata"
 
 #' A table with names for time zone exemplar cities
 #'
