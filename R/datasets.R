@@ -103,6 +103,55 @@
 #'
 "dates"
 
+#' A table with localized generic date attributes and descriptors
+#'
+#' @description
+#' The `dates_generic` table contains localized data for constructing dates and
+#' times across `r length(all_locales)` locales. There are 
+#' `r length(all_locales)` rows and the following `r ncol(dates_generic)`
+#' columns:
+#' 
+#' - `locale` (`character`)
+#' - `months_format_abbrev` (`named list [length of 12]`)
+#' - `months_format_narrow` (`named list [length of 12]`)
+#' - `months_format_wide` (`named list [length of 12]`)
+#' - `months_standalone_abbrev` (`named list [length of 12]`)
+#' - `months_standalone_narrow` (`named list [length of 12]`)
+#' - `months_standalone_wide` (`named list [length of 12]`)
+#' - `days_format_abbrev` (`named list [length of 7]`)
+#' - `days_format_narrow` (`named list [length of 7]`)
+#' - `days_format_short` (`named list [length of 7]`)
+#' - `days_format_wide` (`named list [length of 7]`)
+#' - `days_standalone_abbrev` (`named list [length of 7]`)
+#' - `days_standalone_narrow` (`named list [length of 7]`)
+#' - `days_standalone_short` (`named list [length of 7]`)
+#' - `days_standalone_wide` (`named list [length of 7]`)
+#' - `quarters_format_abbrev` (`named list [length of 4]`)
+#' - `quarters_format_narrow` (`named list [length of 4]`)
+#' - `quarters_format_wide` (`named list [length of 4]`)
+#' - `quarters_standalone_abbrev` (`named list [length of 4]`)
+#' - `quarters_standalone_narrow` (`named list [length of 4]`)
+#' - `quarters_standalone_wide` (`named list [length of 4]`)
+#' - `dayperiods_format_abbrev` (`named list [variable length]`)
+#' - `dayperiods_format_narrow` (`named list [variable length]`)
+#' - `dayperiods_format_wide` (`named list [variable length]`)
+#' - `dayperiods_standalone_abbrev` (`named list [variable length]`)
+#' - `dayperiods_standalone_narrow` (`named list [variable length]`)
+#' - `dayperiods_standalone_wide` (`named list [variable length]`)
+#' - `eras_abbrev` (`named list [length of 4]`)
+#' - `eras_names` (`named list [length of 4]`)
+#' - `eras_narrow` (`named list [length of 4]`)
+#' - `date_formats` (`named list [variable length]`)
+#' - `date_skeletons` (`named list [length of 4]`)
+#' - `time_formats` (`named list [variable length]`)
+#' - `time_skeletons` (`named list [variable length]`)
+#' - `date_time_patterns` (`named list [length of 4]`)
+#' - `date_time_available_formats` (`named list [variable length]`)
+#' - `date_time_append_items` (`named list [length of 11]`)
+#' - `date_time_interval_formats` (`named list [variable length]`)
+#'
+"dates_generic"
+
 #' A table with localized numerical attributes and descriptors
 #'
 #' @description
