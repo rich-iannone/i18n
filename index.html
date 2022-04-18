@@ -76,11 +76,18 @@
 <li><code>all_currency_codes</code></li>
 <li><code>default_locales</code></li>
 <li><code>locale_names</code></li>
-<li><code>numbers</code></li>
 <li><code>dates</code></li>
+<li><code>dates_generic</code></li>
+<li><code>numbers</code></li>
 <li><code>currencies</code></li>
 <li><code>characters</code></li>
 <li><code>character_labels</code></li>
+<li><code>delimiters</code></li>
+<li><code>layout</code></li>
+<li><code>script_metadata</code></li>
+<li><code>units</code></li>
+<li><code>tz_names</code></li>
+<li><code>tz_formats</code></li>
 </ul>
 <p>And the nice-to-have functions are:</p>
 <ul>
@@ -100,7 +107,7 @@
 <pre><code><span class="co">#&gt; [1] ","</span></code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">group</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] ","</span></code></pre>
+<pre><code><span class="co">#&gt; [1] "."</span></code></pre>
 <p>Need to know the <code>"LU"</code> territory name from the <code>"es"</code> locale?</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/cldr_locale_names.html">cldr_locale_names</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"es"</span>, element <span class="op">=</span> <span class="va">locale_names_elements</span><span class="op">$</span><span class="va">territory_names</span><span class="op">)</span><span class="op">$</span><span class="va">LU</span></code></pre></div>
@@ -138,7 +145,7 @@
 <pre><code><span class="co">#&gt; [1] "日元"</span></code></pre>
 <p>Would you like the complete set of exemplar characters for the <code>"fi"</code> locale?</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"fr"</span>, element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"fi"</span>, element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">#&gt; [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"</span></code></pre>
 <p>This is just a small sampling of ways you can easily get at all the data within the CLDR while using <strong>R</strong>!</p>
 </div>
