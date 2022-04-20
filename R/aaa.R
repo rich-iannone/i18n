@@ -14,7 +14,7 @@ utils::globalVariables(
     "layout",
     "script_metadata",
     "units",
-    "tz_names",
+    "tz_exemplar",
     "tz_formats"
   )
 )
