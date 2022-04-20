@@ -475,14 +475,14 @@
 #'
 "units"
 
-#' A table with names for time zone exemplar cities
+#' A table with localized names for all time zone exemplar cities
 #'
 #' @description
-#' The `tz_names` table contains localized names for all exemplar cities used in
-#' time zone names. There are `r length(all_locales)` rows and a column for each
-#' exemplar city name (comprising `r ncol(tz_names) - 1` columns).
+#' The `tz_exemplar` table contains localized names for all exemplar cities used
+#' in time zone names. There are `r length(all_locales)` rows and a column for
+#' each exemplar city name (comprising `r ncol(tz_exemplar) - 1` columns).
 #' 
-"tz_names"
+"tz_exemplar"
 
 #' A table with localized time zone formatting information
 #'
