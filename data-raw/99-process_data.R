@@ -16,7 +16,7 @@ source("data-raw/10-delimiters.R")
 source("data-raw/11-layout.R")
 source("data-raw/12-script_metadata.R")
 source("data-raw/13-units.R")
-source("data-raw/14-tz_names.R")
+source("data-raw/14-tz_exemplar.R")
 source("data-raw/15-tz_formats.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
@@ -33,7 +33,7 @@ delimiters <- readRDS("data-raw/delimiters.rds")
 layout <- readRDS("data-raw/layout.rds")
 script_metadata <- readRDS("data-raw/script_metadata.rds")
 units <- readRDS("data-raw/units.rds")
-tz_names <- readRDS("data-raw/tz_names.rds")
+tz_exemplar <- readRDS("data-raw/tz_exemplar.rds")
 tz_formats <- readRDS("data-raw/tz_formats.rds")
 
 # Create external datasets
@@ -52,7 +52,7 @@ usethis::use_data(
   layout,
   script_metadata,
   units,
-  tz_names,
+  tz_exemplar,
   tz_formats,
   internal = FALSE, overwrite = TRUE
 )
