@@ -27,7 +27,7 @@ The included datasets are:
 - `layout`
 - `script_metadata`
 - `units`
-- `tz_names`
+- `tz_exemplar`
 - `tz_formats`
 
 And the nice-to-have functions are:
