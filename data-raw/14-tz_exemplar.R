@@ -6,11 +6,11 @@ version_tag <- "40.0.0"
 
 source("data-raw/01-locales.R")
 
-tz_names_tbl <- dplyr::tibble()
+tz_exemplar_tbl <- dplyr::tibble()
 
 for (i in seq_along(all_locales)) {
   
-  tz_names <- 
+  tz_exemplar <- 
     file.path(
       "https://raw.githubusercontent.com/unicode-org/cldr-json",
       version_tag, "cldr-json/cldr-dates-full/main", 
@@ -18,36 +18,38 @@ for (i in seq_along(all_locales)) {
       "timeZoneNames.json"
     )
   
-  tz_names_data <-
+  tz_exemplar_data <-
     jsonlite::fromJSON(
-      tz_names,
+      tz_exemplar,
       flatten = TRUE,
       simplifyDataFrame = TRUE
     )
   
-  zone_regions <- names(tz_names_data$main[[1]]$dates$timeZoneNames$zone)
+  zone_data <- tz_exemplar_data$main[[1]]$dates$timeZoneNames$zone
   
-  zones_city_names <- c()
+  regions <- names(zone_data)
   
-  for (j in seq_along(zone_regions)) {
-    zones_city_names <- c(zones_city_names, unlist(zone[[j]]))
+  exemplar_cities <- c()
+  
+  for (j in seq_along(regions)) {
+    exemplar_cities <- c(exemplar_cities, unlist(zone_data[[j]]))
   }
   
-  names(zones_city_names) <- 
-    gsub(".exemplarCity", "", names(zones_city_names), fixed = TRUE)
+  names(exemplar_cities) <- 
+    gsub(".exemplarCity", "", names(exemplar_cities), fixed = TRUE)
   
-  tz_names_tbl_row_i <- 
-    tibble::enframe(zones_city_names) %>%
+  tz_exemplar_tbl_row_i <- 
+    tibble::enframe(exemplar_cities) %>%
     tidyr::pivot_wider(names_from = name) %>%
     dplyr::mutate(locale = all_locales[i]) %>%
     dplyr::select(locale, dplyr::everything())
   
   # Append row to main table
-  tz_names_tbl <- dplyr::bind_rows(tz_names_tbl, tz_names_tbl_row_i)
+  tz_exemplar_tbl <- dplyr::bind_rows(tz_exemplar_tbl, tz_exemplar_tbl_row_i)
 }
 
 readr::write_rds(
-  tz_names_tbl,
-  file = "data-raw/tz_names.rds",
+  tz_exemplar_tbl,
+  file = "data-raw/tz_exemplar.rds",
   compress = "xz"
 )
