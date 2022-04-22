@@ -17,7 +17,8 @@ source("data-raw/11-layout.R")
 source("data-raw/12-script_metadata.R")
 source("data-raw/13-units.R")
 source("data-raw/14-tz_exemplar.R")
-source("data-raw/15-tz_formats.R")
+source("data-raw/15-tz_map.R")
+source("data-raw/16-tz_formats.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
@@ -34,6 +35,7 @@ layout <- readRDS("data-raw/layout.rds")
 script_metadata <- readRDS("data-raw/script_metadata.rds")
 units <- readRDS("data-raw/units.rds")
 tz_exemplar <- readRDS("data-raw/tz_exemplar.rds")
+tz_map <- readRDS("data-raw/tz_map.rds")
 tz_formats <- readRDS("data-raw/tz_formats.rds")
 
 # Create external datasets
@@ -53,6 +55,7 @@ usethis::use_data(
   script_metadata,
   units,
   tz_exemplar,
+  tz_map,
   tz_formats,
   internal = FALSE, overwrite = TRUE
 )
