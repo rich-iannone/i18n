@@ -484,6 +484,14 @@
 #' 
 "tz_exemplar"
 
+#' A table with names of map-based time zones
+#'
+#' @description
+#' The `tz_map` table contains names for all map-based time zone names. There
+#' are `r nrow(tz_map)` rows and `r ncol(tz_map)` columns.
+#' 
+"tz_map"
+
 #' A table with localized time zone formatting information
 #'
 #' @description
