@@ -26,6 +26,7 @@ reference:
     - script_metadata
     - units
     - tz_exemplar
+    - tz_map
     - tz_formats
   - title: Get CLDR Element Values
     contents:
