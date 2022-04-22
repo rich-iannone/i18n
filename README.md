@@ -28,6 +28,7 @@ The included datasets are:
 - `script_metadata`
 - `units`
 - `tz_exemplar`
+- `tz_map`
 - `tz_formats`
 
 And the nice-to-have functions are:
