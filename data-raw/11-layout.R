@@ -44,3 +44,9 @@ readr::write_rds(
   file = "data-raw/layout.rds",
   compress = "xz"
 )
+
+rm(
+  layout_tbl, layout, layout_data,
+  character_order, line_order,
+  layout_tbl_rows_i
+)

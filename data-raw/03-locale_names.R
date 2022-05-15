@@ -99,3 +99,13 @@ readr::write_rds(
   file = "data-raw/locale_names.rds",
   compress = "xz"
 )
+
+rm(
+  languages, languages_data,
+  scripts, scripts_data,
+  territories, territories_data,
+  variants, variants_data,
+  languages_values, scripts_values,
+  territories_values, variants_values,
+  locale_names_tbl_row, locale_names_tbl
+)

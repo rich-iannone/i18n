@@ -55,3 +55,10 @@ readr::write_rds(
   file = "data-raw/tz_formats.rds",
   compress = "xz"
 )
+
+rm(
+  tz_formats_tbl, tz_formats, tz_formats_data, tz_formats_all,
+  hour_format, gmt_format, gmt_zero_format, region_format,
+  region_format_daylight, region_format_standard, region_format_fallback,
+  tz_formats_tbl_row_i
+)

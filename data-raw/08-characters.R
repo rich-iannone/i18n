@@ -63,3 +63,11 @@ readr::write_rds(
   file = "data-raw/characters.rds",
   compress = "xz"
 )
+
+rm(
+  characters_tbl, characters, characters_data,
+  exemplar_characters, auxiliary, index, numbers, punctuation, more_info,
+  ellipsis, leninent_scope_general, leninent_scope_date, leninent_scope_number,
+  stricter_scope_number,
+  characters_tbl_rows_i
+)

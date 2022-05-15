@@ -52,3 +52,9 @@ readr::write_rds(
   file = "data-raw/tz_exemplar.rds",
   compress = "xz"
 )
+
+rm(
+  tz_exemplar_tbl, tz_exemplar, tz_exemplar_data,
+  zone_data, regions, exemplar_cities,
+  tz_exemplar_tbl_row_i
+)

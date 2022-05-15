@@ -164,3 +164,14 @@ readr::write_rds(
   file = "data-raw/numbers.rds",
   compress = "xz"
 )
+
+rm(
+  numbers_tbl, numbers_json_url_locale, numbers_data,
+  default_numbering_system, other_numbering_systems,
+  minimum_grouping_digits, decimal, group, list,
+  percent_sign, plus_sign, minus_sign, approx_sign, exp_sign, sup_exp,
+  per_mille, infinity, nan, time_sep, approx_pattern, at_least_pattern,
+  at_most_pattern, range_pattern, decimal_format, sci_format, percent_format,
+  currency_format, accounting_format,
+  numbers_tbl_row
+)

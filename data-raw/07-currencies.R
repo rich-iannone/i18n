@@ -113,3 +113,11 @@ readr::write_rds(
   file = "data-raw/all_currency_codes.rds",
   compress = "xz"
 )
+
+rm(
+  currency_tbl, currencies_json_url_locale, currencies_data,
+  currency_by_type, currency_code, currency_display_name,
+  currency_symbol, currency_symbol_narrow,
+  currency_display_name_count_1, currency_display_name_count_other,
+  currency_tbl_rows_i
+)

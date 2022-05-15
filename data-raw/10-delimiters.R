@@ -48,3 +48,9 @@ readr::write_rds(
   file = "data-raw/delimiters.rds",
   compress = "xz"
 )
+
+rm(
+  delimiters_tbl, delimiters, delimiters_data,
+  quotation_start, quotation_end, alt_quotation_start, alt_quotation_end, 
+  delimiters_tbl_rows_i
+)

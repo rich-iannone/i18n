@@ -45,3 +45,9 @@ readr::write_rds(
   file = "data-raw/character_labels.rds",
   compress = "xz"
 )
+
+rm(
+  char_labels_tbl, char_labels, char_labels_data,
+  char_label_patterns, char_labels,
+  char_labels_tbl_rows_i
+)

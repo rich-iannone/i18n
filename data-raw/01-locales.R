@@ -30,3 +30,5 @@ readr::write_rds(
   file = "data-raw/all_locales.rds",
   compress = "xz"
 )
+
+rm(all_locales_tbl, all_locales_data)

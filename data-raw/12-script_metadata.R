@@ -61,3 +61,11 @@ readr::write_rds(
   file = "data-raw/script_metadata.rds",
   compress = "xz"
 )
+
+rm(
+  script_meta, script_metadata, script_metadata_list,
+  script_names, script_metadata_tbl,
+  sample_char, rank, rtl, lb_letters, has_case, shaping_req,
+  ime, density, origin_country, likely_lang,
+  script_metadata_row_i
+)

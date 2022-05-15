@@ -116,3 +116,9 @@ readr::write_rds(
   file = "data-raw/units.rds",
   compress = "xz"
 )
+
+rm(
+  units_tbl, units, units_data, long, short, narrow,
+  units_tbl_long_rows_i, units_tbl_short_rows_i, units_tbl_narrow_rows_i,
+  units_tbl_rows_i, units_colnames, colnames_sorted
+)
