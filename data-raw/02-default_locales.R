@@ -2,7 +2,7 @@ library(dplyr)
 library(jsonlite)
 library(readr)
 
-version_tag <- "40.0.0"
+source("data-raw/00-version_tag.R")
 
 default_content <- 
   file.path(

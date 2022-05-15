@@ -2,8 +2,7 @@ library(dplyr)
 library(jsonlite)
 library(readr)
 
-version_tag <- "40.0.0"
-
+source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 dates_tbl <- dplyr::tibble()

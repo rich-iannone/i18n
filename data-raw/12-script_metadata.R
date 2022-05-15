@@ -2,9 +2,7 @@ library(dplyr)
 library(jsonlite)
 library(readr)
 
-version_tag <- "40.0.0"
-
-source("data-raw/01-locales.R")
+source("data-raw/00-version_tag.R")
 
 script_meta <- 
   file.path(
