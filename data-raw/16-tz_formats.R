@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 tz_formats_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -48,6 +51,8 @@ for (i in seq_along(all_locales)) {
   
   # Append row to main table
   tz_formats_tbl <- dplyr::bind_rows(tz_formats_tbl, tz_formats_tbl_row_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -60,5 +65,5 @@ rm(
   tz_formats_tbl, tz_formats, tz_formats_data, tz_formats_all,
   hour_format, gmt_format, gmt_zero_format, region_format,
   region_format_daylight, region_format_standard, region_format_fallback,
-  tz_formats_tbl_row_i
+  tz_formats_tbl_row_i, i, pb
 )

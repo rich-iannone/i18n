@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 units_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -78,6 +81,8 @@ for (i in seq_along(all_locales)) {
   
   # Append rows to main table
   units_tbl <- dplyr::bind_rows(units_tbl, units_tbl_rows_i)
+  
+  pb$tick()
 }
 
 # Sort all column names
@@ -120,5 +125,5 @@ readr::write_rds(
 rm(
   units_tbl, units, units_data, long, short, narrow,
   units_tbl_long_rows_i, units_tbl_short_rows_i, units_tbl_narrow_rows_i,
-  units_tbl_rows_i, units_colnames, colnames_sorted
+  units_tbl_rows_i, units_colnames, colnames_sorted, i, pb
 )

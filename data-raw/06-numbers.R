@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 numbers_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -157,6 +160,8 @@ for (i in seq_along(all_locales)) {
   
   # Append row to main table
   numbers_tbl <- dplyr::bind_rows(numbers_tbl, numbers_tbl_row)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -173,5 +178,5 @@ rm(
   per_mille, infinity, nan, time_sep, approx_pattern, at_least_pattern,
   at_most_pattern, range_pattern, decimal_format, sci_format, percent_format,
   currency_format, accounting_format,
-  numbers_tbl_row
+  numbers_tbl_row, i, pb
 )

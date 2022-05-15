@@ -1,9 +1,12 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
+
+pb <- progress_bar$new(total = length(all_locales))
 
 locale_names_tbl <- dplyr::tibble()
 
@@ -92,6 +95,8 @@ for (i in seq_along(all_locales)) {
   
   # Append row to main table
   locale_names_tbl <- dplyr::bind_rows(locale_names_tbl, locale_names_tbl_row)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -101,11 +106,11 @@ readr::write_rds(
 )
 
 rm(
-  languages, languages_data,
+  locale_names_tbl, languages, languages_data,
   scripts, scripts_data,
   territories, territories_data,
   variants, variants_data,
   languages_values, scripts_values,
   territories_values, variants_values,
-  locale_names_tbl_row, locale_names_tbl
+  locale_names_tbl_row, i, pb
 )

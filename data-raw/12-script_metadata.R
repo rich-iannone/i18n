@@ -1,6 +1,7 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 
@@ -22,6 +23,8 @@ script_metadata_list <- script_metadata$scriptMetadata
 script_names <- names(script_metadata_list)
 
 script_metadata_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(script_names))
 
 for (i in seq_along(script_names)) {
   
@@ -54,6 +57,8 @@ for (i in seq_along(script_names)) {
   
   # Append rows to main table
   script_metadata_tbl <- dplyr::bind_rows(script_metadata_tbl, script_metadata_row_i)
+  
+  pb$tick()
 }
   
 readr::write_rds(
@@ -67,5 +72,5 @@ rm(
   script_names, script_metadata_tbl,
   sample_char, rank, rtl, lb_letters, has_case, shaping_req,
   ime, density, origin_country, likely_lang,
-  script_metadata_row_i
+  script_metadata_row_i, i, pb
 )

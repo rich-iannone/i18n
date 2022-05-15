@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 delimiters_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -41,6 +44,8 @@ for (i in seq_along(all_locales)) {
   
   # Append rows to main table
   delimiters_tbl <- dplyr::bind_rows(delimiters_tbl, delimiters_tbl_rows_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -52,5 +57,5 @@ readr::write_rds(
 rm(
   delimiters_tbl, delimiters, delimiters_data,
   quotation_start, quotation_end, alt_quotation_start, alt_quotation_end, 
-  delimiters_tbl_rows_i
+  delimiters_tbl_rows_i, i, pb
 )

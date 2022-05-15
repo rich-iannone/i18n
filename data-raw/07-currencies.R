@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 currency_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -100,6 +103,8 @@ for (i in seq_along(all_locales)) {
   
   # Append rows to main table
   currency_tbl <- dplyr::bind_rows(currency_tbl, currency_tbl_rows_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -119,5 +124,5 @@ rm(
   currency_by_type, currency_code, currency_display_name,
   currency_symbol, currency_symbol_narrow,
   currency_display_name_count_1, currency_display_name_count_other,
-  currency_tbl_rows_i
+  currency_tbl_rows_i, i, pb
 )

@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 char_labels_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -38,6 +41,8 @@ for (i in seq_along(all_locales)) {
   
   # Append rows to main table
   char_labels_tbl <- dplyr::bind_rows(char_labels_tbl, char_labels_tbl_rows_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -49,5 +54,5 @@ readr::write_rds(
 rm(
   char_labels_tbl, char_labels, char_labels_data,
   char_label_patterns, char_labels,
-  char_labels_tbl_rows_i
+  char_labels_tbl_rows_i, i, pb
 )

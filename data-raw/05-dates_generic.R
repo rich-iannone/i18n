@@ -1,9 +1,12 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
+
+pb <- progress_bar$new(total = length(all_locales))
 
 dates_g_tbl <- dplyr::tibble()
 
@@ -241,6 +244,8 @@ for (i in seq_along(all_locales)) {
   
   # Append row to main table
   dates_g_tbl <- dplyr::bind_rows(dates_g_tbl, dates_g_tbl_row)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -266,5 +271,5 @@ rm(
   date_formats, date_skeletons, time_formats,
   time_skeletons, date_time_patterns, date_time_available_formats,
   date_time_append_items, date_time_interval_formats,
-  dates_g_tbl_row
+  dates_g_tbl_row, i, pb
 )

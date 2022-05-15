@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 layout_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -37,6 +40,8 @@ for (i in seq_along(all_locales)) {
   
   # Append rows to main table
   layout_tbl <- dplyr::bind_rows(layout_tbl, layout_tbl_rows_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -48,5 +53,5 @@ readr::write_rds(
 rm(
   layout_tbl, layout, layout_data,
   character_order, line_order,
-  layout_tbl_rows_i
+  layout_tbl_rows_i, i, pb
 )

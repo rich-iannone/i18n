@@ -1,11 +1,14 @@
 library(dplyr)
 library(jsonlite)
 library(readr)
+library(progress)
 
 source("data-raw/00-version_tag.R")
 source("data-raw/01-locales.R")
 
 tz_exemplar_tbl <- dplyr::tibble()
+
+pb <- progress_bar$new(total = length(all_locales))
 
 for (i in seq_along(all_locales)) {
   
@@ -45,6 +48,8 @@ for (i in seq_along(all_locales)) {
   
   # Append row to main table
   tz_exemplar_tbl <- dplyr::bind_rows(tz_exemplar_tbl, tz_exemplar_tbl_row_i)
+  
+  pb$tick()
 }
 
 readr::write_rds(
@@ -56,5 +61,5 @@ readr::write_rds(
 rm(
   tz_exemplar_tbl, tz_exemplar, tz_exemplar_data,
   zone_data, regions, exemplar_cities,
-  tz_exemplar_tbl_row_i
+  tz_exemplar_tbl_row_i, i, pb
 )
