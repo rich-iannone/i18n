@@ -5,15 +5,15 @@
 \alias{numbers}
 \title{A table with localized numerical attributes and descriptors}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 26 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 26 columns.
 }
 \usage{
 numbers
 }
 \description{
 The \code{numbers} table contains localized data for number-related entities
-across 571 locales. This table has
-571 rows (one per locale) and the following 26 columns:
+across 574 locales. This table has
+574 rows (one per locale) and the following 26 columns:
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{default_numbering_system} (\code{character})

@@ -18,7 +18,7 @@ A named list.
 }
 \description{
 The \link{dates} table contains information on how to express dates and this data
-is localized across 571 locales. The \code{cldr_dates()}
+is localized across 574 locales. The \code{cldr_dates()}
 function allows one to extract a named list using a \code{locale} and a specific
 \code{element}. The element values are:
 \itemize{

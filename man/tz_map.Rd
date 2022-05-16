@@ -5,7 +5,7 @@
 \alias{tz_map}
 \title{A table with names of map-based time zones}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 506 rows and 3 columns.
+An object of class \code{data.frame} with 506 rows and 3 columns.
 }
 \usage{
 tz_map

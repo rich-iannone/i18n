@@ -18,7 +18,7 @@ A named list.
 }
 \description{
 The \link{character_labels} table contains information on character patterns
-and character labels across 571 locales. The
+and character labels across 574 locales. The
 \code{cldr_character_labels()} function allows one to extract element values from
 the table by supplying the \code{locale} and one of the following element names:
 \itemize{

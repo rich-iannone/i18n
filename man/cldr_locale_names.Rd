@@ -19,7 +19,7 @@ A named list.
 }
 \description{
 The \link{locale_names} table contains information on how to express components of
-locale codes and this is localized across 571 locales.
+locale codes and this is localized across 574 locales.
 The \code{cldr_locale_names()} function allows one to extract a named list using
 a \code{locale} and one of the following element names:
 \itemize{

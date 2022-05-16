@@ -5,14 +5,14 @@
 \alias{characters}
 \title{A table with localized character data}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 12 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 12 columns.
 }
 \usage{
 characters
 }
 \description{
 The \code{characters} table contains localized character data across
-571 locales. There are 571 rows and
+574 locales. There are 574 rows and
 the following 12 columns:
 \itemize{
 \item \code{locale}(\code{character})

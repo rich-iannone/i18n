@@ -5,13 +5,13 @@
 \alias{all_currency_codes}
 \title{A vector containing every currency code}
 \format{
-An object of class \code{character} of length 303.
+An object of class \code{character} of length 305.
 }
 \usage{
 all_currency_codes
 }
 \description{
-This is a vector of the 303 currency codes that
+This is a vector of the 305 currency codes that
 are used in the \link{currencies} dataset within the \strong{i18n} package.
 }
 \keyword{datasets}

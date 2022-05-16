@@ -5,7 +5,7 @@
 \alias{default_locales}
 \title{A table containing a mapping of default locale names to base locales}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 226 rows and 2 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 228 rows and 2 columns.
 }
 \usage{
 default_locales
@@ -16,7 +16,7 @@ alongside their default locale names. This indicates that \code{"en"} maps to
 \code{"en-US"} and \code{"de"} should map to \code{"de-DE"}. Throughout the \strong{i18n}
 datasets, base names are used instead of their expanded equivalents.
 
-There are 226 rows and the following 2 columns:
+There are 228 rows and the following 2 columns:
 \itemize{
 \item \code{default_locale} (\code{character})
 \item \code{base_locale} (\code{character})

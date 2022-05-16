@@ -5,15 +5,15 @@
 \alias{delimiters}
 \title{A table with localized delimiter values}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 5 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 5 columns.
 }
 \usage{
 delimiters
 }
 \description{
 The \code{delimiters} table contains localized  information on the preferred and
-alternate sets of quotation marks across 571 locales.
-There are 571 rows and the following 5 columns:
+alternate sets of quotation marks across 574 locales.
+There are 574 rows and the following 5 columns:
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{quotation_start} (\code{character})

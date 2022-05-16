@@ -5,13 +5,13 @@
 \alias{all_locales}
 \title{A vector containing all locale names}
 \format{
-An object of class \code{character} of length 571.
+An object of class \code{character} of length 574.
 }
 \usage{
 all_locales
 }
 \description{
-This is a vector of the 571 locale names that are used
+This is a vector of the 574 locale names that are used
 throughout the tabular datasets within the \strong{i18n} package.
 }
 \keyword{datasets}

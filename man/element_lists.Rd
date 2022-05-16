@@ -3,20 +3,20 @@
 \docType{data}
 \name{element_lists}
 \alias{element_lists}
-\alias{locale_names_elements}
 \alias{locale_list}
 \alias{currency_code_list}
+\alias{locale_names_elements}
 \alias{currencies_elements}
 \alias{dates_elements}
 \alias{numbers_elements}
 \alias{characters_elements}
 \title{Element lists for different \emph{CLDR} data tables}
 \format{
+An object of class \code{list} of length 574.
+
+An object of class \code{list} of length 305.
+
 An object of class \code{list} of length 4.
-
-An object of class \code{list} of length 571.
-
-An object of class \code{list} of length 303.
 
 An object of class \code{list} of length 5.
 
@@ -27,11 +27,11 @@ An object of class \code{list} of length 26.
 An object of class \code{list} of length 12.
 }
 \usage{
-locale_names_elements
-
 locale_list
 
 currency_code_list
+
+locale_names_elements
 
 currencies_elements
 
@@ -47,9 +47,10 @@ functions. The list object names, the number of elements they hold, and the
 functions they nicely pair with are:
 }
 \details{
-\code{locale_names_elements} (4) -> \code{cldr_locale_names()}
-\code{currency_codes} (303) -> \code{cldr_currency()}
+\code{locale_list} (574) -> \link[=several `cldr_*()` functions]{several \verb{cldr_*()} functions}
+\code{currency_code_list} (305) -> \code{cldr_currency()}
 \code{currencies_elements} (5) -> \code{cldr_currency()}
+\code{locale_names_elements} (4) -> \code{cldr_locale_names()}
 \code{dates_elements} (28) -> \code{cldr_dates()}
 \code{numbers_elements} (26) -> \code{cldr_numbers()}
 \code{characters_elements} (12) -> \code{cldr_characters()}

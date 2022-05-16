@@ -5,7 +5,7 @@
 \alias{script_metadata}
 \title{A table with metadata for a wide variety of script types}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 168 rows and 11 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 170 rows and 11 columns.
 }
 \usage{
 script_metadata
@@ -13,7 +13,7 @@ script_metadata
 \description{
 The \code{script_metadata} table contains metadata for various script types.
 There are
-168 rows and the following 11 columns:
+170 rows and the following 11 columns:
 \itemize{
 \item \code{script} (\code{character})
 \item \code{sample_char} (\code{character})

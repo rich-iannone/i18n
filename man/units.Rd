@@ -5,14 +5,14 @@
 \alias{units}
 \title{A table with localized data on units}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1713 rows and 1281 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1722 rows and 1281 columns.
 }
 \usage{
 units
 }
 \description{
 The \code{units} table contains localized character data across
-571 locales. There are  rows and
+574 locales. There are  rows and
 the following  columns. Each row represents a display
 type (\code{"long"}, \code{"short"}, or \code{"narrow"}) for a locale.
 

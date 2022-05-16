@@ -5,14 +5,14 @@
 \alias{currencies}
 \title{A table with localized currency attributes and descriptors}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 173013 rows and 7 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 175070 rows and 7 columns.
 }
 \usage{
 currencies
 }
 \description{
 The \code{currencies} table contains localized data for number-related entities
-across 571 locales. This table has 173,013 rows, one per
+across 574 locales. This table has 173,013 rows, one per
 distinct combination of locale and currency (\code{currency_code}), and the
 following 7 columns:
 \itemize{

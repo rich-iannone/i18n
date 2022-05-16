@@ -22,7 +22,7 @@ the \code{element} value.
 }
 \description{
 The \link{numbers} table contains localization data for number usage and this data
-is available for 571 locales. The \code{cldr_numbers()}
+is available for 574 locales. The \code{cldr_numbers()}
 function allows one to extract a named list using a \code{locale} and a specific
 \code{element}. The \code{element} values are:
 \itemize{

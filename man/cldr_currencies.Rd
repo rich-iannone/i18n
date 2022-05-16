@@ -26,7 +26,7 @@ A length one character vector.
 }
 \description{
 The \link{currencies} table contains information of currency codes and localized
-display names and symbols across 571 locales. The
+display names and symbols across 574 locales. The
 \code{cldr_currencies()} function allows one to extract a single element value
 from the table by supplying the \code{locale}, the currency code (\code{currency}), and
 one of the following \code{element} names:

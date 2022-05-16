@@ -5,14 +5,14 @@
 \alias{tz_formats}
 \title{A table with localized time zone formatting information}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 8 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 8 columns.
 }
 \usage{
 tz_formats
 }
 \description{
 The \code{tz_formats} table contains localized formatting information across all
-locales. There are 571 rows and the following 7 columns:
+locales. There are 574 rows and the following 7 columns:
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{hour_format} (\code{character})

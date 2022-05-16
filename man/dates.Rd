@@ -5,14 +5,14 @@
 \alias{dates}
 \title{A table with localized date attributes and descriptors}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 38 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 38 columns.
 }
 \usage{
 dates
 }
 \description{
 The \code{dates} table contains localized data for constructing dates and times
-across 571 locales. There are 571
+across 574 locales. There are 574
 rows and the following 38 columns:
 \itemize{
 \item \code{locale} (\code{character})

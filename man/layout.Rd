@@ -5,14 +5,14 @@
 \alias{layout}
 \title{A table with localized layout data}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 3 columns.
 }
 \usage{
 layout
 }
 \description{
 The \code{layout} table contains data on text layout across
-571 locales. There are 571 rows and
+574 locales. There are 574 rows and
 the following 3 columns:
 \itemize{
 \item \code{locale} (\code{character})
