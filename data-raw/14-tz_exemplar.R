@@ -61,5 +61,5 @@ readr::write_rds(
 rm(
   tz_exemplar_tbl, tz_exemplar, tz_exemplar_data,
   zone_data, regions, exemplar_cities,
-  tz_exemplar_tbl_row_i, i, pb
+  tz_exemplar_tbl_row_i, i, j, pb
 )
