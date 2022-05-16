@@ -4,7 +4,7 @@
 #' functions. The list object names, the number of elements they hold, and the
 #' functions they nicely pair with are:
 #' 
-#' `locale_list` (574) -> [several `cldr_*()` functions]
+#' `locale_list` (574) -> several `cldr_*()` functions
 #' `currency_code_list` (305) -> `cldr_currency()`
 #' `currencies_elements` (5) -> `cldr_currency()`
 #' `locale_names_elements` (4) -> `cldr_locale_names()`
