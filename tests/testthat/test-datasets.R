@@ -14,7 +14,7 @@ test_that("Datasets have the expected types", {
 test_that("Tabular datasets have the expected dimensions", {
   
   expect_equal(ncol(default_locales), 2)
-  expect_equal(nrow(default_locales), 226)
+  expect_equal(nrow(default_locales), 228)
   
   expect_equal(ncol(locale_names), 5)
   expect_equal(nrow(locale_names), length(all_locales))
