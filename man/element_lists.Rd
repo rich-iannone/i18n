@@ -47,7 +47,7 @@ functions. The list object names, the number of elements they hold, and the
 functions they nicely pair with are:
 }
 \details{
-\code{locale_list} (574) -> \link[=several `cldr_*()` functions]{several \verb{cldr_*()} functions}
+\code{locale_list} (574) -> several \verb{cldr_*()} functions
 \code{currency_code_list} (305) -> \code{cldr_currency()}
 \code{currencies_elements} (5) -> \code{cldr_currency()}
 \code{locale_names_elements} (4) -> \code{cldr_locale_names()}
