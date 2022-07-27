@@ -16,7 +16,7 @@ BugReports: https://github.com/rich-iannone/i18n/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Depends: 
     R (>= 3.2)
 Imports: 
