@@ -397,7 +397,7 @@
 #' A table with localized delimiter values
 #'
 #' @description
-#' The `delimiters` table contains localized  information on the preferred and
+#' The `delimiters` table contains localized information on the preferred and
 #' alternate sets of quotation marks across `r length(all_locales)` locales.
 #' There are `r length(all_locales)` rows and the following 5 columns:
 #'
@@ -408,7 +408,6 @@
 #' - `alt_quotation_end` (`character`)
 #' 
 "delimiters"
-
 
 #' A table with localized layout data
 #'
@@ -427,8 +426,7 @@
 #'
 #' @description
 #' The `script_metadata` table contains metadata for various script types.
-#' There are
-#' `r nrow(script_metadata)` rows and the following 11 columns:
+#' There are `r nrow(script_metadata)` rows and the following 11 columns:
 #'
 #' - `script` (`character`)
 #' - `sample_char` (`character`)
@@ -449,11 +447,11 @@
 #'
 #' @description
 #' The `units` table contains localized character data across
-#' `r length(all_locales)` locales. There are `r nrow(units)` rows and
-#' the following `r ncol(units)` columns. Each row represents a display
-#' type (`"long"`, `"short"`, or `"narrow"`) for a locale.
+#' `r length(all_locales)` locales. There are `r nrow(i18n::units)` rows and
+#' `r ncol(i18n::units)` columns. Each row represents a display type (`"long"`,
+#' `"short"`, or `"narrow"`) for each of the locales.
 #' 
-#' Following the `locale` and `type` columns, each unit and it's subelements
+#' Following the `locale` and `type` columns, each unit and its subelements
 #' are provided as a cluster of columns in the form
 #' `"<<category>-unit name>.<subelement name>"`. The subelement names are:
 #' 
@@ -480,7 +478,8 @@
 #' @description
 #' The `tz_exemplar` table contains localized names for all exemplar cities used
 #' in time zone names. There are `r length(all_locales)` rows and a column for
-#' each exemplar city name (comprising `r ncol(tz_exemplar) - 1` columns).
+#' each exemplar city name (comprising `r ncol(tz_exemplar) - 1` columns; the
+#' `locale` column is first).
 #' 
 "tz_exemplar"
 
@@ -508,3 +507,16 @@
 #' - `region_format_fallback` (`character`)
 #' 
 "tz_formats"
+
+#' A table with BCP47 Olson/IANA-style and canonical time zone IDs 
+#'
+#' @description
+#' The `tz_bcp_id` table provides a lookup for converting between BCP47
+#' Olson/IANA-style time zone IDs and the canonical forms (according to BCP47).
+#' There are `r nrow(tz_bcp_id)` rows and the following 3 columns:
+#' 
+#' - `tz_bcp_id` (`character`)
+#' - `tz_canonical` (`character`)
+#' - `description` (`character`)
+#' 
+"tz_bcp_id"
