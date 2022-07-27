@@ -19,6 +19,7 @@ source("data-raw/13-units.R")
 source("data-raw/14-tz_exemplar.R")
 source("data-raw/15-tz_map.R")
 source("data-raw/16-tz_formats.R")
+source("data-raw/17-tz_bcp_id.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
@@ -37,6 +38,7 @@ units <- readRDS("data-raw/units.rds")
 tz_exemplar <- readRDS("data-raw/tz_exemplar.rds")
 tz_map <- readRDS("data-raw/tz_map.rds")
 tz_formats <- readRDS("data-raw/tz_formats.rds")
+tz_bcp_id <- readRDS("data-raw/tz_bcp_id.rds")
 
 # Create external datasets
 usethis::use_data(
@@ -57,5 +59,6 @@ usethis::use_data(
   tz_exemplar,
   tz_map,
   tz_formats,
+  tz_bcp_id,
   internal = FALSE, overwrite = TRUE
 )
