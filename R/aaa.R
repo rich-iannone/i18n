@@ -16,6 +16,7 @@ utils::globalVariables(
     "units",
     "tz_exemplar",
     "tz_map",
-    "tz_formats"
+    "tz_formats",
+    "tz_bcp_id"
   )
 )
