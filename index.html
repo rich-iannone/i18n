@@ -11,8 +11,8 @@
     key elements from the tabular datasets.">
 <title>Internationalization Data from the Unicode CLDR in Tabular Form • i18n</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Internationalization Data from the Unicode CLDR in Tabular Form">
 <meta property="og:description" content="Up-to-date data from the Unicode CLDR Project (where CLDR
@@ -103,50 +103,50 @@
 </h2>
 <p>If you need to get the decimal mark and grouping separators for the base German locale <code>"de"</code>, then the <code><a href="reference/cldr_numbers.html">cldr_numbers()</a></code> function could be used:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">decimal</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] ","</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">decimal</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; [1] ","</span></span></code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">group</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] "."</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">group</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; [1] "."</span></span></code></pre>
 <p>Need to know the <code>"LU"</code> territory name from the <code>"es"</code> locale?</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_locale_names.html">cldr_locale_names</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"es"</span>, element <span class="op">=</span> <span class="va">locale_names_elements</span><span class="op">$</span><span class="va">territory_names</span><span class="op">)</span><span class="op">$</span><span class="va">LU</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] "Luxemburgo"</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_locale_names.html">cldr_locale_names</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"es"</span>, element <span class="op">=</span> <span class="va">locale_names_elements</span><span class="op">$</span><span class="va">territory_names</span><span class="op">)</span><span class="op">$</span><span class="va">LU</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; [1] "Luxemburgo"</span></span></code></pre>
 <p>Want a list of days-of-the-week names in the <code>"ko"</code> locale?</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_dates.html">cldr_dates</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"ko"</span>, element <span class="op">=</span> <span class="va">dates_elements</span><span class="op">$</span><span class="va">days_standalone_wide</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; $sun</span>
-<span class="co">#&gt; [1] "일요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $mon</span>
-<span class="co">#&gt; [1] "월요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $tue</span>
-<span class="co">#&gt; [1] "화요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $wed</span>
-<span class="co">#&gt; [1] "수요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $thu</span>
-<span class="co">#&gt; [1] "목요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $fri</span>
-<span class="co">#&gt; [1] "금요일"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $sat</span>
-<span class="co">#&gt; [1] "토요일"</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_dates.html">cldr_dates</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"ko"</span>, element <span class="op">=</span> <span class="va">dates_elements</span><span class="op">$</span><span class="va">days_standalone_wide</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; $sun</span></span>
+<span><span class="co">#&gt; [1] "일요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $mon</span></span>
+<span><span class="co">#&gt; [1] "월요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $tue</span></span>
+<span><span class="co">#&gt; [1] "화요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $wed</span></span>
+<span><span class="co">#&gt; [1] "수요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $thu</span></span>
+<span><span class="co">#&gt; [1] "목요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $fri</span></span>
+<span><span class="co">#&gt; [1] "금요일"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $sat</span></span>
+<span><span class="co">#&gt; [1] "토요일"</span></span></code></pre>
 <p>Need to get the appropriate display name for the Japanese Yen (<code>"JPY"</code>) currency while in the <code>"zh"</code> locale?</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_currencies.html">cldr_currencies</a></span><span class="op">(</span>
-  locale <span class="op">=</span> <span class="st">"zh"</span>,
-  currency <span class="op">=</span> <span class="va">currency_code_list</span><span class="op">$</span><span class="va">JPY</span>,
-  element <span class="op">=</span> <span class="va">currencies_elements</span><span class="op">$</span><span class="va">currency_display_name</span>
-<span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] "日元"</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_currencies.html">cldr_currencies</a></span><span class="op">(</span></span>
+<span>  locale <span class="op">=</span> <span class="st">"zh"</span>,</span>
+<span>  currency <span class="op">=</span> <span class="va">currency_code_list</span><span class="op">$</span><span class="va">JPY</span>,</span>
+<span>  element <span class="op">=</span> <span class="va">currencies_elements</span><span class="op">$</span><span class="va">currency_display_name</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; [1] "日元"</span></span></code></pre>
 <p>Would you like the complete set of exemplar characters for the <code>"fi"</code> locale?</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"fi"</span>, element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">#&gt; [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"fi"</span>, element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"</span></span></code></pre>
 <p>This is just a small sampling of ways you can easily get at all the data within the CLDR while using <strong>R</strong>!</p>
 </div>
 <div class="section level2">
@@ -154,10 +154,10 @@
 </h2>
 <p>Want to try this out? The <strong>i18n</strong> package is available on <strong>CRAN</strong>:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"i18n"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"i18n"</span><span class="op">)</span></span></code></pre></div>
 <p>You can also install the development version of <strong>i18n</strong> from <strong>GitHub</strong>:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rich-iannone/i18n"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rich-iannone/i18n"</span><span class="op">)</span></span></code></pre></div>
 <p>If you encounter a bug, have usage questions, or want to share ideas to make this package better, feel free to file an <a href="https://github.com/rich-iannone/i18n/issues" class="external-link">issue</a>.</p>
 </div>
 <div class="section level2">
@@ -228,7 +228,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer>
