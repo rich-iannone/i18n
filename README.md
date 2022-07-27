@@ -30,6 +30,7 @@ The included datasets are:
 - `tz_exemplar`
 - `tz_map`
 - `tz_formats`
+- `tz_bcp_id`
 
 And the nice-to-have functions are:
 
