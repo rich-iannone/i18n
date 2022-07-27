@@ -43,12 +43,16 @@ one of the following \code{element} names:
 
 If you would like to get the currency display name for the British Pound
 (\code{"GBP"}) currency while in the \code{"de"} locale, the following invocation of
-\code{cldr_currencies()} can be used.\if{html}{\out{<div class="sourceCode r">}}\preformatted{cldr_currencies(
+\code{cldr_currencies()} can be used.
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{cldr_currencies(
   locale = "de",
   currency = currency_code_list$GBP,
   element = currencies_elements$currency_display_name
 )
-}\if{html}{\out{</div>}}\preformatted{#> [1] "Britisches Pfund"
-}
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> [1] "Britisches Pfund"
+}\if{html}{\out{</div>}}
 }
 

@@ -13,6 +13,7 @@ tz_exemplar
 \description{
 The \code{tz_exemplar} table contains localized names for all exemplar cities used
 in time zone names. There are 574 rows and a column for
-each exemplar city name (comprising 442 columns).
+each exemplar city name (comprising 442 columns; the
+\code{locale} column is first).
 }
 \keyword{datasets}

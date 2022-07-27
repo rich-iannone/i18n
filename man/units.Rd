@@ -12,11 +12,11 @@ units
 }
 \description{
 The \code{units} table contains localized character data across
-574 locales. There are  rows and
-the following  columns. Each row represents a display
-type (\code{"long"}, \code{"short"}, or \code{"narrow"}) for a locale.
+574 locales. There are 1722 rows and
+1281 columns. Each row represents a display type (\code{"long"},
+\code{"short"}, or \code{"narrow"}) for each of the locales.
 
-Following the \code{locale} and \code{type} columns, each unit and it's subelements
+Following the \code{locale} and \code{type} columns, each unit and its subelements
 are provided as a cluster of columns in the form
 \code{"<<category>-unit name>.<subelement name>"}. The subelement names are:
 \itemize{

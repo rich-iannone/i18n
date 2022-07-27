@@ -12,8 +12,7 @@ script_metadata
 }
 \description{
 The \code{script_metadata} table contains metadata for various script types.
-There are
-170 rows and the following 11 columns:
+There are 170 rows and the following 11 columns:
 \itemize{
 \item \code{script} (\code{character})
 \item \code{sample_char} (\code{character})

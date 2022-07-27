@@ -11,7 +11,7 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 delimiters
 }
 \description{
-The \code{delimiters} table contains localized  information on the preferred and
+The \code{delimiters} table contains localized information on the preferred and
 alternate sets of quotation marks across 574 locales.
 There are 574 rows and the following 5 columns:
 \itemize{
