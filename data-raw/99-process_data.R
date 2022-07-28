@@ -63,5 +63,5 @@ usethis::use_data(
   tz_map,
   tz_formats,
   tz_bcp_id,
-  internal = FALSE, overwrite = TRUE
+  internal = FALSE, overwrite = TRUE, compress = "xz"
 )
