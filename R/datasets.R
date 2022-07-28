@@ -483,6 +483,21 @@
 #' 
 "tz_exemplar"
 
+
+#' A table with localized time zone names for all metazones
+#'
+#' @description
+#' The `tz_metazone_names` table contains localized time zone names for all
+#' metazones (e.g., `America/Eastern`). There can be a variety of time zone
+#' names, comprising long and short forms (e.g., `Eastern Time` and `ET`) and
+#' this is further segmented by generic, standard, and daylight forms (an
+#' example, using short forms, is `ET`, `EST`, and `EDT`). There are
+#' `r nrow(tz_metazone_names)` rows and a column for
+#' each metazone (comprising `r ncol(tz_metazone_names) - 1` columns; the
+#' `locale` column is first).
+#' 
+"tz_metazone_names"
+
 #' A table with names of map-based time zones
 #'
 #' @description
