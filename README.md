@@ -28,6 +28,7 @@ The included datasets are:
 - `script_metadata`
 - `units`
 - `tz_exemplar`
+- `tz_metazone_names`
 - `tz_map`
 - `tz_formats`
 - `tz_bcp_id`
