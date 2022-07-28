@@ -26,8 +26,10 @@ reference:
     - script_metadata
     - units
     - tz_exemplar
+    - tz_metazone_names
     - tz_map
     - tz_formats
+    - tz_bcp_id
   - title: Get CLDR Element Values
     contents:
     - cldr_locale_names
