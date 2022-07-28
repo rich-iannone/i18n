@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-07-28T17:33Z
+last_built: 2022-07-28T17:37Z
 urls:
   reference: https://rich-iannone.github.io/i18n/reference
   article: https://rich-iannone.github.io/i18n/articles
