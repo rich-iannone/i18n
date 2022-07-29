@@ -483,7 +483,6 @@
 #' 
 "tz_exemplar"
 
-
 #' A table with localized time zone names for all metazones
 #'
 #' @description
@@ -498,11 +497,34 @@
 #' 
 "tz_metazone_names"
 
+#' A table that links canonical tz names with their metazone
+#'
+#' @description
+#' The `tz_metazone_users` table allows for a lookup of canonical time zone
+#' name to which metazone each uses. As an example, the canonical time zone
+#' `America/Vancouver` corresponds to the `America_Pacific` metazone (this is
+#' the long ID, but there is often a short ID available as well). The
+#' `metazone_long_id` can be used to get a localized metazone name by use of
+#' the [tz_metazone_names] table.
+#' 
+#' There are `r nrow(tz_metazone_users)` rows and the following 4 columns:
+#' 
+#' - `canonical_tz_name` (`character`)
+#' - `territory` (`character`)
+#' - `metazone_long_id` (`character`)
+#' - `metazone_short_id` (`character`)
+#' 
+"tz_metazone_users"
+
 #' A table with names of map-based time zones
 #'
 #' @description
 #' The `tz_map` table contains names for all map-based time zone names. There
-#' are `r nrow(tz_map)` rows and `r ncol(tz_map)` columns.
+#' are `r nrow(tz_map)` rows and the following 4 columns:
+#' 
+#' - `canonical_tz_name` (`character`)
+#' - `territory` (`character`)
+#' - `tz_name` (`character`)
 #' 
 "tz_map"
 
