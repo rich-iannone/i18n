@@ -27,6 +27,7 @@ reference:
     - units
     - tz_exemplar
     - tz_metazone_names
+    - tz_metazone_users
     - tz_map
     - tz_formats
     - tz_bcp_id
