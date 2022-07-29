@@ -19,10 +19,17 @@ tz_map_data <-
     simplifyDataFrame = TRUE
   )
   
-map_data_all <- tz_map_data$supplemental$windowsZones[[1]]
-
-colnames(map_data_all) <- 
-  c("mapzone_other", "mapzone_type", "mapzone_territory")
+map_data_all <- 
+  dplyr::as_tibble(tz_map_data$supplemental$windowsZones[[1]]) %>%
+  dplyr::rename(
+    canonical_tz_name = mapZone._type,
+    territory = mapZone._territory,
+    tz_name = mapZone._other
+  ) %>%
+  dplyr::select(canonical_tz_name, territory, tz_name) %>%
+  tidyr::separate_rows(canonical_tz_name, sep = " ") %>%
+  dplyr::arrange(canonical_tz_name, territory) %>%
+  dplyr::distinct()
 
 readr::write_rds(
   map_data_all,
