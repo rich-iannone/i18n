@@ -5,13 +5,18 @@
 \alias{tz_map}
 \title{A table with names of map-based time zones}
 \format{
-An object of class \code{data.frame} with 506 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 598 rows and 3 columns.
 }
 \usage{
 tz_map
 }
 \description{
 The \code{tz_map} table contains names for all map-based time zone names. There
-are 506 rows and 3 columns.
+are 598 rows and the following 4 columns:
+\itemize{
+\item \code{canonical_tz_name} (\code{character})
+\item \code{territory} (\code{character})
+\item \code{tz_name} (\code{character})
+}
 }
 \keyword{datasets}
