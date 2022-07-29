@@ -14,6 +14,11 @@ tz_exemplar
 The \code{tz_exemplar} table contains localized names for all exemplar cities used
 in time zone names. There are 574 rows and a column for
 each exemplar city name (comprising 442 columns; the
-\code{locale} column is first).
+\code{locale} column is first). To have syntactical column names, all slashes in
+exemplar city names are instead represented with period characters (e.g.,
+\code{Indiana/Vincennes} is \code{Indiana.Vincennes}). Some exemplar cities are not
+actually cities and these are: \code{UTC.long.standard}
+(\emph{en}: \code{"Coordinated Universal Time"}), \code{UTC.short.standard} (\emph{en}: \code{"UTC"}),
+and \code{Unknown} (\emph{en}: \code{"Unknown City"}).
 }
 \keyword{datasets}
