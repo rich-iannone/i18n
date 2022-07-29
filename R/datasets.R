@@ -479,7 +479,12 @@
 #' The `tz_exemplar` table contains localized names for all exemplar cities used
 #' in time zone names. There are `r length(all_locales)` rows and a column for
 #' each exemplar city name (comprising `r ncol(tz_exemplar) - 1` columns; the
-#' `locale` column is first).
+#' `locale` column is first). To have syntactical column names, all slashes in
+#' exemplar city names are instead represented with period characters (e.g.,
+#' `Indiana/Vincennes` is `Indiana.Vincennes`). Some exemplar cities are not
+#' actually cities and these are: `UTC.long.standard`
+#' (*en*: `"Coordinated Universal Time"`), `UTC.short.standard` (*en*: `"UTC"`),
+#' and `Unknown` (*en*: `"Unknown City"`).
 #' 
 "tz_exemplar"
 
