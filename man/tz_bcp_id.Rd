@@ -5,7 +5,7 @@
 \alias{tz_bcp_id}
 \title{A table with BCP47 Olson/IANA-style and canonical time zone IDs}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 461 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 593 rows and 3 columns.
 }
 \usage{
 tz_bcp_id
@@ -13,7 +13,7 @@ tz_bcp_id
 \description{
 The \code{tz_bcp_id} table provides a lookup for converting between BCP47
 Olson/IANA-style time zone IDs and the canonical forms (according to BCP47).
-There are 461 rows and the following 3 columns:
+There are 593 rows and the following 3 columns:
 \itemize{
 \item \code{tz_bcp_id} (\code{character})
 \item \code{tz_canonical} (\code{character})
