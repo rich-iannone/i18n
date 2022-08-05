@@ -39,7 +39,8 @@ for (i in seq_along(tz_bcp_id_data_all)) {
 
 tz_bcp_id_tbl <-
   tz_bcp_id_tbl %>%
-  dplyr::filter(!is.na(tz_canonical))
+  dplyr::filter(!is.na(tz_canonical)) %>%
+  tidyr::separate_rows(tz_canonical, sep = " ")
 
 readr::write_rds(
   tz_bcp_id_tbl,
