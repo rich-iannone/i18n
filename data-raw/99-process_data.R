@@ -16,12 +16,13 @@ source("data-raw/10-delimiters.R")
 source("data-raw/11-layout.R")
 source("data-raw/12-script_metadata.R")
 source("data-raw/13-units.R")
-source("data-raw/14-tz_exemplar.R")
-source("data-raw/15-tz_metazone_names.R")
-source("data-raw/16-tz_metazone_users.R")
-source("data-raw/17-tz_map.R")
-source("data-raw/18-tz_formats.R")
-source("data-raw/19-tz_bcp_id.R")
+source("data-raw/14-day_periods.R")
+source("data-raw/15-tz_exemplar.R")
+source("data-raw/16-tz_metazone_names.R")
+source("data-raw/17-tz_metazone_users.R")
+source("data-raw/18-tz_map.R")
+source("data-raw/19-tz_formats.R")
+source("data-raw/20-tz_bcp_id.R")
 
 all_locales <- readRDS("data-raw/all_locales.rds")
 all_currency_codes <- readRDS("data-raw/all_currency_codes.rds")
@@ -37,6 +38,7 @@ delimiters <- readRDS("data-raw/delimiters.rds")
 layout <- readRDS("data-raw/layout.rds")
 script_metadata <- readRDS("data-raw/script_metadata.rds")
 units <- readRDS("data-raw/units.rds")
+day_periods <- readRDS("data-raw/day_periods.rds")
 tz_exemplar <- readRDS("data-raw/tz_exemplar.rds")
 tz_metazone_names <- readRDS("data-raw/tz_metazone_names.rds")
 tz_metazone_users <- readRDS("data-raw/tz_metazone_users.rds")
@@ -60,6 +62,7 @@ usethis::use_data(
   layout,
   script_metadata,
   units,
+  day_periods,
   tz_exemplar,
   tz_metazone_names,
   tz_metazone_users,
