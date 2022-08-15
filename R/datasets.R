@@ -473,6 +473,32 @@
 #'
 "units"
 
+#' A table with rule sets for naming periods of a day
+#'
+#' @description
+#' The `day_periods` table contains rules for naming periods of time throughout
+#' a day. There are `r nrow(day_periods)` rows that comprise a day period name
+#' and rule for a locale. There may be only two rows associated with a locale
+#' but many more if a locale has many names for periods of a day. The following
+#' columns are included:
+#'
+#' - `locale` (`character`)
+#' - `period` (`character`)
+#' - `from` (`character`)
+#' - `to` (`character`)
+#' - `at` (`character`)
+#' 
+#' The `period` value provides an identifier for the period of time. For a given
+#' locale there may typically be `"afternoon1"` and `"evening1"` period
+#' identifiers. Some may have quite a few periods defined (perhaps with
+#' `"morning1"` and `"morning2"` rules). A period is either a block of time
+#' defined by the `from` and `to` columns, or, a set time (like `"noon"` and
+#' `"midnight"`) found in the `at` column. The `period` values are typically
+#' obtained from this dataset in order to obtain localized text from
+#' the [dates] and [dates_generic] datasets (within the `dayperiods_*` columns).
+#' 
+"day_periods"
+
 #' A table with localized names for all time zone exemplar cities
 #'
 #' @description
