@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rich-iannone.github.io/i18n/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/LICENSE-text.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/LICENSE.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/PULL_REQUEST_TEMPLATE.html</loc>
+    <loc>/PULL_REQUEST_TEMPLATE.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/news/index.html</loc>
+    <loc>/news/index.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/all_currency_codes.html</loc>
+    <loc>/reference/all_currency_codes.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/all_locales.html</loc>
+    <loc>/reference/all_locales.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/character_labels.html</loc>
+    <loc>/reference/character_labels.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/characters.html</loc>
+    <loc>/reference/characters.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_character_labels.html</loc>
+    <loc>/reference/cldr_character_labels.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_characters.html</loc>
+    <loc>/reference/cldr_characters.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_currencies.html</loc>
+    <loc>/reference/cldr_currencies.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_dates.html</loc>
+    <loc>/reference/cldr_dates.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_locale_names.html</loc>
+    <loc>/reference/cldr_locale_names.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/cldr_numbers.html</loc>
+    <loc>/reference/cldr_numbers.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/currencies.html</loc>
+    <loc>/reference/currencies.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/dates.html</loc>
+    <loc>/reference/dates.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/dates_generic.html</loc>
+    <loc>/reference/dates_generic.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/day_periods.html</loc>
+    <loc>/reference/day_periods.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/default_locales.html</loc>
+    <loc>/reference/default_locales.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/delimiters.html</loc>
+    <loc>/reference/delimiters.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/element_lists.html</loc>
+    <loc>/reference/element_lists.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/layout.html</loc>
+    <loc>/reference/layout.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/locale_names.html</loc>
+    <loc>/reference/locale_names.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/numbers.html</loc>
+    <loc>/reference/numbers.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/pipe.html</loc>
+    <loc>/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/script_metadata.html</loc>
+    <loc>/reference/script_metadata.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_bcp_id.html</loc>
+    <loc>/reference/tz_bcp_id.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_exemplar.html</loc>
+    <loc>/reference/tz_exemplar.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_formats.html</loc>
+    <loc>/reference/tz_formats.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_map.html</loc>
+    <loc>/reference/tz_map.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_metazone_names.html</loc>
+    <loc>/reference/tz_metazone_names.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/tz_metazone_users.html</loc>
+    <loc>/reference/tz_metazone_users.html</loc>
   </url>
   <url>
-    <loc>https://rich-iannone.github.io/i18n/reference/units.html</loc>
+    <loc>/reference/units.html</loc>
   </url>
 </urlset>
