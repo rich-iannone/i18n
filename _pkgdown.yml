@@ -1,10 +1,4 @@
-destination: docs
-
-home:
-  strip_header: true
-
-url: https://rich-iannone.github.io/i18n
-
+url: ~
 template:
   bootstrap: 5
 
