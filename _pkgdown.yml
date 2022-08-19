@@ -9,7 +9,7 @@ template:
   bootstrap: 5
 
 reference:
-  - title: CLDR Tables
+  - title: CLDR Datasets
     contents:
     - all_locales
     - all_currency_codes
