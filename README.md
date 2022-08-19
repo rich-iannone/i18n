@@ -1,15 +1,18 @@
-**i18n**
+<div align="center">
 
+<a href='https://rich-iannone.github.io/i18n/'><img src="man/figures/logo.svg" height="350px"/></a>
+
+<br />
 <!-- badges: start -->
 <a href="https://cran.r-project.org/package=i18n"><img src="https://www.r-pkg.org/badges/version/i18n" alt="CRAN status" /></a>
 <a href="https://github.com/rich-iannone/i18n/actions"><img src="https://github.com/rich-iannone/i18n/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
-<!-- badges: end -->
 
-With the **i18n** package it’s possible to get *CLDR* (*Common Locale
-Data Repository*) data to support your own localization efforts. This package
-provides up-to-date datasets from the Unicode's CLDR repositories, and, as an
-added bonus, functions to extract elements and sub-elements in a locale-specific
-way.
+<a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" alt="Contributor Covenant" /></a>
+<!-- badges: end -->
+<br />
+</div>
+
+With the **i18n** package it’s possible to get *CLDR* (*Common Locale Data Repository*) data to support your own localization efforts. This package provides up-to-date datasets from the Unicode's CLDR repositories, and, as an added bonus, functions to extract elements and sub-elements in a locale-specific way.
 
 The included datasets are:
 
@@ -46,8 +49,7 @@ And the nice-to-have functions are:
 
 ## EXAMPLES
 
-If you need to get the decimal mark and grouping separators for the base German
-locale `"de"`, then the `cldr_numbers()` function could be used:
+If you need to get the decimal mark and grouping separators for the base German locale `"de"`, then the `cldr_numbers()` function could be used:
 
 ```r
 cldr_numbers(
@@ -109,8 +111,7 @@ cldr_dates(
 #> [1] "토요일"
 ```
 
-Need to get the appropriate display name for the Japanese Yen (`"JPY"`)
-currency while in the `"zh"` locale?
+Need to get the appropriate display name for the Japanese Yen (`"JPY"`) currency while in the `"zh"` locale?
 
 ```r
 cldr_currencies(
@@ -135,8 +136,7 @@ cldr_characters(
 #> [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"
 ```
 
-This is just a small sampling of ways you can easily get at all the data
-within the CLDR while using **R**!
+This is just a small sampling of ways you can easily get at all the data within the CLDR while using **R**!
 
 ## INSTALLATION
 
@@ -152,9 +152,7 @@ You can also install the development version of **i18n** from **GitHub**:
 devtools::install_github("rich-iannone/i18n")
 ```
 
-If you encounter a bug, have usage questions, or want to share ideas to
-make this package better, feel free to file an
-[issue](https://github.com/rich-iannone/i18n/issues).
+If you encounter a bug, have usage questions, or want to share ideas to make this package better, feel free to file an [issue](https://github.com/rich-iannone/i18n/issues).
 
 ## Code of Conduct
 
@@ -169,5 +167,3 @@ See the [`LICENSE.md`](LICENSE.md) file for more details.
 ## 🏛️ Governance
 
 This project is primarily maintained by [Rich Iannone](https://twitter.com/riannone).
-
-<hr>
