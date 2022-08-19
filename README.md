@@ -27,8 +27,10 @@ The included datasets are:
 - `layout`
 - `script_metadata`
 - `units`
+- `day_periods`
 - `tz_exemplar`
 - `tz_metazone_names`
+- `tz_metazone_users`
 - `tz_map`
 - `tz_formats`
 - `tz_bcp_id`
@@ -48,14 +50,20 @@ If you need to get the decimal mark and grouping separators for the base German
 locale `"de"`, then the `cldr_numbers()` function could be used:
 
 ```r
-cldr_numbers(locale = "de", element = numbers_elements$decimal)
+cldr_numbers(
+  locale = "de",
+  element = numbers_elements$decimal
+)
 ```
 ```
 #> [1] ","
 ```
 
 ```r
-cldr_numbers(locale = "de", element = numbers_elements$group)
+cldr_numbers(
+  locale = "de",
+  element = numbers_elements$group
+)
 ```
 ```
 #> [1] "."
@@ -73,7 +81,10 @@ cldr_locale_names(locale = "es", element = locale_names_elements$territory_names
 Want a list of days-of-the-week names in the `"ko"` locale?
 
 ```r
-cldr_dates(locale = "ko", element = dates_elements$days_standalone_wide)
+cldr_dates(
+  locale = "ko",
+  element = dates_elements$days_standalone_wide
+)
 ```
 ```
 #> $sun
@@ -115,7 +126,10 @@ cldr_currencies(
 Would you like the complete set of exemplar characters for the `"fi"` locale?
 
 ```r
-cldr_characters(locale = "fi", element = characters_elements$exemplar_characters)
+cldr_characters(
+  locale = "fi",
+  element = characters_elements$exemplar_characters
+)
 ```
 ```
 #> [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"
@@ -144,10 +158,8 @@ make this package better, feel free to file an
 
 ## Code of Conduct
 
-Please note that the **i18n** project is released with a [contributor
-code of
-conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).<br>By
-participating in this project you agree to abide by its terms.
+Please note that the **i18n** project is released with a [contributor code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
+<br>By participating in this project you agree to abide by its terms.
 
 ## 📄 License
 
