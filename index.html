@@ -85,8 +85,10 @@
 <li><code>layout</code></li>
 <li><code>script_metadata</code></li>
 <li><code>units</code></li>
+<li><code>day_periods</code></li>
 <li><code>tz_exemplar</code></li>
 <li><code>tz_metazone_names</code></li>
+<li><code>tz_metazone_users</code></li>
 <li><code>tz_map</code></li>
 <li><code>tz_formats</code></li>
 <li><code>tz_bcp_id</code></li>
@@ -105,10 +107,16 @@
 </h2>
 <p>If you need to get the decimal mark and grouping separators for the base German locale <code>"de"</code>, then the <code><a href="reference/cldr_numbers.html">cldr_numbers()</a></code> function could be used:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">decimal</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span></span>
+<span>  locale <span class="op">=</span> <span class="st">"de"</span>,</span>
+<span>  element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">decimal</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] ","</span></span></code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"de"</span>, element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">group</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_numbers.html">cldr_numbers</a></span><span class="op">(</span></span>
+<span>  locale <span class="op">=</span> <span class="st">"de"</span>,</span>
+<span>  element <span class="op">=</span> <span class="va">numbers_elements</span><span class="op">$</span><span class="va">group</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] "."</span></span></code></pre>
 <p>Need to know the <code>"LU"</code> territory name from the <code>"es"</code> locale?</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -116,7 +124,10 @@
 <pre><code><span><span class="co">#&gt; [1] "Luxemburgo"</span></span></code></pre>
 <p>Want a list of days-of-the-week names in the <code>"ko"</code> locale?</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_dates.html">cldr_dates</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"ko"</span>, element <span class="op">=</span> <span class="va">dates_elements</span><span class="op">$</span><span class="va">days_standalone_wide</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_dates.html">cldr_dates</a></span><span class="op">(</span></span>
+<span>  locale <span class="op">=</span> <span class="st">"ko"</span>,</span>
+<span>  element <span class="op">=</span> <span class="va">dates_elements</span><span class="op">$</span><span class="va">days_standalone_wide</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; $sun</span></span>
 <span><span class="co">#&gt; [1] "일요일"</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -147,7 +158,10 @@
 <pre><code><span><span class="co">#&gt; [1] "日元"</span></span></code></pre>
 <p>Would you like the complete set of exemplar characters for the <code>"fi"</code> locale?</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span>locale <span class="op">=</span> <span class="st">"fi"</span>, element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/cldr_characters.html">cldr_characters</a></span><span class="op">(</span></span>
+<span>  locale <span class="op">=</span> <span class="st">"fi"</span>,</span>
+<span>  element <span class="op">=</span> <span class="va">characters_elements</span><span class="op">$</span><span class="va">exemplar_characters</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] "[a b c d e f g h i j k l m n o p q r s š t u v w x y z ž å ä ö]"</span></span></code></pre>
 <p>This is just a small sampling of ways you can easily get at all the data within the CLDR while using <strong>R</strong>!</p>
 </div>
@@ -165,7 +179,7 @@
 <div class="section level2">
 <h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
 </h2>
-<p>Please note that the <strong>i18n</strong> project is released with a <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/" class="external-link">contributor code of conduct</a>.<br>By participating in this project you agree to abide by its terms.</p>
+<p>Please note that the <strong>i18n</strong> project is released with a <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/" class="external-link">contributor code of conduct</a>. <br>By participating in this project you agree to abide by its terms.</p>
 </div>
 <div class="section level2">
 <h2 id="-license">📄 License<a class="anchor" aria-label="anchor" href="#-license"></a>
