@@ -1,4 +1,4 @@
-# i18n (development version)
+# i18n 0.2.0
 
 # i18n 0.1.0
 
