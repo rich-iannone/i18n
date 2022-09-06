@@ -1,8 +1,11 @@
-^LICENSE\.md$
 ^.*\.Rproj$
+^\.github$
 ^\.Rproj\.user$
-^data-raw$
 ^_pkgdown\.yml$
+^data-raw$
 ^docs$
 ^pkgdown$
-^\.github$
+^README\.md$
+^index\.md$
+^LICENSE\.md$
+man/figures/
