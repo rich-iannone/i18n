@@ -13,6 +13,7 @@ test_that("Datasets have the expected types", {
   expect_s3_class(layout, "data.frame")
   expect_s3_class(script_metadata, "data.frame")
   expect_s3_class(day_periods, "data.frame")
+  expect_s3_class(start_of_week, "data.frame")
   expect_s3_class(tz_exemplar, "data.frame")
   expect_s3_class(tz_metazone_names, "data.frame")
   expect_s3_class(tz_metazone_users, "data.frame")
@@ -58,6 +59,8 @@ test_that("Tabular datasets have the expected dimensions", {
   expect_equal(ncol(script_metadata), 11)
 
   expect_equal(ncol(day_periods), 5)
+  
+  expect_equal(ncol(start_of_week), 2)
 
   expect_equal(ncol(tz_exemplar), 443)
   expect_equal(nrow(tz_exemplar), length(all_locales))
