@@ -499,6 +499,18 @@
 #' 
 "day_periods"
 
+#' A table with the starting day of the week across territories
+#'
+#' @description
+#' The `start_of_week` table contains the day names for the start of the week
+#' (e.g., `"sun"`, `"mon"`, etc.) for a given territory (which is typically a
+#' 2-letter country code). The following columns are included:
+#'
+#' - `territory` (`character`)
+#' - `day_of_week` (`character`)
+#' 
+"start_of_week"
+
 #' A table with localized names for all time zone exemplar cities
 #'
 #' @description
