@@ -30,7 +30,9 @@ The included datasets are:
 - `layout`
 - `script_metadata`
 - `units`
+- `num_system_digits`
 - `day_periods`
+- `start_of_week`
 - `tz_exemplar`
 - `tz_metazone_names`
 - `tz_metazone_users`
