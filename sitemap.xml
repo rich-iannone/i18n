@@ -82,6 +82,9 @@
     <loc>/reference/locale_names.html</loc>
   </url>
   <url>
+    <loc>/reference/num_system_digits.html</loc>
+  </url>
+  <url>
     <loc>/reference/numbers.html</loc>
   </url>
   <url>
@@ -89,6 +92,9 @@
   </url>
   <url>
     <loc>/reference/script_metadata.html</loc>
+  </url>
+  <url>
+    <loc>/reference/start_of_week.html</loc>
   </url>
   <url>
     <loc>/reference/tz_bcp_id.html</loc>
