@@ -57,6 +57,8 @@ test_that("Tabular datasets have the expected dimensions", {
   expect_equal(nrow(layout), length(all_locales))
   
   expect_equal(ncol(script_metadata), 11)
+  
+  expect_equal(ncol(num_system_digits), 2)
 
   expect_equal(ncol(day_periods), 5)
   
