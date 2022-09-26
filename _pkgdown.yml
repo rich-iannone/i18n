@@ -19,6 +19,7 @@ reference:
     - layout
     - script_metadata
     - units
+    - num_system_digits
     - day_periods
     - tz_exemplar
     - tz_metazone_names
