@@ -118,15 +118,15 @@ locale_list <-
     `fr-SY` = "fr-SY", `fr-TD` = "fr-TD", `fr-TG` = "fr-TG", 
     `fr-TN` = "fr-TN", `fr-VU` = "fr-VU", `fr-WF` = "fr-WF", 
     `fr-YT` = "fr-YT", fur = "fur", fy = "fy", ga = "ga", `ga-GB` = "ga-GB", 
-    gd = "gd", gl = "gl", gsw = "gsw", `gsw-FR` = "gsw-FR", `gsw-LI` = "gsw-LI", 
-    gu = "gu", guz = "guz", gv = "gv", ha = "ha", `ha-GH` = "ha-GH", 
-    `ha-NE` = "ha-NE", haw = "haw", he = "he", hi = "hi", `hi-Latn` = "hi-Latn", 
-    hr = "hr", `hr-BA` = "hr-BA", hsb = "hsb", hu = "hu", hy = "hy", 
-    ia = "ia", id = "id", ig = "ig", ii = "ii", is = "is", it = "it", 
-    `it-CH` = "it-CH", `it-SM` = "it-SM", `it-VA` = "it-VA", 
-    ja = "ja", jgo = "jgo", jmc = "jmc", jv = "jv", ka = "ka", 
-    kab = "kab", kam = "kam", kde = "kde", kea = "kea", kgp = "kgp", 
-    khq = "khq", ki = "ki", kk = "kk", kkj = "kkj", kl = "kl", 
+    gd = "gd", gl = "gl", gsw = "gsw", `gsw-FR` = "gsw-FR",
+    `gsw-LI` = "gsw-LI", gu = "gu", guz = "guz", gv = "gv", ha = "ha",
+    `ha-GH` = "ha-GH", `ha-NE` = "ha-NE", haw = "haw", he = "he", hi = "hi",
+    `hi-Latn` = "hi-Latn", hr = "hr", `hr-BA` = "hr-BA", hsb = "hsb",
+    hu = "hu", hy = "hy", ia = "ia", id = "id", ig = "ig", ii = "ii",
+    is = "is", it = "it",  `it-CH` = "it-CH", `it-SM` = "it-SM",
+    `it-VA` = "it-VA", ja = "ja", jgo = "jgo", jmc = "jmc", jv = "jv",
+    ka = "ka", kab = "kab", kam = "kam", kde = "kde", kea = "kea",
+    kgp = "kgp", khq = "khq", ki = "ki", kk = "kk", kkj = "kkj", kl = "kl", 
     kln = "kln", km = "km", kn = "kn", ko = "ko", `ko-KP` = "ko-KP", 
     kok = "kok", ks = "ks", `ks-Arab` = "ks-Arab", `ks-Deva` = "ks-Deva", 
     ksb = "ksb", ksf = "ksf", ksh = "ksh", ku = "ku", kw = "kw", 
@@ -658,7 +658,9 @@ cldr_character_labels <- function(
       labels = "character_labels"
     )
   
-  values <- character_labels[character_labels$locale == locale,][[element_full]]
+  values <- 
+    character_labels[character_labels$locale == locale,][[element_full]]
+  
   values <- unlist(values, use.names = TRUE)
   
   names(values) <- gsub("^value\\.", "", names(values))
