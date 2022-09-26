@@ -473,6 +473,19 @@
 #'
 "units"
 
+#' Vectors of digits from various numbering systems
+#'
+#' @description
+#' The `num_system_digits` table contains vectors of digits for different
+#' numbering systems. Each vector contains 10 elements (comprising the numbers
+#' `0` to `9`) and there are are `r nrow(num_system_digits)` rows in total. The
+#' following columns are included:
+#'
+#' - `script` (`character`)
+#' - `digits` (`list [length of 10]`)
+#' 
+"num_system_digits"
+
 #' A table with rule sets for naming periods of a day
 #'
 #' @description
