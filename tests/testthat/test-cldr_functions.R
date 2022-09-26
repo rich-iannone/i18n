@@ -48,6 +48,13 @@ test_that("The `cldr_*()` functions work", {
     ),
     "character"
   )
+  expect_type(
+    cldr_characters(
+      locale =  locale_list$tr,
+      element = characters_elements$ellipsis
+    ),
+    "list"
+  )
   
   expect_type(
     cldr_character_labels(
