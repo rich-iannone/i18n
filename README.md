@@ -5,7 +5,10 @@
 <br />
 <!-- badges: start -->
 <a href="https://cran.r-project.org/package=i18n"><img src="https://www.r-pkg.org/badges/version/i18n" alt="CRAN status" /></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
 <a href="https://github.com/rich-iannone/i18n/actions"><img src="https://github.com/rich-iannone/i18n/workflows/R-CMD-check/badge.svg" alt="R build status" /></a>
+<a href="https://github.com/rich-iannone/i18n/actions"><img src="https://github.com/rich-iannone/i18n/workflows/lint/badge.svg" alt="Linting" /></a>
+<a href="https://app.codecov.io/gh/rich-iannone/i18n?branch=main"><img src="https://codecov.io/gh/rich-iannone/i18n/branch/main/graph/badge.svg" alt="Coverage status" /></a>
 
 <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" alt="Contributor Covenant" /></a>
 <!-- badges: end -->
