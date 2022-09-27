@@ -24,57 +24,76 @@ test_that("Datasets have the expected types", {
 
 test_that("Tabular datasets have the expected dimensions", {
   
+  # `default_locales`
   expect_equal(ncol(default_locales), 2)
   expect_equal(nrow(default_locales), 228)
   
+  # `locale_names`
   expect_equal(ncol(locale_names), 5)
   expect_equal(nrow(locale_names), length(all_locales))
   expect_equal(locale_names$locale, all_locales)
 
+  # `dates`
   expect_equal(ncol(dates), 38)
   expect_equal(nrow(dates), length(all_locales))
   expect_equal(dates$locale, all_locales)
   
+  # `numbers`
   expect_equal(ncol(numbers), 26)
   expect_equal(nrow(numbers), length(all_locales))
   expect_equal(numbers$locale, all_locales)
   
+  # `currencies`
   expect_equal(ncol(currencies), 7)
   expect_equal(nrow(currencies), length(all_locales) * length(all_currency_codes))
   
+  # `characters`
   expect_equal(ncol(characters), 12)
   expect_equal(nrow(characters), length(all_locales))
   expect_equal(characters$locale, all_locales)
   
+  # `character_labels`
   expect_equal(ncol(character_labels), 3)
   expect_equal(nrow(character_labels), length(all_locales))
   expect_equal(character_labels$locale, all_locales)
   
+  # `delimiters`
   expect_equal(ncol(delimiters), 5)
   expect_equal(nrow(delimiters), length(all_locales))
   
+  # `layout`
   expect_equal(ncol(layout), 3)
   expect_equal(nrow(layout), length(all_locales))
   
+  # `script_metadata`
   expect_equal(ncol(script_metadata), 11)
   
+  # `num_system_digits`
   expect_equal(ncol(num_system_digits), 2)
 
+  # `day_periods`
   expect_equal(ncol(day_periods), 5)
   
+  # `start_of_week`
   expect_equal(ncol(start_of_week), 2)
 
+  # `tz_exemplar`
   expect_equal(ncol(tz_exemplar), 443)
   expect_equal(nrow(tz_exemplar), length(all_locales))
   
+  # `tz_metazone_names`
   expect_equal(ncol(tz_metazone_names), 160)
   
+  # `tz_metazone_users`
   expect_equal(ncol(tz_metazone_users), 4)
   
+  # `tz_map`
   expect_equal(ncol(tz_map), 3)
 
+  # `tz_formats`
   expect_equal(ncol(tz_formats), 8)
   expect_equal(nrow(tz_formats), length(all_locales))
 
+  # `tz_bcp_id`
   expect_equal(ncol(tz_bcp_id), 3)
 })
