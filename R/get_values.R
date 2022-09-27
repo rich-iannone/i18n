@@ -659,7 +659,7 @@ cldr_character_labels <- function(
     )
   
   values <- 
-    character_labels[character_labels$locale == locale,][[element_full]]
+    character_labels[character_labels$locale == locale, ][[element_full]]
   
   values <- unlist(values, use.names = TRUE)
   
