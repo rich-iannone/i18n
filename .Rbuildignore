@@ -9,3 +9,4 @@
 ^index\.md$
 ^LICENSE\.md$
 man/figures/
+^codecov\.yml$
