@@ -54,3 +54,6 @@ for (i in seq_along(regional_currencies)) {
     dplyr::bind_rows(regional_currencies_tbl, regional_currencies_tbl_row_i)
 }
 
+# Make corrections for specific currencies
+regional_currencies_tbl[regional_currencies_tbl$region == "CU", ][["currency_code"]] <- "CUP"
+
